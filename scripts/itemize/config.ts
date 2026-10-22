@@ -40,7 +40,7 @@ export const PARTIES: Party[] = [
     raw: "data/raw/bcndp-2024.txt",
     out: "data/items/bcndp-2024.promises.json",
     sourceUrl:
-      "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+      "https://campaign-tracker-jet-zeta.vercel.app/bcndp-2024-platform.pdf",
     sourceType: "pdf",
   },
   {
