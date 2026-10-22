@@ -22,6 +22,11 @@ export default async function Home() {
         </p>
       </header>
 
+      <div className="mb-8 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
+        <strong>BETA — in progress</strong> (updated October 21, 2026). All
+        promises are still under review and categorization.
+      </div>
+
       <div className="grid gap-6 sm:grid-cols-2">
         {parties.map((party) => {
           const counts = statusCounts[party.id] ?? {};
