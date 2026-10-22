@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import StatusBadge from "@/components/status-badge";
 import VoteButtons from "@/components/vote-buttons";
 import {
+  getGoals,
   getPromiseById,
   getReferences,
   getVoteScore,
@@ -34,6 +35,7 @@ export default async function PromisePage({
   const { promise, party, category, updates } = detail;
   const voteScore = await getVoteScore(id);
   const references = await getReferences(id);
+  const goals = await getGoals(id);
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
@@ -58,19 +60,6 @@ export default async function PromisePage({
           </p>
         )}
 
-        {promise.metric && (
-          <p className="mt-2 text-sm">
-            <span className="text-zinc-500 dark:text-zinc-400">Target: </span>
-            <span className="font-medium">{promise.metric}</span>
-            {promise.metric_source && (
-              <span className="text-zinc-400 dark:text-zinc-500">
-                {" "}
-                · {promise.metric_source}
-              </span>
-            )}
-          </p>
-        )}
-
         <div className="mt-4 flex items-center gap-3">
           <span className="text-sm text-zinc-500 dark:text-zinc-400">
             Accurate?
@@ -82,6 +71,53 @@ export default async function PromisePage({
           <p className="mt-5 text-zinc-700 dark:text-zinc-300">
             {promise.description}
           </p>
+        )}
+
+        {goals.length > 0 && (
+          <section className="mt-8">
+            <h2 className="mb-3 text-lg font-semibold">Goals</h2>
+            <ul className="space-y-2">
+              {goals.map((g) => (
+                <li
+                  key={g.id}
+                  className="rounded-lg border border-zinc-200 px-4 py-3 dark:border-zinc-800"
+                >
+                  <div className="font-medium">{g.label}</div>
+                  {g.target && g.target !== g.label && (
+                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                      {g.target}
+                    </div>
+                  )}
+                  {(g.target_value != null || g.current_value != null) && (
+                    <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                      {g.target_value != null && (
+                        <span className="mr-4">
+                          Target: {g.target_value}
+                          {g.unit ? ` ${g.unit}` : ""}
+                        </span>
+                      )}
+                      {g.current_value != null && (
+                        <span>
+                          Current: {g.current_value}
+                          {g.unit ? ` ${g.unit}` : ""}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  {g.source_url && (
+                    <a
+                      href={g.source_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block truncate text-sm text-blue-600 hover:underline dark:text-blue-400"
+                    >
+                      {g.source_url}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
 
         {promise.original_quote && (

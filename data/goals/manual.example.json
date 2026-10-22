@@ -1,0 +1,34 @@
+[
+  {
+    "party": "bc-ndp",
+    "promise": "Crack down on bad drivers",
+    "label": "Red light cameras",
+    "target": "Add red light cameras at busy community intersections",
+    "target_value": null,
+    "unit": "cameras",
+    "status": "not_started",
+    "sort_order": 0
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Crack down on bad drivers",
+    "label": "Dedicated highway patrol",
+    "target": "Create a dedicated highway patrol",
+    "target_value": null,
+    "unit": null,
+    "status": "not_started",
+    "sort_order": 1
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Double public EV charging stations by 2030",
+    "label": "Public EV chargers",
+    "target": "Double the number of public chargers by 2030",
+    "target_value": 8900,
+    "unit": "chargers",
+    "current_value": 8900,
+    "status": "in_progress",
+    "source_url": "https://news.gov.bc.ca/releases/2026ECS0041-000855",
+    "sort_order": 0
+  }
+]

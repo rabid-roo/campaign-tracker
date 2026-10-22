@@ -207,3 +207,27 @@ export const getReferences = cache(
     return (data as Reference[]) ?? [];
   },
 );
+
+export type Goal = {
+  id: string;
+  promise_id: string;
+  label: string;
+  target: string | null;
+  unit: string | null;
+  target_value: number | null;
+  current_value: number | null;
+  status: string;
+  source_url: string | null;
+  sort_order: number;
+};
+
+export const getGoals = cache(async (promiseId: string): Promise<Goal[]> => {
+  const supabase = createClient();
+  const { data, error } = await supabase
+    .from("goals")
+    .select("*")
+    .eq("promise_id", promiseId)
+    .order("sort_order", { ascending: true });
+  if (error) return [];
+  return (data as Goal[]) ?? [];
+});
