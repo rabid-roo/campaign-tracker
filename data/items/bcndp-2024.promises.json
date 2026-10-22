@@ -1,0 +1,826 @@
+[
+  {
+    "title": "Building more homes for renters and buyers",
+    "category": "housing",
+    "description": "Increase the supply of housing for both renters and buyers, including through the BC Builds program aimed at creating attainable housing for middle-class residents.",
+    "original_quote": "Fueling BC Builds – the future of building attainable housing for middle class British Columbians.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "300,000 more middle-class homes",
+    "metric_source": "CMHC / BC Gov"
+  },
+  {
+    "title": "Fast-tracking BC's factory home construction",
+    "category": "housing",
+    "description": "Speed up factory-built home construction to deliver lower-cost homes to middle-class buyers more quickly.",
+    "original_quote": "Fast-tracking BC’s factory home construction to quickly deliver lower cost middle-class homes.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Working with municipalities, private developers, non-profits and unions to drive home construction",
+    "category": "housing",
+    "description": "Partner with municipalities, developers, non-profits and unions to encourage building upward rather than outward.",
+    "original_quote": "Work with municipalities to build up rather than out",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Open the door to more home ownership",
+    "category": "housing",
+    "description": "Make home ownership more accessible to first-time buyers by lowering the upfront costs of purchasing a home.",
+    "original_quote": "Opening the door for first time home buyers by reducing the up-front costs of buying a home.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "25,000 attainable homes (60/40 shared-equity)",
+    "metric_source": "BC NDP / BC Gov"
+  },
+  {
+    "title": "Open up and protect homes for people",
+    "category": "housing",
+    "description": "Ensure that every available unit, from suites to condos to houses, is used as a home for people.",
+    "original_quote": "We need to make sure that every unit out there — from suites to condos to houses — is turned into a home for people.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Provide safe, secure housing for everyone",
+    "category": "housing",
+    "description": "Expand the HEARTH program to more communities, consistent with the province's strategy to move people out of encampments and into indoor housing.",
+    "original_quote": "We will bring the Homeless Encampment Action Response Temporary Housing (HEARTH) program to more communities, in line with our provincial decampment strategy to get people inside.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver a middle-class income tax cut",
+    "category": "affordability",
+    "description": "Provide a middle-class income tax cut worth a $1,000 benefit to 90 percent of BC families.",
+    "original_quote": "Deliver a middle-class income tax cut that will provide a $1,000 benefit for 90 percent of BC families",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver affordable before- and after-school care",
+    "category": "education-childcare",
+    "description": "Provide affordable before- and after-school care for children up to age 12 throughout the province.",
+    "original_quote": "Deliver affordable before- and after-school care for kids up to age 12 across BC.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Build new child care spaces",
+    "category": "education-childcare",
+    "description": "Make an initial $500 million investment to add new accessible and affordable child care spaces.",
+    "original_quote": "That’s why we’re making a $500 million initial investment to add new desperately needed accessible and affordable child care spaces",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "$500 million initial investment",
+    "metric_source": "BC Gov"
+  },
+  {
+    "title": "Strengthen protections for BC consumers",
+    "category": "affordability",
+    "description": "Strengthen consumer protections against bad actors in the market and protect people struggling with high household costs.",
+    "original_quote": "Strengthen protections for BC consumers from bad actors that are taking advantage of the market — and protecting people who are struggling with already-high household costs.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Freeze ICBC premiums",
+    "category": "affordability",
+    "description": "Freeze ICBC premiums to preserve savings on car insurance.",
+    "original_quote": "Freeze your ICBC premiums to lock in your car insurance savings.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "ICBC basic rates frozen",
+    "metric_source": "ICBC"
+  },
+  {
+    "title": "Offer free transit for seniors in non-peak hours",
+    "category": "transit-infrastructure",
+    "description": "Provide free public transit for seniors during non-peak hours.",
+    "original_quote": "Offer free transit for seniors in non-peak hours.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Keep hydro rates low and support solar",
+    "category": "environment-climate",
+    "description": "Keep hydro rates low and let residents save by installing solar panels and selling electricity back to the grid.",
+    "original_quote": "Keep your hydro rates low and give you the opportunity to save more by installing solar panels and selling electricity back into the grid",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Cut the cost of heating and cooling your home",
+    "category": "environment-climate",
+    "description": "Lower the cost of home heating and cooling while improving comfort and efficiency and reducing carbon footprint.",
+    "original_quote": "Cut the cost of heating and cooling your home, making it more comfortable and efficient while helping reduce your carbon footprint.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand the school meals program",
+    "category": "education-childcare",
+    "description": "Expand the school meals program to help families save on groceries and support children's health.",
+    "original_quote": "Expand the school meals program to save families money on groceries and put our kids’ health first",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Support people living with disabilities",
+    "category": "community-services",
+    "description": "Support people with disabilities by raising Community Living BC home share rates, letting them keep the full Canada Disability Benefit, and adjusting the spousal rule to lift more people out of poverty.",
+    "original_quote": "Support people living with disabilities by: Increasing the Community Living BC home share rates... Ensuring that people living with disabilities keep all of the new Canada Disability Benefit; and Adjusting the spousal rule to help lift more people out of poverty.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Making BC a clean energy superpower",
+    "category": "environment-climate",
+    "description": "Position British Columbia as a leader in clean energy.",
+    "original_quote": "Making BC a clean energy superpower",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Double electricity generation by 2050",
+    "metric_source": "CleanBC / BC Hydro"
+  },
+  {
+    "title": "Bringing the certainty businesses are looking for",
+    "category": "economy-jobs",
+    "description": "Provide businesses with the certainty they need.",
+    "original_quote": "Bringing the certainty businesses are looking for",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "A sustainable future for forest workers, companies and communities",
+    "category": "economy-jobs",
+    "description": "Secure a sustainable future for forest workers, companies and communities.",
+    "original_quote": "A sustainable future for forest workers, companies and communities",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Plant 300 million trees annually",
+    "metric_source": "BC Gov Forests"
+  },
+  {
+    "title": "Fast Track Priority Critical Mineral Projects",
+    "category": "economy-jobs",
+    "description": "Fast-track priority critical mineral projects and help mining companies and workers capitalize on growing global opportunities.",
+    "original_quote": "David Eby and the BC NDP team will fast track priority critical mineral projects and help mining companies and workers take advantage of new and growing global opportunities",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Build Out the Electricity Grid and Upgrade Northwest Highways for Mining",
+    "category": "transit-infrastructure",
+    "description": "Expand the province's electricity grid and help mines connect to clean power. Upgrade key highways in northwest BC to attract investment in new critical mineral mines.",
+    "original_quote": "Building out the electricity grid across the province and supporting mines to power up with clean energy... Upgrading key highway infrastructure in BC's northwest needed to unlock investments in new critical mineral mines",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Ensure Resource Development Benefits Communities and First Nations",
+    "category": "economy-jobs",
+    "description": "Make sure resource development brings lasting benefits to northwest communities through the Resource Benefits Alliance, and to First Nations through continued revenue-sharing and new equity ownership opportunities.",
+    "original_quote": "Ensuring that resource development provides lasting benefits to communities in the Northwest through the Resource Benefits Alliance and to First Nations through continued revenue-sharing and new equity ownership opportunities.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Require Industry to Pay for Mine Cleanup",
+    "category": "environment-climate",
+    "description": "Make industry, rather than taxpayers, cover the costs of cleaning up mines.",
+    "original_quote": "Requiring that industry – not taxpayers – pay for the costs of clean up.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver Food Security Through a Stronger Agricultural Industry",
+    "category": "economy-jobs",
+    "description": "Strengthen BC's agricultural industry in order to deliver food security for the province.",
+    "original_quote": "DELIVER FOOD SECURITY FOR BC THROUGH A STRONGER AGRICULTURAL INDUSTRY",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Secure Clean Water for BC Communities",
+    "category": "environment-climate",
+    "description": "Ensure communities have secure clean water supplies for the future by giving local communities, farmers and businesses, working with First Nations, control over land use and watershed planning.",
+    "original_quote": "Making sure BC communities have secure sources of clean water for the future by putting land use and watershed planning in the hands of local communities, farmers and businesses, in partnership with First Nations",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Help Protect Small Business Owners and Reduce Their Costs",
+    "category": "economy-jobs",
+    "description": "Protect small business owners in disputes with landlords and cut their costs. Reduce administrative burden by changing PST filing from monthly to quarterly.",
+    "original_quote": "Help protect small business owners and reduce their costs when disputes with landlords arise... Reduce administrative burdens on small businesses by changing PST filing to quarterly from monthly.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Cut Red Tape for Restaurants, Wineries, Breweries and Distilleries",
+    "category": "economy-jobs",
+    "description": "Reduce red tape for restaurants, wineries, breweries and distilleries by modernizing liquor laws and licensing, including moving to risk-based licensing.",
+    "original_quote": "Cut red tape for BC restaurants, wineries, breweries and distilleries by modernizing liquor laws and licensing, including a move to risk-based licensing",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Invest in Tourism, Arts and Culture",
+    "category": "recreation-culture",
+    "description": "Keep investing in the tourism, arts and culture activities that residents and visitors value most, to strengthen communities.",
+    "original_quote": "Continue to build the heart of communities by investing in the tourism, arts and culture activities people here — and visiting here — love most",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Double Apprenticeship Training",
+    "category": "education-childcare",
+    "description": "Double all apprenticeship training to prepare more young people for future jobs.",
+    "original_quote": "Prepare more young people for the jobs of the future – and the future starts now – by doubling all apprenticeship training",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Double apprenticeship training",
+    "metric_source": "BC Gov"
+  },
+  {
+    "title": "Train, Hire and Keep More Health Professionals",
+    "category": "healthcare",
+    "description": "Train, hire and retain more doctors, nurses and other health professionals, backed by a practice-in-BC guarantee.",
+    "original_quote": "Train, hire and keep more doctors, nurses and other health professionals with a practice-in-BC guarantee.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Speed Up Licensing of Out-of-Province Health Care Providers",
+    "category": "healthcare",
+    "description": "Get out-of-province health care providers working sooner by requiring BC's health regulatory colleges to issue provisional licences immediately to Canadian-trained providers and within six weeks for those from approved jurisdictions.",
+    "original_quote": "Get out-of-province health care providers delivering care sooner by requiring BC's health regulatory colleges to provide provisional licences immediately to Canadian-trained providers and within six weeks for providers from approved jurisdictions",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Address Regional Shortages of Health Care Professionals",
+    "category": "healthcare",
+    "description": "Address regional shortages of critical health care professionals, such as laboratory, imaging and cardiology technologists, psychologists and pharmacists, through targeted tuition assistance.",
+    "original_quote": "Address regional shortages of critical health care professionals – like labratory, imaging and cardiology technologists, psychologists and pharmacists — through targeted tuition assistance.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Clean Energy Labour Market Strategy",
+    "category": "economy-jobs",
+    "description": "Create a clean energy labour market strategy to anticipate and meet the job demands of BC's newest and fastest-growing sector.",
+    "original_quote": "Anticipate and meet the job demands for BC's newest and fastest-growing sector with a clean energy labour market strategy",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Strengthen Protections for BC Workers",
+    "category": "economy-jobs",
+    "description": "Strengthen protections for BC workers, including keeping minimum wage increases in line with inflation.",
+    "original_quote": "David Eby and the BC NDP will strengthen protections for BC workers by: Protecting BC's commitment to keep minimum wage increases in line with inflation.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Minimum wage highest in Canada, indexed to inflation",
+    "metric_source": "StatsCan"
+  },
+  {
+    "title": "Remove BC's consumer carbon tax if Ottawa lifts national requirement",
+    "category": "affordability",
+    "description": "Remove BC's consumer carbon tax if Ottawa drops its national requirement, while ensuring big polluters still pay their fair share.",
+    "original_quote": "if Ottawa removes its national requirement for a consumer carbon tax, we will remove BC's carbon tax on people while making sure that big polluters pay their fair share.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Consumer carbon tax rate to $0",
+    "metric_source": "BC Gov News"
+  },
+  {
+    "title": "Use government buying power to make clean energy technology more affordable",
+    "category": "environment-climate",
+    "description": "Use the government's size and purchasing power to lower the cost of energy-efficient, cost-saving technology so more people can afford to take part in climate solutions.",
+    "original_quote": "we'll use government's size and buying power to help drive down costs on energy efficient, cost-saving technology, so it becomes more affordable for people to be part of BC's climate solutions.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand BC Hydro solar and battery rebates",
+    "category": "environment-climate",
+    "description": "Expand BC Hydro rebates on solar panels and home solar batteries so more people across the province can generate and store their own energy.",
+    "original_quote": "Our BC Hydro rebates on solar panels and home solar batteries will help you create and store your own energy... we will work to expand it so more people can access it across the province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Bulk purchase heat pumps to get better deals on energy retrofits",
+    "category": "environment-climate",
+    "description": "Bulk purchase heat pumps, following the European Union model, and pass the savings on to residents for energy retrofits.",
+    "original_quote": "We'll take the approach that is working well in the European Union by bulk purchasing heat pumps and passing the savings on to you.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Double public EV charging stations by 2030",
+    "category": "transit-infrastructure",
+    "description": "Prioritize new EV charging stations at community and recreation centres, municipal parking, highway rest stops and park-and-ride locations, aiming to double public chargers provincewide by 2030.",
+    "original_quote": "We will prioritize building new EV charging stations at community and recreation centres, municipal parking, highway rest stops, and park-and-ride stations, with a goal of doubling the number of public chargers across the province by 2030",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Double public EV chargers by 2030",
+    "metric_source": "BC Hydro / NRCan"
+  },
+  {
+    "title": "Move BC's school bus fleet to electric",
+    "category": "environment-climate",
+    "description": "Switch BC's school bus fleet to electric to protect children's health, lower transportation costs and cut provincial carbon emissions.",
+    "original_quote": "By moving BC's school bus fleet to electric, we can help protect our kids' health, lower transportation costs, and reduce our province's carbon emissions.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Cap emissions from the oil and gas sector",
+    "category": "environment-climate",
+    "description": "The party promised to limit carbon pollution from the oil and gas industry through an emissions cap, aiming for a 75% reduction in that sector by 2030.",
+    "original_quote": "Continuing to reduce carbon pollution through a cap on harmful emissions from the oil and gas sector... achieving a 75% reduction by the industry by 2030.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "75% methane reduction by 2030",
+    "metric_source": "CleanBC GHG inventory"
+  },
+  {
+    "title": "Protect 30% of BC's lands and waters by 2030",
+    "category": "environment-climate",
+    "description": "The party committed to working toward protecting 30% of provincial lands by 2030, partnering with First Nations, the federal government and local communities to safeguard at-risk ecosystems.",
+    "original_quote": "Moving BC closer to its goal of protecting 30% of provincial lands by 2030 by working with First Nations, Ottawa and local communities on a shared, ambitious commitment to defend and preserve critical, at-risk ecosystems.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Protect 30% of lands/waters by 2030 (20% as of 2026)",
+    "metric_source": "BC Gov (30×30)"
+  },
+  {
+    "title": "Made-in-BC biodiversity strategy",
+    "category": "environment-climate",
+    "description": "The party promised a BC-specific strategy to protect biodiversity and ecological integrity, with science-based targets for preserving water and natural systems.",
+    "original_quote": "Driving a made-in-BC strategy to protect BC's biodiversity and ecological integrity... will objectively set and deliver on science-based targets to protect water and natural systems that support all of us.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Complete Old Growth Strategic Review recommendations",
+    "category": "environment-climate",
+    "description": "The party pledged to protect more old growth forests by fulfilling all 14 recommendations of the Old Growth Strategic Review, working alongside First Nations.",
+    "original_quote": "Protecting more old growth in partnership with First Nations by completing the provincial commitment set out in the Old Growth Strategic Review's 14 recommendations.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand the Youth Climate Corps",
+    "category": "environment-climate",
+    "description": "The party promised to grow the Youth Climate Corps provincewide, offering training and paid work to young people aged 17-30 who want to work on climate action in their communities.",
+    "original_quote": "We'll expand the Youth Climate Corps across BC, providing training and paid work for young people between age 17-30 who want to start their careers by making a difference on climate action in their communities",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Phase out glyphosate use in BC forests",
+    "category": "environment-climate",
+    "description": "The party committed to phasing out the herbicide glyphosate in BC forests to protect communities and local watersheds.",
+    "original_quote": "Protecting communities and local watersheds by phasing out the use of the herbicide glyphosate (commonly, Round-Up) in BC forests.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand salmon restoration investment",
+    "category": "environment-climate",
+    "description": "The party promised to increase funding for salmon restoration, supporting more projects that restore estuaries, inter-tidal zones and critical spawning habitats.",
+    "original_quote": "Expanding our investment in salmon restoration to more projects that are restoring estuaries, inter-tidal zones, and critical salmon spawning habitats.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Ramp up active forest management to protect communities from wildfire",
+    "category": "environment-climate",
+    "description": "The party pledged to expand active forest management to help protect homes, communities and watersheds from wildfire.",
+    "original_quote": "Helping protect homes, communities and local watersheds by ramping up active forest management.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Advance Sumas Prairie flood prevention",
+    "category": "environment-climate",
+    "description": "The party promised to move forward on flood prevention in the Sumas Prairie by combining flood mitigation infrastructure with the Highway 1 expansion.",
+    "original_quote": "Advancing work on flood prevention in the Sumas Prairie through integrating flood mitigation infrastructure with our Highway 1 expansion.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Continue the Declaration Act Action Plan",
+    "category": "governance-accountability",
+    "description": "The party committed to continuing joint work on the Declaration Act Action Plan to advance reconciliation in tangible, measurable ways across the province.",
+    "original_quote": "Continue the shared work of the Declaration Act Action Plan. Together, we will work to advance reconciliation in tangible and measurable ways for all communities across the province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Partner for sustainable, innovative forestry",
+    "category": "economy-jobs",
+    "description": "The party promised partnerships for healthy, sustainable forests that drive innovation and good jobs, protect old growth and ecosystems, and expand community forests for forest workers.",
+    "original_quote": "Ensure partnerships for healthy, productive and sustainable forests to drive forestry innovation and good-paying jobs, protect old growth and ecosystems, and expand working community forests to build a strong future for all forest workers.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver regional land-use clarity with First Nations and communities",
+    "category": "governance-accountability",
+    "description": "The party pledged to meet the 30% land and water protection goal by 2030 while providing land-use clarity across BC, focusing on long-term regional land-use planning with First Nations and communities.",
+    "original_quote": "Meet our shared commitment to protecting 30% of BC's land and water by 2030, as part of our overall goal to deliver land-use clarity in all parts of the province, focussing on long-term land use planning at the regional level",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Build more on- and off-reserve Indigenous housing",
+    "category": "housing",
+    "description": "The party promised to build more housing both on and off reserve, and to partner with First Nations and Métis on BC Builds projects to deliver more homes provincewide.",
+    "original_quote": "Build more on- and off-reserve housing, and partner with First Nations and Metis on BC Builds projects to deliver more housing for everyone in communities around the province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Advance Indigenous education and language revitalization",
+    "category": "education-childcare",
+    "description": "The party committed to expanding Indigenous education and training opportunities, including preserving and revitalizing First Nations languages and cultural heritage.",
+    "original_quote": "Advance Indigenous education and training opportunities, including the preservation and revitalization of First Nations languages and cultural heritage.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand support for urban Indigenous people through Friendship Centres",
+    "category": "community-services",
+    "description": "The party promised to increase support for urban Indigenous people through the work of BC's 25 Aboriginal Friendship Centres.",
+    "original_quote": "Expand support for urban Indigenous people through the work being done by the 25 Aboriginal Friendship Centres across BC.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Protecting you from the return of costly MSP premiums",
+    "category": "healthcare",
+    "description": "The party noted it eliminated MSP premiums in 2020 and promised they will never be reinstated under David Eby.",
+    "original_quote": "In 2020, the BC NDP eliminated those premiums for British Columbians. And under David Eby, they will never come back.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "MSP premiums remain eliminated",
+    "metric_source": "BC Gov"
+  },
+  {
+    "title": "Making sure everyone who wants a regular family doctor or nurse practitioner gets one",
+    "category": "healthcare",
+    "description": "The party promised that everyone who wants a regular family doctor or nurse practitioner will be able to get one.",
+    "original_quote": "MAKING SURE everyone who wants a regular family doctor or nurse practitioner gets one",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Match everyone on the Health Connect Registry to a provider by end of 2025",
+    "metric_source": "BC Health Connect Registry"
+  },
+  {
+    "title": "More doctors, nurse practitioners and nurses",
+    "category": "healthcare",
+    "description": "The party pledged to hire more family doctors, nurse practitioners, nurses and other health professionals than ever before.",
+    "original_quote": "We will hire more family doctors, nurse practitioners, nurses and other health professionals than ever before",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "45,000 additional healthcare workers over 5 years",
+    "metric_source": "BC Gov health workforce data"
+  },
+  {
+    "title": "Faster care with more choices",
+    "category": "healthcare",
+    "description": "The party promised to protect and improve health care and shorten wait times for the care people need.",
+    "original_quote": "David Eby and the BC NDP will protect, improve, and shorten your wait time for the health care you need",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Building or expanding hospitals across BC",
+    "category": "healthcare",
+    "description": "The party committed to building new hospitals and upgrading or expanding existing ones, totaling 29 new and expanded hospitals.",
+    "original_quote": "That’s why we’re building new hospitals, and upgrading or expanding others — in all, 29 new and expanding hospitals",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "29 new/expanded hospitals",
+    "metric_source": "BC Gov"
+  },
+  {
+    "title": "Better and faster cancer care through our 10-year plan",
+    "category": "healthcare",
+    "description": "A long-term commitment to cancer prevention, detection and treatment, delivered through a 10-year cancer care plan.",
+    "original_quote": "we made a long-term commitment to prevention, detection and treatment. That’s why we launched a 10-year cancer care plan.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "End deadly cervical cancer within a decade",
+    "category": "healthcare",
+    "description": "Aim to eliminate deadly cervical cancer within ten years by providing self-screening kits for HPV and the cancer-preventing HPV vaccine.",
+    "original_quote": "We’re putting BC on track to end deadly cervical cancer within a decade by offering self-screening kits to test for the human papillomavirus (HPV) and the cancer-preventing HPV vaccine.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Eliminate cervical cancer within a decade",
+    "metric_source": "BC Cancer"
+  },
+  {
+    "title": "Increase job-protected leave for major medical diagnoses",
+    "category": "healthcare",
+    "description": "Raise job-protected leave to 27 weeks, up from the current eight days, for people diagnosed with a major medical condition such as cancer.",
+    "original_quote": "Provide better peace of mind for people with a major medical condition diagnosis like cancer by increasing job-protected leave to 27 weeks from the current eight days.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver faster access to cancer treatment",
+    "category": "healthcare",
+    "description": "Speed up access to cancer treatment by continuing to extend operating hours for radiation and systemic therapy at regional cancer centres.",
+    "original_quote": "Deliver faster access to cancer treatment by: Continuing to extend hours of operation for radiation and systemic therapy at our regional cancer centres.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Improve cancer care through partnerships",
+    "category": "healthcare",
+    "description": "Improve cancer care for everyone by working through partnerships.",
+    "original_quote": "Improve care for all through partnerships.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Make cancer care work better for you",
+    "category": "healthcare",
+    "description": "Improve cancer care by hiring more doctors and clinicians, expanding the virtual oncology nursing line, and better managing the critical data used to deliver care.",
+    "original_quote": "Make cancer care work better for you by hiring more doctors and clinicians, expanding the virtual oncology nursing line, and improving the flow and management of critical data that helps deliver better care.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Streamline health care administration",
+    "category": "healthcare",
+    "description": "Conduct a full review of Health Authorities to cut costs and streamline overhead and administration, redirecting the savings to front-line services.",
+    "original_quote": "We will complete a full review of Health Authorities with the goal of driving down costs and streamlining overhead and administration, putting those savings to work delivering more front-line services to you.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Let doctors treat patients",
+    "category": "healthcare",
+    "description": "Allow doctors to focus on treating patients while physician assistants handle charting and manage patient bed flow.",
+    "original_quote": "We will let doctors treat patients, while physician assistants chart and manage patient bed flow.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver unified access to provincial health care resources",
+    "category": "healthcare",
+    "description": "Provide unified access to the province's health care resources.",
+    "original_quote": "We will deliver unified access to provincial health care resources.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Ban doctor's notes for short absences",
+    "category": "healthcare",
+    "description": "Prohibit employers and other service providers from requiring a doctor's note for short absences due to illness.",
+    "original_quote": "We will ban employers and other service providers from requiring a “doctor’s note” for short absences due to illness.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Modernize and expand dignified disposition options",
+    "category": "healthcare",
+    "description": "Respectfully honour the lives, families and cultures of deceased people by modernizing and expanding dignified disposition options.",
+    "original_quote": "We will respectfully honour the lives, families and cultures of people who have died by modernizing and expanding dignified disposition options.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Move health care to digital delivery",
+    "category": "healthcare",
+    "description": "Shift health care to digital delivery by eliminating faxes and unnecessary paperwork and speeding up prescriptions, referrals and other services.",
+    "original_quote": "We will move to digital delivery. We will axe the fax, remove unnecessary paperwork, and speed up prescription, referral and other services.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Defend and expand access to reproductive health services",
+    "category": "healthcare",
+    "description": "Protect and expand access to reproductive health services, contrasting this with the BC Conservative Party's openness to restricting them.",
+    "original_quote": "Defending and expanding access to reproductive health services, while John Rustad’s BC Conservative Party has left the door open to restricting those services.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Create a comprehensive maternity care strategy",
+    "category": "healthcare",
+    "description": "Develop a comprehensive strategy to improve maternity care provincewide, with new ways to support OBGYNs, family doctors and midwives in delivering care.",
+    "original_quote": "Create a comprehensive strategy to improve maternity care across the province that prioritizes new ways of supporting OBGYNs, family doctors and midwives in delivering care to their patients.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Fast-track cancer diagnosis and treatment",
+    "category": "healthcare",
+    "description": "Speed up cancer diagnosis and treatment through new rapid access clinics for breast and ovarian cancer, with built-in support and access for people without a family doctor.",
+    "original_quote": "Fast-tracking cancer diagnosis and treatment through new rapid access cancer clinics for breast and ovarian cancer, with built in support and access for people without a family doctor.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Mental health counsellor in every public school",
+    "category": "education-childcare",
+    "description": "Ensure every public school has a mental health counsellor, giving students the help they need and freeing principals and teachers to focus on their trained work.",
+    "original_quote": "Providing BC students the help they need by making sure every public school has a mental health counsellor, freeing up principals and teachers to make sure they’re doing the work they’re trained to do.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Create a Community Mental Health Resilience Fund",
+    "category": "healthcare",
+    "description": "Expand mental health counselling across BC by supporting community-based mental health organizations through a new $50 million Community Mental Health Resilience Fund.",
+    "original_quote": "Expanding mental health counselling care across BC by fueling the vital work of community-based mental health organizations through a new $50 million Community Mental Health Resilience Fund.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand Foundry Centres for Youth",
+    "category": "healthcare",
+    "description": "Open Foundry Centres in ten more communities, quadrupling the number of centres since 2017.",
+    "original_quote": "We are moving forward with Foundry Centres in ten more communities — quadrupling the number since 2017.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "Foundry centres in 10 more communities",
+    "metric_source": "Foundry BC"
+  },
+  {
+    "title": "Single phone number for addiction treatment",
+    "category": "healthcare",
+    "description": "Give people ready for addiction treatment tailored, publicly funded care from detox to after-care, accessible through a single provincewide phone number.",
+    "original_quote": "Getting people with addictions the right care in the right place when they’re ready for treatment with individually tailored, publicly funded addiction treatment and support, from detox to after-care, accessible through a single phone number across the entire province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Strengthen drug prevention education in schools",
+    "category": "education-childcare",
+    "description": "Help break the cycle of addiction by strengthening drug prevention education in BC schools.",
+    "original_quote": "Helping prevent the cycle of addiction by strengthening drug prevention education in BC schools.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand access to high quality addiction treatment",
+    "category": "healthcare",
+    "description": "Increase access to quality addiction treatment by strengthening local recovery homes, backing First Nations treatment centres and Indigenous-led programs, and funding more at-home treatment services.",
+    "original_quote": "Creating more access to high quality addiction treatment by strengthening local recovery homes, supporting First Nations treatment centres and Indigenous-led programming, and funding more at-home addiction treatment services.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Residential treatment options for parents",
+    "category": "healthcare",
+    "description": "Establish residential treatment programs that directly support parents in addiction treatment, reducing barriers and helping families stay together through recovery.",
+    "original_quote": "Removing barriers to treatment and keep families together through the recovery process by establishing residential treatment options that provide direct supports to parents undergoing addiction treatment.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand specialized treatment beds",
+    "category": "healthcare",
+    "description": "Add specialized treatment beds for people with both mental health and substance use disorders by building a second Red Fish Healing Centre and additional satellite facilities.",
+    "original_quote": "Expanding specialized treatment beds for people from across the province with both mental health and substance use disorders by building a second Red FishHealing Centre and additional “satellite” facilities.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Open secure care facilities under the Mental Health Act",
+    "category": "healthcare",
+    "description": "Open secure facilities under the Mental Health Act to provide care for people who may pose a danger to themselves or others.",
+    "original_quote": "By opening up secure facilities to provide secure care under the Mental Health Act, we can deliver help to people who are potentially a danger to themselves or others.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Addictions Treatment Centre for construction workers",
+    "category": "healthcare",
+    "description": "Build BC's first addictions treatment centre dedicated to construction workers, who account for one in five drug deaths, to address addiction in the industry.",
+    "original_quote": "Tackling the addiction epidemic in BC’s construction industry by building BC’s first-ever Addictions Treatment Centre for construction workers who tragically make up one in five drug deaths.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand nasal naloxone availability",
+    "category": "healthcare",
+    "description": "Make nasal naloxone available at pharmacies throughout the province to protect people at risk, especially in smaller communities.",
+    "original_quote": "Helping protect people at risk, particularly in smaller communities, by expanding the availability of nasal naloxone to pharmacies across the province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Designated mental health units in correctional centres",
+    "category": "healthcare",
+    "description": "Set up designated mental health units in correctional centres to provide rapid treatment for people with mental health and addiction challenges who are held on remand or serving custody sentences, aiming to break the cycle of addiction and crime.",
+    "original_quote": "Breaking the chain of addictions leading to crime by setting up designated mental health units in correctional centres to provide rapid treatment for people with mental health and addiction challenges being held on remand or sentenced to custody by the courts.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Security & Affordability For BC Seniors",
+    "category": "community-services",
+    "description": "Continue working to ensure seniors can live with dignity, including by building more housing that seniors can afford.",
+    "original_quote": "David Eby and the BC NDP will continue to ensure a dignified life for seniors by: Building more housing seniors can afford.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "5,400 new long-term care beds; seniors supplement +$50/mo",
+    "metric_source": "BC Gov Budget"
+  },
+  {
+    "title": "More Nurses and Home Support for BC Seniors",
+    "category": "healthcare",
+    "description": "Commit $324 million over three years to expand programs that help seniors stay in their homes and communities rather than moving into care.",
+    "original_quote": "We're doing this by committing $324 million over three years to boost programs that help seniors thrive in their homes and communities, instead of moving into care.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf",
+    "metric": "$324 million over 3 years",
+    "metric_source": "BC Gov Budget"
+  },
+  {
+    "title": "Getting You Where You Want To Go, Faster & Cleaner",
+    "category": "transit-infrastructure",
+    "description": "Partner with communities to plan for growth and rising demand, and deliver transit options that make commutes faster and more efficient.",
+    "original_quote": "David Eby and the BC NDP team will partner with communities to anticipate growth and increased demands, and deliver transit options that make your commutes faster and more efficient. We will:",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Ramp up seizure of proceeds of organized crime",
+    "category": "public-safety",
+    "description": "Increase seizure of organized crime proceeds to cut off criminal profits, shut down gang houses, and take cars and properties used by criminals where the owner knew of the use.",
+    "original_quote": "Ramping up the seizure of proceeds of organized crime to deny profits to criminal networks and close down gang houses, take their cars, and seize properties used by criminals with the knowledge of the property’s owner.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Keep repeat violent and gang offenders off the streets",
+    "category": "public-safety",
+    "description": "Press Ottawa for stronger bail and sentencing conditions and easier access to dangerous offender designations so repeat violent and gang offenders stay behind bars.",
+    "original_quote": "Keeping repeat violent and gang offenders off the streets by pushing Ottawa for stronger bail and sentencing conditions, along with easier access to dangerous offender designations for violent people who need to stay behind bars.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Stop repeat offenders in their tracks",
+    "category": "public-safety",
+    "description": "Strengthen targeted policing, boost funding for immediate police investigations, add case management capacity for prosecutors, and expand rehabilitative referrals to stop repeat offenders.",
+    "original_quote": "Stopping repeat offenders in their tracks by strengthening targeted policing, increasing funding for immediate police investigations, adding more comprehensive case management capacity for prosecutors, and expanding support for rehabilitative referrals.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Make roads safer from reckless supercar drivers",
+    "category": "public-safety",
+    "description": "Introduce a new deterrent that ties speeding ticket costs to the value of cars worth over $150,000 to make roads safer from reckless supercar drivers.",
+    "original_quote": "Making our roads safer from reckless supercar drivers through a new deterrent that ties the cost of their speeding ticket directly to the value of cars valued over $150,000.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Crack down on bad drivers",
+    "category": "public-safety",
+    "description": "Crack down on bad drivers by adding red light cameras at busy community intersections and creating a dedicated highway patrol to lower policing costs, free up the RCMP for crime, and improve safety on BC's busiest highways.",
+    "original_quote": "Cracking down on bad drivers, including adding red light cameras for busy community intersections and using a dedicated highway patrol to reduce policing costs and let the RCMP tackle crime instead, improving safety on BC’s busiest highways.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Help women and families escape domestic abuse",
+    "category": "public-safety",
+    "description": "Expand transition housing and protect the jobs of women and families who flee domestic abuse so they can keep supporting their families.",
+    "original_quote": "Helping women and families permanently escape domestic abuse and violence by expanding the availability of transition housing, and making sure their jobs are protected if they have to run to safety so they can keep supporting their families.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Strengthen Gender-Based Violence Action Plan",
+    "category": "public-safety",
+    "description": "Strengthen implementation of the Safe and Supported gender-based violence action plan by working with service providers, Indigenous partners, and families on initiatives such as the Path Forward Community Fund to make BC safer and more inclusive.",
+    "original_quote": "Strengthening implementation of the Safe and Supported: BC’s Gender-Based Violence Action Plan by working with service providers, Indigenous partners and families on initiatives, like the Path Forward Community Fund, to make BC safer and more inclusive for women, girls and 2SLGBTQIA+ people.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Protect vulnerable groups with hate crime legislation",
+    "category": "public-safety",
+    "description": "Introduce new, tough hate crime legislation to protect vulnerable groups.",
+    "original_quote": "Protecting vulnerable groups with new, tough hate crime legislation.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Deliver health-focused crisis response to 911 calls",
+    "category": "public-safety",
+    "description": "Fast-track expansion of civilian-led, health-focused crisis response teams across the province so mental health crisis calls to 911 receive supportive, safe, quality care.",
+    "original_quote": "Delivering supportive, safe, quality care when a mental health crisis is reported to 911 by fast-tracking the expansion of civilian-led and health-focused crisis response teams across the province.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Support police to keep guns off our streets",
+    "category": "public-safety",
+    "description": "Support police in keeping guns off the streets and continue anti-gang programs such as the new Integrated Gang Homicide Team.",
+    "original_quote": "Supporting police to keep guns off our streets and continue anti-gang programs like the new Integrated Gang Homicide Team.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Help youth-at-risk make the right decision",
+    "category": "public-safety",
+    "description": "Provide community sports, recreation, and educational programs tailored to at-risk youth to help them make positive choices for their futures.",
+    "original_quote": "Helping youth-at-risk make the right decision for their future by providing community sports, recreational or educational programming targeted to their needs.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Increase funding for amateur sports",
+    "category": "recreation-culture",
+    "description": "Boost funding for amateur sports so they become more affordable, accessible, and inclusive, helping connect kids with their communities.",
+    "original_quote": "Connecting kids to their community by increasing funding for amateur sports so it’s more affordable, accessible and inclusive.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Create better camping experiences",
+    "category": "recreation-culture",
+    "description": "Improve family camping by adding more campsites in BC parks, including large group sites suited for family gatherings.",
+    "original_quote": "Creating better camping experiences for your family by adding more campsites in BC parks, including large group capacity sites for family gatherings.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Expand BC parks, recreation sites and trails",
+    "category": "recreation-culture",
+    "description": "Grow BC parks, recreation sites, and trails, especially near regional centres, backed by long-term funding.",
+    "original_quote": "Expanding BC parks, recreation sites and trails — particularly in areas close to regional centres — through a long-term funding commitment",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Create a cultural, sports and recreation fund",
+    "category": "recreation-culture",
+    "description": "Establish a fund supporting affordable family entertainment and community cultural gatherings and celebrations across the province.",
+    "original_quote": "Create a cultural, sports and recreation fund that will help deliver affordable family entertainment and cultural community gatherings and celebrations across the province at a time when families rely on these services more than ever.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Create standardized online municipal building permit system",
+    "category": "governance-accountability",
+    "description": "Build a province-wide standardized online municipal building permit system to make permitting consistent for builders and approval times across cities, while cutting administrative and technology costs for municipalities.",
+    "original_quote": "Create a standardized, province-wide online municipal building permit system to provide consistency in permitting for builders in every city in the province, and to ensure consistent permit approval times between communities, reducing administration and technology cost burdens on municipalities.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Unify provincial enforcement teams into a single agency",
+    "category": "governance-accountability",
+    "description": "Merge provincial enforcement teams for gambling, liquor, traffic, transit police, and tobacco into one agency using outcomes-based regulation to cut duplication, improve efficiency, reduce red tape, and target bad actors.",
+    "original_quote": "Unify our provincial enforcement teams for gambling, liquor, traffic, transit police, and tobacco into a single enforcement agency that uses outcomes-based regulation to reduce duplication, improve efficiency, reduce red tape, and focus on bad actors.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Leverage AI to ease administration costs",
+    "category": "governance-accountability",
+    "description": "Use emerging AI technology to reduce administrative costs and workloads in key programs that involve reviewing large volumes of non-sensitive data.",
+    "original_quote": "Leverage emerging AI technology to ease administration costs and burdens in key program areas that require the review of large amounts of non-sensitive data.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Keep public service ratios consistent with other provinces",
+    "category": "governance-accountability",
+    "description": "Maintain public service ratios in line with other provinces and best practices.",
+    "original_quote": "Ensure our public service ratios continue to be consistent with other provinces and best practices.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Keep debt-to-GDP among the lowest in Canada",
+    "category": "governance-accountability",
+    "description": "Ensure BC's debt-to-GDP ratio stays among the lowest in Canada.",
+    "original_quote": "Ensure our debt-to-GDP remains among the lowest in Canada.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Lobby Ottawa to reallocate immigration policy and funding",
+    "category": "governance-accountability",
+    "description": "Press the federal government to shift immigration policy and funding to the province, similar to Quebec's arrangement.",
+    "original_quote": "Lobby Ottawa to reallocate immigration policy and funding to the provincial government similar to the agreement in place in Quebec.",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  },
+  {
+    "title": "Manage public finances sustainably while putting people first",
+    "category": "governance-accountability",
+    "description": "Manage public finances sustainably on a path back to balanced budgets while prioritizing people.",
+    "original_quote": "we are on a path to return BC to balance... managing public finances sustainably while putting people first",
+    "source_url": "https://www.bcndp.ca/sites/default/files/bcndp_anactionplanforyou_final_final_final_final_web_0.pdf"
+  }
+]

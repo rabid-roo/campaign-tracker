@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# large source files (extracted text is committed; raw PDFs are not)
+data/raw/*.pdf
+
 # debug
 npm-debug.log*
 yarn-debug.log*

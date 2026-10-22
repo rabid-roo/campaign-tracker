@@ -1,0 +1,902 @@
+[
+  {
+    "party": "bc-ndp",
+    "promise": "Remove BC's consumer carbon tax if Ottawa lifts national requirement",
+    "status": "completed",
+    "summary": "Legislation tabled March 31, 2025 dropped the consumer carbon tax rate to $0, effective April 1, 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025FIN0014-000255",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-01"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Ban doctor's notes for short absences",
+    "status": "completed",
+    "summary": "Bill 11 amended the Employment Standards Act so employers cannot require a sick note for the first two short-term absences per year. In force November 12, 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025LBR0041-001106",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-11-12"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver a middle-class income tax cut",
+    "status": "cancelled",
+    "summary": "Finance Minister Brenda Bailey confirmed on Feb 13, 2025 the $1,000-per-household middle-class tax cut (rebate in year one) would not be included in the March 4 budget, citing the U.S. tariff threat.",
+    "evidence_url": "https://dailyhive.com/vancouver/bc-government-to-cancel-previously-promised-1000-grocery-rebate",
+    "evidence_source": "Daily Hive",
+    "dated_on": "2025-02-13"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Building more homes for renters and buyers",
+    "status": "in_progress",
+    "summary": "BC Builds has broken ground on 4,000 units and over 99,000 homes are delivered or underway since 2017; B.C. asking rents are down 12.5% since Aug 2023.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HMA0028-000639",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-02"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Fast-tracking BC's factory home construction",
+    "status": "in_progress",
+    "summary": "The Digitally Accelerated Standardized Housing (DASH) program launched Nov 2025; first RFPs for prefab/modular demo projects (~90 homes in Prince George and Abbotsford) issued Feb 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HMA0014-000137",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-10"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Working with municipalities, private developers, non-profits and unions to drive home construction",
+    "status": "in_progress",
+    "summary": "Local Government Development Approvals Program ($9M to 56 local governments via UBCM) and BC Builds are funding partnerships to speed approvals and construction.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HMA0072-000788",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-06"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Open the door to more home ownership",
+    "status": "in_progress",
+    "summary": "Attainable Housing Initiative with the MST Nations will deliver ~2,600 first homes at 40% below market at the Heather Lands (Province contributing up to $672M).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024HOUS0044-001557",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-09-19"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Open up and protect homes for people",
+    "status": "in_progress",
+    "summary": "Rental Protection Fund has safeguarded nearly 1,600 affordable rental homes since 2023; short-term rental restrictions returned thousands of units to long-term market.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HMA0049-000542",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-06-05"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Provide safe, secure housing for everyone",
+    "status": "in_progress",
+    "summary": "Federal Build Canada Homes partnership commits $170M federal plus up to $200M provincial to advance 700+ supportive and transitional homes.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HMA0017-000165",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-18"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Strengthen protections for BC consumers",
+    "status": "in_progress",
+    "summary": "Business Practices and Consumer Protection Act amendments (Feb 2025) ban high-pressure door-to-door sales and improve cancellation/subscription rules; second phase on credit-fraud tools Oct 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025AG0013-000139",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-02-25"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Freeze ICBC premiums",
+    "status": "completed",
+    "summary": "ICBC basic rates are frozen with no increase through spring 2027 — seven consecutive years without a basic-rate increase.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025AG0063-001064",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-10-28"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Offer free transit for seniors in non-peak hours",
+    "status": "not_started",
+    "summary": "No provincial announcement found introducing free transit for seniors during non-peak hours.",
+    "evidence_url": null,
+    "evidence_source": null,
+    "dated_on": null
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Keep hydro rates low and support solar",
+    "status": "completed",
+    "summary": "BC Hydro launched first-ever rooftop solar and battery-storage rebates (up to $5,000 each for homes) in July 2024; B.C. holds the second-lowest residential electricity rates in North America.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024EMLI0036-001020",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Cut the cost of heating and cooling your home",
+    "status": "completed",
+    "summary": "Expanded CleanBC Better Homes Energy Savings Program (July 2024) offers up to $16,000 in heat-pump rebates (up to $24,000 in northern B.C.).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024EMLI0038-001043",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-07-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Build more on- and off-reserve Indigenous housing",
+    "status": "in_progress",
+    "summary": "BC Builds partnered with three First Nations to fast-track 235 on-reserve rental homes (construction started April 2025); ~6,800 Indigenous homes total since 2017.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HMA0025-000290",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-04"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Create standardized online municipal building permit system",
+    "status": "completed",
+    "summary": "The digital Building Permit Hub launched May 27, 2024, standardizing permit submissions with automated code checks across pilot jurisdictions.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024HOUS0028-000817",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-05-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Bringing the certainty businesses are looking for",
+    "status": "in_progress",
+    "summary": "B.C. launched an ease-of-doing-business review in June 2025 to streamline regulation and permitting.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025JEDI0022-000544",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-06-05"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "A sustainable future for forest workers, companies and communities",
+    "status": "in_progress",
+    "summary": "Province announced the 'Make More in B.C.' project ($2M to FPInnovations) and legislative changes for BC Timber Sales to protect forestry jobs.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FOR0020-000539",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-05-12"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Fast Track Priority Critical Mineral Projects",
+    "status": "in_progress",
+    "summary": "B.C. became the first Canadian jurisdiction with fixed mineral-exploration permitting timelines (April 2026); first permits issued ahead of schedule.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026MCM0031-001120",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-22"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Build Out the Electricity Grid and Upgrade Northwest Highways for Mining",
+    "status": "in_progress",
+    "summary": "Construction broke ground on the North Coast Transmission Line (Sept 2026) to power northwest mining/energy projects.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026PREM0034-001026",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Ensure Resource Development Benefits Communities and First Nations",
+    "status": "in_progress",
+    "summary": "B.C. launched a First Nations Equity Financing Program and signed shared-prosperity and consent agreements with the Tahltan Nation and Simpcw First Nation.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FIN0023-000703",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-16"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver Food Security Through a Stronger Agricultural Industry",
+    "status": "in_progress",
+    "summary": "B.C. continued Buy BC and farm-technology funding to strengthen food security, including labour-saving technology support for farmers in 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026AF0011-000175",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-24"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Help Protect Small Business Owners and Reduce Their Costs",
+    "status": "in_progress",
+    "summary": "Province paused the PST expansion (~$260M saved) and raised the employer health tax exemption threshold.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026PREM0034-001089",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-18"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Cut Red Tape for Restaurants, Wineries, Breweries and Distilleries",
+    "status": "not_started",
+    "summary": "No post-election action found to cut red tape specifically for restaurants, wineries, breweries and distilleries.",
+    "evidence_url": null,
+    "evidence_source": null,
+    "dated_on": null
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Strengthen Protections for BC Workers",
+    "status": "in_progress",
+    "summary": "B.C. introduced job-protected medical leave (Employment Standards Act amendment), new crane-safety licensing, and improved the ESB complaint process.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025LBR0039-001029",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-10-20"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Partner for sustainable, innovative forestry",
+    "status": "in_progress",
+    "summary": "B.C. announced the first candidate area for the Working Forest Landscape Model and continued value-added wood manufacturing and community-forest expansion.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FOR0034-001069",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-15"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Double Apprenticeship Training",
+    "status": "in_progress",
+    "summary": "A $241-million fund (Nov 2025) will double trades-training funding over three years and permanently expand apprenticeship seats.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025PSFS0052-001123",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-11-14"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Making BC a clean energy superpower",
+    "status": "in_progress",
+    "summary": "B.C. released its 'Powering Our Future' clean-energy strategy (June 2024) and advanced BC Hydro's first call for power in 15 years (nine wind projects, Dec 2024).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024EMLI0036-001020",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Use government buying power to make clean energy technology more affordable",
+    "status": "in_progress",
+    "summary": "New BC Hydro solar/battery rebates and expanded heat-pump rebates are lowering costs, though a distinct bulk-procurement program was not identified.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024EMLI0036-001020",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand BC Hydro solar and battery rebates",
+    "status": "in_progress",
+    "summary": "BC Hydro introduced first-ever rooftop solar and battery-storage rebates in mid-2024 (up to $10,000 for homes).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024EMLI0036-001020",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Bulk purchase heat pumps to get better deals on energy retrofits",
+    "status": "in_progress",
+    "summary": "Heat-pump rebates substantially expanded (~$50M April 2025 for up to 8,300 rebates, plus a condo/apartment program July 2025).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025ECS0029-000678",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-07-15"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Double public EV charging stations by 2030",
+    "status": "in_progress",
+    "summary": "Public charging ports grew to 8,900+ by April 2026 (87% up from 2023); a $700M plan (July 2026) will add 3,500 more ports by 2035.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026ECS0041-000855",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-21"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Move BC's school bus fleet to electric",
+    "status": "in_progress",
+    "summary": "First electric school buses entered service in Sooke School District (2021), but no provincewide electrification program found.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2021EDUC0031-000848",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2021-05-06"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Cap emissions from the oil and gas sector",
+    "status": "in_progress",
+    "summary": "B.C. committed (March 2024) to a backstop to the federal oil-and-gas emissions cap, with provincial regulations planned; no confirmation of final regulation found.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024ENV0017-000445",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-03-28"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand the Youth Climate Corps",
+    "status": "in_progress",
+    "summary": "Youth Climate Corps B.C. expanded to 11 communities; a further $1.4M announced June 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026ECS0033-000737",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-22"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Phase out glyphosate use in BC forests",
+    "status": "not_started",
+    "summary": "No provincial action or announcement to phase out glyphosate in B.C. forests was found.",
+    "evidence_url": null,
+    "evidence_source": null,
+    "dated_on": null
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand salmon restoration investment",
+    "status": "in_progress",
+    "summary": "New joint B.C. Fisheries Fund (Aug 2026) and continued watershed/estuary restoration work.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026WLRS0044-000968",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-08-20"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Made-in-BC biodiversity strategy",
+    "status": "in_progress",
+    "summary": "B.C. released a draft Biodiversity and Ecosystem Health Framework (Nov 2023); no finalization found through 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2023WLRS0061-001784",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2023-11-15"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Protect 30% of BC's lands and waters by 2030",
+    "status": "in_progress",
+    "summary": "Three new conservation-planning projects (~127,000 ha) announced July 2026 explicitly support the 30x30 target.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026WLRS0032-000798",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-06"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Complete Old Growth Strategic Review recommendations",
+    "status": "in_progress",
+    "summary": "Implementation continuing (Fairy Creek old-growth deferral extended to Sept 2026; Working Forest Landscape Model advancing).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025FOR0002-000059",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-01-29"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Ramp up active forest management to protect communities from wildfire",
+    "status": "in_progress",
+    "summary": "Budget 2026 includes new wildfire-prevention investments alongside ongoing FireSmart funding.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FOR0004-000228",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-03-05"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Advance Sumas Prairie flood prevention",
+    "status": "in_progress",
+    "summary": "$3.3M (Jan 2026) for the Sumas River Watershed Flood Mitigation Planning Initiative, building on ~$220M since 2021.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026EMCR0002-000081",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-01-28"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Secure Clean Water for BC Communities",
+    "status": "in_progress",
+    "summary": "Watershed security strategy being co-developed with First Nations and a $100M healthy-watershed investment announced; final strategy not yet released.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2023WLRS0008-000267",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2023-03-06"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Continue the Declaration Act Action Plan",
+    "status": "in_progress",
+    "summary": "Annual Declaration Act implementation progress report published June 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026IRR0023-000760",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-26"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver regional land-use clarity with First Nations and communities",
+    "status": "in_progress",
+    "summary": "Multiple regional land-use planning processes advancing with First Nations (Tahltan, Taku River Tlingit, Kaska Dena, Gitanyow, Nisga'a).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025MCM0025-000535",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-06-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Advance Indigenous education and language revitalization",
+    "status": "in_progress",
+    "summary": "Supporting First Nations-led teacher-education programs with FNESC and IAHLA to increase First Nations K-12 teachers.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025PSFS0040-000871",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-09-15"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand support for urban Indigenous people through Friendship Centres",
+    "status": "in_progress",
+    "summary": "Pilot projects through Friendship Centres (Port Alberni, Kamloops, Prince George, Surrey, Nanaimo, Smithers) launched.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026SDPR0009-000321",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-03-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Support people living with disabilities",
+    "status": "in_progress",
+    "summary": "Continued disability supports including employment programs for blind/low-vision people, plus AccessibleBC standards work.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026SDPR0036-000956",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-08-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Train, Hire and Keep More Health Professionals",
+    "status": "in_progress",
+    "summary": "765+ new nursing/allied-health seats, 40 more UBC med-school seats, SFU medical school opened (48 students, Aug 2026), 160+ new residency positions by 2028.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0077-001076",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Speed Up Licensing of Out-of-Province Health Care Providers",
+    "status": "completed",
+    "summary": "New College of Physicians and Surgeons bylaws (July 6, 2026) allow internationally trained doctors from seven countries to apply directly for full licences; 1,200+ licensed in 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0065-000793",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-06"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Address Regional Shortages of Health Care Professionals",
+    "status": "in_progress",
+    "summary": "Internationally trained doctors/nurses being distributed across regions; shortages persist in rural/remote areas.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0077-001076",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Protecting you from the return of costly MSP premiums",
+    "status": "completed",
+    "summary": "MSP premiums eliminated Jan 1, 2020 and remain eliminated with no reintroduction.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2020FIN0001-000004",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2020-01-02"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Making sure everyone who wants a regular family doctor or nurse practitioner gets one",
+    "status": "in_progress",
+    "summary": "~4.47 million people (80%) have a primary care provider, but ~323,000 remain on the Health Connect Registry.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0034-001074",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-16"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "More doctors, nurse practitioners and nurses",
+    "status": "in_progress",
+    "summary": "Family doctors rose from 4,362 (2018) to 5,807 (2026); nurse practitioners tripled to 1,750+; 77,880 licensed nurses.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0077-001076",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Faster care with more choices",
+    "status": "in_progress",
+    "summary": "Pharmacists can prescribe for 21 minor ailments and contraceptives since June 2023; more urgent/primary care centres opening.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2023HLTH0074-000859",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2023-05-31"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Building or expanding hospitals across BC",
+    "status": "in_progress",
+    "summary": "Royal Columbian acute care tower (May 2026), Burnaby Hospital pavilion (March 2026), Surrey renal facility, and Royal Inland/Port Hardy upgrades.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026INF0030-000583",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-05-22"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Better and faster cancer care through our 10-year plan",
+    "status": "in_progress",
+    "summary": "10-Year Cancer Action Plan ($440M, launched 2023) roughly three years in; 92 new cancer physicians and four regional cancer centres in development.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024HLTH0090-001025",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "End deadly cervical cancer within a decade",
+    "status": "in_progress",
+    "summary": "First-in-Canada at-home HPV self-screening launched Jan 2024; free HPV vaccine program expanded July 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024HLTH0001-000015",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-01-09"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Increase job-protected leave for major medical diagnoses",
+    "status": "completed",
+    "summary": "Employment Standards Act amendment created up to 27 weeks of job-protected leave for serious illness/injury, in effect Nov 28, 2025.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025LBR0042-001180",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-11-28"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver faster access to cancer treatment",
+    "status": "in_progress",
+    "summary": "76.1% of patients receiving radiation within four weeks (up 11.1%); new regional cancer centres under construction.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024HLTH0090-001025",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-06-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Improve cancer care through partnerships",
+    "status": "in_progress",
+    "summary": "New BC Cancer centres being built with regional health authorities (Nanaimo construction Oct 2025; Kamloops underway).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025INF0053-001077",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-10-31"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Make cancer care work better for you",
+    "status": "in_progress",
+    "summary": "10-Year Cancer Action Plan rolling out through new regional cancer centres and expanded HPV vaccine program.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025INF0032-000713",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-07-24"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Streamline health care administration",
+    "status": "in_progress",
+    "summary": "Health-authority review consolidating admin/corporate services into a shared-services organization (spring 2026); ~$60M+ annual savings expected.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0103-001195",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-12-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Let doctors treat patients",
+    "status": "partially_complete",
+    "summary": "New sick-note rules (Nov 2025) reduce paperwork; physician-assistant/scribe use is not yet provincewide.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025LBR0041-001106",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-11-12"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver unified access to provincial health care resources",
+    "status": "in_progress",
+    "summary": "Consolidating corporate/administrative services into one provincewide shared-services organization.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0103-001195",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-12-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Modernize and expand dignified disposition options",
+    "status": "partially_complete",
+    "summary": "First dedicated ash-dispersal site on a waterway (Fraser River, July 2026) and municipal guidelines published.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026AG0053-000833",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-16"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Defend and expand access to reproductive health services",
+    "status": "in_progress",
+    "summary": "First publicly funded IVF program (July 2025); midwives' scope expanded to prescribe Mifegymiso and contraceptives (2026).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0043-000505",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-05-07"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Create a comprehensive maternity care strategy",
+    "status": "in_progress",
+    "summary": "New team-based Prince George Maternity Clinic (May 2026) and expanded midwifery scope.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0049-000591",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-05-25"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Fast-track cancer diagnosis and treatment",
+    "status": "in_progress",
+    "summary": "~93% of patients starting radiation within four weeks (Feb 2025), exceeding the 90% benchmark; BC Cancer ended its U.S. treatment program.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0027-000304",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-07"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand Foundry Centres for Youth",
+    "status": "in_progress",
+    "summary": "Foundry Surrey Central opened Nov 2025; new Foundry centre in Terrace (May 2026).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0098-001105",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-11-12"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Single phone number for addiction treatment",
+    "status": "partially_complete",
+    "summary": "Access Central (single-point-of-entry addictions line) is live in Fraser, Interior, Island and Vancouver Coastal regions; Northern Health still to come.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0002-000028",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-01-14"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand access to high quality addiction treatment",
+    "status": "in_progress",
+    "summary": "New withdrawal-management and First Nations-led treatment (Terrace, Haida Gwaii, Adams Lake); 3,700+ publicly funded addiction beds.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0013-000112",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-04"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand specialized treatment beds",
+    "status": "in_progress",
+    "summary": "New 60-bed facility in Surrey underway; new complex-care beds opened at Alouette Homes (2025).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0034-001028",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-09-04"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Open secure care facilities under the Mental Health Act",
+    "status": "in_progress",
+    "summary": "Mental Health Act amendments (Nov 2025); 132 involuntary-care beds in Surrey and Prince George; first beds opened at Alouette Homes (spring 2025).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0029-000808",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-07-10"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand nasal naloxone availability",
+    "status": "completed",
+    "summary": "$50M investment expands nasal naloxone to ~half of 400,000+ kits, from 150 to all 2,400 take-home sites (April 2026).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0015-000170",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-19"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Designated mental health units in correctional centres",
+    "status": "partially_complete",
+    "summary": "Ten involuntary-care beds in a designated mental-health unit at Surrey Pretrial Services Centre.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0035-000373",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-24"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Security & Affordability For BC Seniors",
+    "status": "in_progress",
+    "summary": "SAFER and Rental Assistance Program enhanced (April 2025) to help low-income seniors afford rent.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HMA0022-000287",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "More Nurses and Home Support for BC Seniors",
+    "status": "in_progress",
+    "summary": "Expanded home-care supports (five-year Better at Home agreement) and streamlined credential recognition for U.S. nurses.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0037-000378",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-25"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Strengthen drug prevention education in schools",
+    "status": "in_progress",
+    "summary": "PreVenture drug-prevention program expanded to 80+ schools in 20+ districts ($2M annual funding).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025HLTH0082-000855",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-09-11"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver affordable before- and after-school care",
+    "status": "in_progress",
+    "summary": "Bill 19 (School Amendment Act, Oct 2025) lets school districts provide before/after-school child care and opt into fee reduction.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025ECC0041-000970",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-10-07"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Build new child care spaces",
+    "status": "in_progress",
+    "summary": "ChildCareBC funded 41,500+ new licensed spaces (26,200+ open), with school-based spaces opening through 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026ECC0023-001005",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-08-31"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand the school meals program",
+    "status": "in_progress",
+    "summary": "Feeding Futures school food program continues delivering meals; no new post-election expansion announcement found.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2023ECC0020-000424",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2023-04-04"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Getting You Where You Want To Go, Faster & Cleaner",
+    "status": "in_progress",
+    "summary": "Expanded Metro Vancouver bus service (April 2025), new transit hours in Kelowna/Kamloops/Victoria (Jan 2026), Surrey Langley SkyTrain construction.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025TT0035-000317",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-04-10"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Increase funding for amateur sports",
+    "status": "in_progress",
+    "summary": "Continued Pathways to Sport funding ($400K/yr KidSport BC, $1.4M/yr Indigenous sport, $51M over 5 years for sport organizations).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026TACS0028-000641",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Create better camping experiences",
+    "status": "in_progress",
+    "summary": "Campground improvements underway/completed (Rolley Lake added sites, Tribune Bay redesign, Paul Lake accessibility).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026ENV0027-000617",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-05-28"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Expand BC parks, recreation sites and trails",
+    "status": "in_progress",
+    "summary": "Legislation (Feb 2025) expands three parks; 2026 Look West Outdoor Recreation Strategy and trail funding.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025ENV0002-000114",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-02-19"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Ramp up seizure of proceeds of organized crime",
+    "status": "in_progress",
+    "summary": "Civil Forfeiture Act amendments (Feb 2026), expanded Civil Forfeiture Office, and claims against three Hells Angels clubhouses.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026PSSG0027-000350",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-04-01"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Keep repeat violent and gang offenders off the streets",
+    "status": "in_progress",
+    "summary": "Repeat Violent Offending Intervention Initiative expanded; federal bail/sentencing reforms received royal assent June 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025PSSG0071-001267",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-12-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Stop repeat offenders in their tracks",
+    "status": "in_progress",
+    "summary": "Budget 2026 added $139M to reduce repeat offending; welcomed federal bail/sentencing reforms (June 2026).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026AG0040-000711",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-16"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Make roads safer from reckless supercar drivers",
+    "status": "partially_complete",
+    "summary": "Dangerous-driving impound fees substantially increased (Aug 2024); no separate supercar-specific measure confirmed.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024PSSG0074-001408",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-08-29"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Crack down on bad drivers",
+    "status": "completed",
+    "summary": "Dangerous-driving impound fees and penalties substantially increased (Aug 2024).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2024PSSG0074-001408",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2024-08-29"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Help women and families escape domestic abuse",
+    "status": "in_progress",
+    "summary": "229 transition/second-stage housing units (Mar 2025), 150+ more homes (Feb 2026), and further supports (Sept 2026).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HMA0008-000098",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-03"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Strengthen Gender-Based Violence Action Plan",
+    "status": "in_progress",
+    "summary": "$18M federal (Sept 2025) and $4.6M (April 2026) to deliver B.C.'s Gender-Based Violence Action Plan.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025FIN0036-000886",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-09-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Protect vulnerable groups with hate crime legislation",
+    "status": "in_progress",
+    "summary": "Hate-crime offences are federal; B.C. welcomed proposed federal Criminal Code amendments (Sept 2025).",
+    "evidence_url": "https://news.gov.bc.ca/releases/2025AG0039-000910",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2025-09-19"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Deliver health-focused crisis response to 911 calls",
+    "status": "in_progress",
+    "summary": "Peer Assisted Care Teams expanded (Prince George, Comox Valley, Kamloops); further expansion announced June 2026.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026HLTH0063-000749",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-25"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Support police to keep guns off our streets",
+    "status": "in_progress",
+    "summary": "New Firearm Violence Prevention Act regulations (April 2026) and expanded Provincial Forensic Firearms Lab.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026PSSG0037-000460",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-04-27"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Unify provincial enforcement teams into a single agency",
+    "status": "completed",
+    "summary": "BC Compliance and Enforcement Agency (BC-CEA) established July 1, 2026, consolidating natural-resource enforcement.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026ENV0033-000744",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-06-23"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Keep public service ratios consistent with other provinces",
+    "status": "in_progress",
+    "summary": "Budget 2026 commits to reduce the public sector by 15,000 FTEs over the fiscal plan.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FIN0003-000158",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Keep debt-to-GDP among the lowest in Canada",
+    "status": "partially_complete",
+    "summary": "Net liabilities-to-GDP remains among the lowest, but taxpayer-supported debt-to-GDP projected to rise to 37.4% by 2028-29.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FIN0003-000158",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-17"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Manage public finances sustainably while putting people first",
+    "status": "in_progress",
+    "summary": "Budget 2025/2026 project declining deficits and $3.5B in expenditure-management savings while protecting core services.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026FIN0003-000158",
+    "evidence_source": "BC Gov News",
+    "dated_on": "2026-02-17"
+  }
+]

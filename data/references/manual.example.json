@@ -1,0 +1,18 @@
+[
+  {
+    "party": "bc-ndp",
+    "promise": "Remove BC's consumer carbon tax if Ottawa lifts national requirement",
+    "label": "BC Gov News — carbon tax eliminated",
+    "url": "https://news.gov.bc.ca/releases/2025FIN0014-000255",
+    "source_type": "news",
+    "note": "Official announcement of the $0 rate effective April 1, 2025"
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Protect 30% of BC's lands and waters by 2030",
+    "label": "BC Gov — 30x30 progress",
+    "url": "https://news.gov.bc.ca/releases/2026WLRS0032-000798",
+    "source_type": "gov",
+    "note": "Conservation planning projects (~127,000 ha) announced 2026"
+  }
+]

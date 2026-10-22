@@ -1,0 +1,905 @@
+[
+  {
+    "title": "Make our city safe again",
+    "category": "public-safety",
+    "description": "Improve public safety through a combined approach of enforcement, cleanup efforts, and support for the most vulnerable residents.",
+    "original_quote": "Make our city safe again through a comprehensive program of enforcement, cleaning, and support for the most vulnerable.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Ensure the city operates with a realistic budget",
+    "category": "governance-accountability",
+    "description": "Run the city on a realistic budget that prioritizes the core services residents rely on.",
+    "original_quote": "Ensure the city operates with a realistic budget, focused on the core services we all depend on.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Revive our neglected amenities and infrastructure",
+    "category": "transit-infrastructure",
+    "description": "Restore neglected public amenities and infrastructure, including sports fields and roads.",
+    "original_quote": "Revive our neglected amenities and infrastructure - from sports fields to roads.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Revitalize downtown and our business districts",
+    "category": "economy-jobs",
+    "description": "Renew and revitalize the downtown area and the city's business districts.",
+    "original_quote": "Revitalize downtown and our business districts.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Put you at the center of every decision",
+    "category": "governance-accountability",
+    "description": "Make residents the central focus of every decision the party makes.",
+    "original_quote": "Put you at the center of every decision.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Focus on parks and green space",
+    "category": "environment-climate",
+    "description": "Prioritize parks and green space.",
+    "original_quote": "Focus on parks and green space.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Tackle over-crowded schools",
+    "category": "education-childcare",
+    "description": "Address overcrowding in schools.",
+    "original_quote": "Tackle over-crowded schools.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Be practical and measured",
+    "category": "governance-accountability",
+    "description": "Take a practical, measured approach to governing.",
+    "original_quote": "Be practical and measured.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Greener New West",
+    "category": "environment-climate",
+    "description": "Protect the local environment and prepare the city for climate change impacts through practical actions that strengthen neighbourhoods and produce measurable results.",
+    "original_quote": "Our Greener New West platform will protect our local environment and prepare New Westminster for the impacts of climate change through practical action that strengthens neighbourhoods and delivers measurable results.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Celebrate New West",
+    "category": "recreation-culture",
+    "description": "Bring more colour, energy, and civic pride to public life throughout the city.",
+    "original_quote": "Celebrate New West — a plan to put more colour, energy and civic pride into public life across the city.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Commitment to Queensborough",
+    "category": "community-services",
+    "description": "An eight-point plan addressing the distinct needs of Queensborough, one of the city's most unique and fast-growing communities.",
+    "original_quote": "The New Westminster Progressives have released their Commitment to Queensborough, an eight-point plan focused on the distinct needs of one of New Westminster's most unique and fast-growing communities.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Commitment to Downtown",
+    "category": "economy-jobs",
+    "description": "A coordinated plan to revive the city's downtown core.",
+    "original_quote": "The New Westminster Progressives' Commitment to Downtown is a coordinated plan to bring the city's heart back to life.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Commitment to Seniors",
+    "category": "community-services",
+    "description": "Help more older adults stay independent, connected, and supported in the neighbourhoods they call home.",
+    "original_quote": "Age Well New West, a commitment to help more older adults remain independent, connected and supported in the neighbourhoods they call home.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Heritage Plan",
+    "category": "recreation-culture",
+    "description": "Protect the city's heritage while welcoming new housing, new neighbours, and continued growth.",
+    "original_quote": "Heritage Plan: Distinctly New West, a commitment to protect New Westminster's heritage while welcoming new housing, new neighbours and continued growth.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Stronger Together New West",
+    "category": "community-services",
+    "description": "A community-focused platform aimed at building a more caring, connected, and resilient city.",
+    "original_quote": "Stronger Together, a community-focused platform to help build a more caring, connected and resilient New Westminster.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "100-Day Plan",
+    "category": "governance-accountability",
+    "description": "Fifteen actions a council would begin right after election, focused on tax relief, safer streets, cleaner neighbourhoods, stronger core services, and practical fixes residents can see.",
+    "original_quote": "Ready to Govern: Our First 100 Days, a plan setting out 15 actions a NWP Council will begin immediately after being elected, focused on tax relief, safer streets, cleaner neighbourhoods, stronger core services and practical fixes residents can see.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Building and learning for the future",
+    "category": "education-childcare",
+    "description": "Advocate for the classroom space New Westminster students need.",
+    "original_quote": "We will fight for the classroom space New Westminster students need.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Student success & well-being",
+    "category": "education-childcare",
+    "description": "Make student success the central focus of every decision.",
+    "original_quote": "We will put student success at the centre of every decision.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Safe, healthy and inclusive schools",
+    "category": "education-childcare",
+    "description": "Work to make every school safe, welcoming, healthy, and ready for learning.",
+    "original_quote": "We will work to make every school safe, welcoming, healthy, and ready for learning.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Collaborative & transparent leadership",
+    "category": "education-childcare",
+    "description": "Put students first in all decisions, communicate openly and accessibly, spend responsibly, advocate for fair funding, and strengthen partnerships with families, caregivers, students, staff, Indigenous communities, the City, and community partners.",
+    "original_quote": "Put students first in every decision, communicate openly and accessibly, spend responsibly, advocate for fair funding, and strengthen partnerships with families, caregivers, students, staff, Indigenous communities, the City, and community partners.",
+    "source_url": "https://nwprogress.ca/nwp-platform/"
+  },
+  {
+    "title": "Eliminate the Electricity Surtax",
+    "category": "affordability",
+    "description": "Remove the 3.5% electricity surtax of about $2.1 million that is charged only to New Westminster residents and businesses through the city's electrical utility.",
+    "original_quote": "Eliminating the $2.1 million electricity surtax (3.5%) currently charged only to New Westminster residents ($1.1M) and businesses ($1M) through the New Westminster Electrical Utility.",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Create a Financial Accountability and Budget Oversight Committee",
+    "category": "governance-accountability",
+    "description": "Set up a new committee focused on financial accountability and budget oversight to improve transparency and public trust in how the City manages its finances.",
+    "original_quote": "Creating a new Financial Accountability and Budget Oversight Committee to strengthen transparency and improve public confidence in City finances",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Reduce External Consultant Spending",
+    "category": "governance-accountability",
+    "description": "Cut spending on outside consultants by at least 20% over the first two years, measured against the 2026 baseline budget.",
+    "original_quote": "Reducing external consultant spending by at least 20% within the first two years compared to the 2026 baseline budget",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Eliminate Patio Permit Fees and Expand Patio Seating",
+    "category": "economy-jobs",
+    "description": "Make patio permit fees permanently free and aim to grow citywide patio seating capacity by 25% during the coming term.",
+    "original_quote": "Permanently eliminating all patio permit fees and setting a goal of increasing patio seating capacity citywide by 25% over the next term of office",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Introduce a Lower-Cost Three-Year Business License",
+    "category": "economy-jobs",
+    "description": "Offer a cheaper business license option lasting three years, cutting paperwork and the need to renew annually.",
+    "original_quote": "Introducing a new lower-cost three-year business license option to reduce red tape and requirements for annual renewals",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Eliminate Business License Application and Address Change Fees",
+    "category": "economy-jobs",
+    "description": "Remove the fees businesses pay to apply for a license and to change their address on it.",
+    "original_quote": "Eliminating business license application fees and address change fees",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Pilot an Information Sharing Agreement with the Chamber of Commerce",
+    "category": "economy-jobs",
+    "description": "Test a new arrangement for sharing information with the New Westminster Chamber of Commerce to better connect and support local businesses.",
+    "original_quote": "Piloting a new information sharing agreement with the New Westminster Chamber of Commerce to strengthen local business connections and support services",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Cancel the 'Sue Big Oil' Initiative",
+    "category": "environment-climate",
+    "description": "End the expensive \"Sue Big Oil\" initiative and use the money instead for practical local environmental priorities.",
+    "original_quote": "Cancelling the costly \"Sue Big Oil\" initiative and redirecting those funds toward practical local environmental priorities instead",
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+  },
+  {
+    "title": "Place at least 12 new Community Enforcement and Safety Officers",
+    "category": "public-safety",
+    "description": "Add at least 12 Community Enforcement and Safety Officers who patrol on foot and by bicycle in Downtown, Uptown, Sapperton and Queensborough.",
+    "original_quote": "Place at least 12 new Community Enforcement and Safety Officers (CESO) on foot and bicycle patrols in the Downtown, Uptown, Sapperton and Queensborough.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Triple investment in I's On the Street program",
+    "category": "community-services",
+    "description": "Increase the City's funding for the I's On the Street program to three times its current level.",
+    "original_quote": "Triple the City's investment in the successful I's On the Street program",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Explore a Car 87-type mental health response program",
+    "category": "public-safety",
+    "description": "Work with the New Westminster Police Department and Fraser Health Authority to look into launching a Car 87-style program that better serves people living with mental illness.",
+    "original_quote": "Work with the New Westminster Police Department and Fraser Health Authority to explore the opportunity to introduce a Car 87-type program to better meet the needs of individuals who are living with a mental illness.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Launch the VIP (Vibrancy Invites People) initiative",
+    "category": "recreation-culture",
+    "description": "Start a VIP initiative to bring more buskers, public art, performances and cultural activities to key commercial streets and public spaces.",
+    "original_quote": "Launch the VIP (Vibrancy Invites People) initiative to bring more buskers, public art, performances and other cultural activities to key commercial streets and public spaces",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Enhance street cleaning and add 100 new waste and recycling bins",
+    "category": "community-services",
+    "description": "Improve regular street cleaning and install 100 additional waste and recycling bins in busy pedestrian areas.",
+    "original_quote": "Enhance regular street cleaning and add 100 new waste and recycling bins in busy pedestrian areas.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Keep SkyTrain stations clean and secure",
+    "category": "transit-infrastructure",
+    "description": "Press TransLink and other key stakeholders to keep the New Westminster and Columbia SkyTrain stations clean and safe.",
+    "original_quote": "Insist that TransLink and key stakeholders keep the New Westminster & Columbia SkyTrain stations clean and secure",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Establish a new TAG Team to reduce graffiti",
+    "category": "public-safety",
+    "description": "Create a TAG Team that requires hate-based and offensive graffiti on public property to be removed within 4 hours and all other graffiti within 72 hours, sharply cutting graffiti.",
+    "original_quote": "Establish a new TAG Team to dramatically reduce graffiti by requiring the removal of hate-based and offensive graffiti on public property within 4 hours and all other graffiti within 72 hours.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Increase lighting in key public spaces",
+    "category": "public-safety",
+    "description": "Add more lighting in key public spaces within high-density neighbourhoods to improve safety and visibility.",
+    "original_quote": "Increase lighting to improve safety and visibility in key public spaces within high density neighbourhoods.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Establish a Crime Reduction and Public Safety Task Force",
+    "category": "public-safety",
+    "description": "Create a new task force on crime reduction and public safety to coordinate action and deliver results.",
+    "original_quote": "Establish a new Crime Reduction and Public Safety Task Force to coordinate action and deliver results.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Mayor to seek appointment as Chair of the Police Board",
+    "category": "governance-accountability",
+    "description": "The Mayor will pursue appointment as Chair of the New Westminster Police Board.",
+    "original_quote": "The Mayor will seek appointment as Chair of the New Westminster Police Board.",
+    "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/"
+  },
+  {
+    "title": "Get New West to the front of the line for provincial and federal funding for new recreation infrastructure",
+    "category": "recreation-culture",
+    "description": "Position New Westminster to be first in line for provincial and federal money for new recreation infrastructure.",
+    "original_quote": "Get New West to the front of the line for provincial and federal funding for new recreation infrastructure.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Reinvent the waterfront as one of the most active, vibrant public spaces in Metro Vancouver",
+    "category": "recreation-culture",
+    "description": "Transform the waterfront into one of Metro Vancouver's most active and vibrant public spaces.",
+    "original_quote": "Reinvent the waterfront as one of the most active, vibrant public spaces in Metro Vancouver.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Ensure existing sports fields can be used year-round, while pursuing new fields",
+    "category": "recreation-culture",
+    "description": "Make current sports fields usable throughout the year and work toward adding new fields.",
+    "original_quote": "Ensure existing sports fields can be used year-round, while pursuing new fields.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Protect and expand park space as New Westminster grows",
+    "category": "environment-climate",
+    "description": "Preserve existing parks and add more park space to keep pace with the city's growth.",
+    "original_quote": "Protect and expand park space as New Westminster grows.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Keep recreation accessible and affordable",
+    "category": "affordability",
+    "description": "Ensure recreation programs and facilities remain within reach and affordable for residents.",
+    "original_quote": "Keep recreation accessible and affordable.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Create Active Streets neighbourhood festivals",
+    "category": "recreation-culture",
+    "description": "Establish neighbourhood festivals on active streets.",
+    "original_quote": "Create Active Streets neighbourhood festivals.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Create a new Amateur Sport and Recreation Council",
+    "category": "governance-accountability",
+    "description": "Form a new council on amateur sport and recreation made up of local sports organizations, seniors' recreation groups and accessibility advocates.",
+    "original_quote": "Create a new Amateur Sport and Recreation Council, drawn from the city's sports organizations, seniors' recreation groups and accessibility advocates.",
+    "source_url": "https://nwprogress.ca/active-new-west-plan-for-better-recreation-parks-and-sports-facilities/"
+  },
+  {
+    "title": "Fix New Westminster's worst traffic bottlenecks",
+    "category": "transit-infrastructure",
+    "description": "Address the city's most severe traffic bottlenecks with practical fixes rather than further studies.",
+    "original_quote": "Fix New Westminster's worst traffic bottlenecks. Residents don't want more studies – they want practical solutions.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Bring Political Leadership Back to Rail Issues",
+    "category": "transit-infrastructure",
+    "description": "Provide consistent political leadership and advocacy on rail issues, one of the city's biggest transportation challenges.",
+    "original_quote": "Bring Political Leadership Back to Rail Issues. Railways are one of New Westminster's biggest transportation challenges and require consistent political leadership and advocacy.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Advocate to reduce train whistles",
+    "category": "transit-infrastructure",
+    "description": "Push for fewer train whistles, responding to residents' long-standing calls for action.",
+    "original_quote": "Advocate to reduce train whistles. Residents have waited long enough for action.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Champion major transportation investments",
+    "category": "transit-infrastructure",
+    "description": "Advocate for major transportation investments so infrastructure keeps up with a growing population.",
+    "original_quote": "Champion major transportation investments. New Westminster must have transportation infrastructure that keeps pace with our growing population.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Deliver Common Sense Transportation Planning",
+    "category": "transit-infrastructure",
+    "description": "Make transportation decisions that bring neighbourhoods together rather than divide them.",
+    "original_quote": "Deliver Common Sense Transportation Planning. Transportation decisions should unite neighbourhoods – not divide them.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Take a balanced approach to cycling",
+    "category": "transit-infrastructure",
+    "description": "Support cycling as part of the transportation network while also meeting the needs of pedestrians, transit users, motorists and local businesses.",
+    "original_quote": "Take a balanced approach to cycling. Cycling is an important part of our transportation network – but so are the needs of pedestrians, transit users, motorists and local businesses.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Modernize Our transportation network",
+    "category": "transit-infrastructure",
+    "description": "Use technology to help keep the city moving.",
+    "original_quote": "Modernize Our transportation network. Technology should help keep New Westminster moving.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Improve construction coordination",
+    "category": "transit-infrastructure",
+    "description": "Coordinate construction work better to avoid unnecessary disruption.",
+    "original_quote": "Improve construction coordination. Construction is necessary – but unnecessary disruption is not.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Make Walking Safer and More Accessible",
+    "category": "transit-infrastructure",
+    "description": "Improve safety and accessibility for walking, since every trip begins and ends on foot.",
+    "original_quote": "Make Walking Safer and More Accessible. Every trip begins and ends on foot.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Protect Neighbourhood Parking",
+    "category": "transit-infrastructure",
+    "description": "Set parking policies that work for residents, businesses and visitors.",
+    "original_quote": "Protect Neighbourhood Parking. Parking policies should work for residents, businesses and visitors alike.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Prioritize Enforcement",
+    "category": "public-safety",
+    "description": "Enforce reasonable traffic rules to make streets safer.",
+    "original_quote": "Prioritize Enforcement. Streets are safer when reasonable traffic rules are enforced.",
+    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+  },
+  {
+    "title": "Build complete neighbourhoods",
+    "category": "housing",
+    "description": "Ensure growth brings the public amenities residents need, not just more housing.",
+    "original_quote": "Build complete neighbourhoods — not just more housing. Growth must come with the public amenities residents need.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Protect neighbourhood character while embracing thoughtful growth",
+    "category": "housing",
+    "description": "Allow thoughtful growth that strengthens the community without erasing what makes it special.",
+    "original_quote": "Protect neighbourhood character while embracing thoughtful growth. Growth should strengthen our community — not erase what makes it special.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Modernize City Hall",
+    "category": "governance-accountability",
+    "description": "Speed up approvals and improve customer service for residents and businesses.",
+    "original_quote": "Modernize City Hall. Residents and businesses deserve faster approvals and better customer service.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Deliver a Customer Service Guarantee",
+    "category": "governance-accountability",
+    "description": "Commit to city services that keep pace with today's economy.",
+    "original_quote": "Deliver a Customer Service Guarantee. City Hall should work at the speed of today's economy.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Revitalize Downtown",
+    "category": "economy-jobs",
+    "description": "Revitalize the downtown core, arguing that a stronger downtown benefits the whole city.",
+    "original_quote": "Revitalize Downtown. A stronger downtown benefits the entire city.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Support housing with compassion and common sense",
+    "category": "housing",
+    "description": "Address housing affordability, which the party calls one of the community's biggest challenges, through a compassionate and practical approach.",
+    "original_quote": "Support housing with compassion and common sense. Housing affordability remains one of our community's greatest challenges.",
+    "source_url": "https://nwprogress.ca/build-complete-communities/"
+  },
+  {
+    "title": "Protect our community from climate change",
+    "category": "environment-climate",
+    "description": "Take practical steps to make the community safer and more resilient, since climate change is already affecting New Westminster.",
+    "original_quote": "Protect our community from climate change. Climate change is already affecting New Westminster. Our priority is to take practical actions that will make our community safer and more resilient.",
+    "source_url": "https://nwprogress.ca/a-greener-new-west/"
+  },
+  {
+    "title": "Grow a greener New Westminster",
+    "category": "environment-climate",
+    "description": "Invest in trees, parks and green spaces, which the party describes as among the most effective local environmental investments.",
+    "original_quote": "Grow a greener New Westminster. Trees, parks and green spaces are among the most effective local environmental investments we can make.",
+    "source_url": "https://nwprogress.ca/a-greener-new-west/"
+  },
+  {
+    "title": "Lead by example",
+    "category": "environment-climate",
+    "description": "Have the City show environmental leadership through how it carries out its own operations.",
+    "original_quote": "Lead by example. The City should demonstrate environmental leadership through the way it does its own work.",
+    "source_url": "https://nwprogress.ca/a-greener-new-west/"
+  },
+  {
+    "title": "Invest wisely and protect taxpayers",
+    "category": "governance-accountability",
+    "description": "Pair environmental responsibility with fiscal responsibility in spending decisions.",
+    "original_quote": "Invest wisely and protect taxpayers. Environmental responsibility and fiscal responsibility should go hand in hand.",
+    "source_url": "https://nwprogress.ca/a-greener-new-west/"
+  },
+  {
+    "title": "Build healthier neighbourhoods",
+    "category": "community-services",
+    "description": "Focus environmental efforts at the neighbourhood level, where the party says caring for the environment begins.",
+    "original_quote": "Build healthier neighbourhoods. Looking after our environment begins in our own neighbourhoods.",
+    "source_url": "https://nwprogress.ca/a-greener-new-west/"
+  },
+  {
+    "title": "Rebrand 'Downtown New Westminster' to the new Columbia District",
+    "category": "recreation-culture",
+    "description": "Rename downtown as the Columbia District and work to make Columbia Street, including Front St, Carnarvon St and the waterfront, a top Metro Vancouver destination for arts, culture, dining and entertainment.",
+    "original_quote": "Rebrand 'Downtown New Westminster' to the new Columbia District. We'll aim to establish Columbia Street (including Front St, Carnarvon St and waterfront) as one of Metro Vancouver's premier destinations for arts, culture, dining and entertainment.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Activate our streets through the VIP program",
+    "category": "recreation-culture",
+    "description": "Use the VIP program to bring activity to the streets, which the party says draws people, supports businesses and improves public safety.",
+    "original_quote": "Activate our streets through the VIP program. A vibrant downtown attracts people, supports businesses and improves public safety.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Create more reasons to visit New Westminster",
+    "category": "recreation-culture",
+    "description": "Bring back community events residents have requested and add new attractions to draw visitors.",
+    "original_quote": "Create more reasons to visit New Westminster. We'll bring back the community events residents have been asking for while introducing exciting new attractions.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Celebrate our artists, heritage and culture",
+    "category": "recreation-culture",
+    "description": "Celebrate local artists and history, which the party says help define the community's identity.",
+    "original_quote": "Celebrate our artists, heritage and culture. Our artists and history help define who we are.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Become the events capital of the Fraser River",
+    "category": "recreation-culture",
+    "description": "Make the city's waterfront, which the party calls one of BC's most beautiful, into one of the most exciting event destinations.",
+    "original_quote": "Become the events capital of the Fraser River. We have one of the most beautiful waterfronts in British Columbia. Let's make it one of the most exciting.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Make our cultural facilities more accessible",
+    "category": "recreation-culture",
+    "description": "Ensure publicly funded arts facilities are welcoming, affordable and busy with community activity.",
+    "original_quote": "Make our cultural facilities more accessible. Our publicly funded arts facilities should be welcoming, affordable and filled with community activity.",
+    "source_url": "https://nwprogress.ca/celebrate-new-west/"
+  },
+  {
+    "title": "Traffic flow: new Queensborough Bridge or third crossing",
+    "category": "transit-infrastructure",
+    "description": "Push for a new Queensborough Bridge or third crossing, with clear timelines and accountability for improving mobility in Queensborough.",
+    "original_quote": "Traffic flow: Advocate for a new Queensborough Bridge or third crossing, with clear timelines and accountability for improving Queensborough mobility.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Pedestrian link: fixed crossing and Q to Q ferry",
+    "category": "transit-infrastructure",
+    "description": "Work toward a fixed pedestrian crossing between Queensborough and Quayside as part of rail swing bridge redevelopment, while retaining the Q to Q ferry.",
+    "original_quote": "Pedestrian link: Pursue a fixed pedestrian crossing between Queensborough and Quayside as part of rail swing bridge redevelopment, while keeping the Q to Q ferry.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Recreation facilities: Ryall Park turf field and track",
+    "category": "recreation-culture",
+    "description": "Deliver an artificial turf field and all-weather track at Ryall Park.",
+    "original_quote": "Recreation facilities: Deliver the artificial turf field and all-weather track at Ryall Park.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "High school site: identify land with the province",
+    "category": "education-childcare",
+    "description": "Work with the province to identify land for a future high school in Queensborough.",
+    "original_quote": "High school site: Identify land with the province for a future Queensborough high school.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Student bus service to NWSS",
+    "category": "education-childcare",
+    "description": "Work toward safe, reliable, free bus service for Queensborough students travelling to NWSS.",
+    "original_quote": "Student bus service: Pursue safe, reliable, free bus service for Queensborough students travelling to NWSS.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Street infrastructure: drainage, lighting, crossings and road maintenance",
+    "category": "transit-infrastructure",
+    "description": "Improve drainage, lighting, pedestrian crossings and road maintenance, and add a 50/50 grant matching program to help eliminate open ditches faster.",
+    "original_quote": "Street infrastructure: Improve drainage, lighting, pedestrian crossings and road maintenance, and introduce a 50/50 grant matching program to help eliminate open ditches faster.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Community policing: expand Queensborough office",
+    "category": "public-safety",
+    "description": "Expand the Queensborough Community Policing Office and station a Community Enforcement and Safety Officer there.",
+    "original_quote": "Community policing: Expand the Queensborough Community Policing Office and station a Community Enforcement and Safety Officer there.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Local voice: town halls and council meetings in the community",
+    "category": "governance-accountability",
+    "description": "Hold regular town halls in Queensborough and move council meetings into the community so residents can participate more directly.",
+    "original_quote": "Local voice: Hold regular Queensborough town halls and bring council meetings into the community.",
+    "source_url": "https://nwprogress.ca/queensborough/"
+  },
+  {
+    "title": "Create the Columbia District",
+    "category": "economy-jobs",
+    "description": "Establish a Columbia District to rebrand the historic commercial core and promote it as a top Metro Vancouver destination for dining, entertainment, arts, culture and shopping.",
+    "original_quote": "Create the Columbia District We will give our historic commercial core a renewed identity and aggressively promote it as one of Metro Vancouver's premier destinations for dining, entertainment, arts, culture and shopping.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Make Downtown Safer, Cleaner and More Welcoming",
+    "category": "public-safety",
+    "description": "Focus on making people feel comfortable using downtown streets, businesses, transit stations and public spaces.",
+    "original_quote": "Make Downtown Safer, Cleaner and More Welcoming A successful Downtown starts with people feeling comfortable using its streets, businesses, transit stations and public spaces.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Bring People Back to Columbia Street",
+    "category": "economy-jobs",
+    "description": "Increase activity on Columbia Street throughout the day, evening and weekend to support local businesses.",
+    "original_quote": "Bring People Back to Columbia Street Empty sidewalks don't create successful business districts. Our goal will be to bring significantly more activity to Downtown throughout the day, evening and weekend.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Attract Investment and Redevelop Vacant Properties",
+    "category": "housing",
+    "description": "Attract investment and redevelop prominent vacant or underused downtown properties.",
+    "original_quote": "Attract Investment and Redevelop Vacant Properties Downtown cannot reach its potential while prominent properties remain vacant or underused.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Make Downtown a Destination Again",
+    "category": "recreation-culture",
+    "description": "Draw visitors from across Metro Vancouver by making New Westminster a destination people plan to visit.",
+    "original_quote": "Make Downtown a Destination Again We want people from across Metro Vancouver to put New Westminster on their calendars.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Reconnect Downtown with the Fraser River",
+    "category": "transit-infrastructure",
+    "description": "Make the waterfront a defining downtown attraction and strengthen its connection to the city centre.",
+    "original_quote": "Reconnect Downtown with the Fraser River Our waterfront should be one of Downtown's defining attractions.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Make Downtown Easier and Safer to Get Around",
+    "category": "transit-infrastructure",
+    "description": "Improve downtown travel for pedestrians, transit users, cyclists, motorists, residents and businesses.",
+    "original_quote": "Make Downtown Easier and Safer to Get Around A successful Downtown must work for pedestrians, transit users, cyclists, motorists, residents and businesses.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Invest in Arts, Heritage and Public Spaces",
+    "category": "recreation-culture",
+    "description": "Invest in downtown arts, heritage and public spaces to build on cultural assets that newer urban centres lack.",
+    "original_quote": "Invest in Arts, Heritage and Public Spaces Downtown's history and cultural assets give it something newer urban centres cannot replicate.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Ensure Growth Delivers More for Downtown Residents",
+    "category": "community-services",
+    "description": "Make sure downtown growth benefits the thousands of people who live there, not just the commercial district.",
+    "original_quote": "Ensure Growth Delivers More for Downtown Residents Downtown is not simply a commercial district. Thousands of people call it home.",
+    "source_url": "https://nwprogress.ca/downtown-dcommitment/"
+  },
+  {
+    "title": "Build a More Age-Friendly New Westminster",
+    "category": "community-services",
+    "description": "Create a city that works for seniors and, in doing so, improves life for residents of all ages.",
+    "original_quote": "Build a More Age-Friendly New Westminster. Creating a city that works for seniors makes New Westminster better for residents of every age.",
+    "source_url": "https://nwprogress.ca/aging-well-commitment/"
+  },
+  {
+    "title": "Help Seniors Age in Place",
+    "category": "housing",
+    "description": "Support older adults who want to remain in the neighbourhoods they know and love.",
+    "original_quote": "Help Seniors Age in Place. Most older adults want to remain in the neighbourhoods they know and love.",
+    "source_url": "https://nwprogress.ca/aging-well-commitment/"
+  },
+  {
+    "title": "Improve Mobility, Accessibility and Safety",
+    "category": "transit-infrastructure",
+    "description": "Make neighbourhoods safe and accessible so residents can stay active.",
+    "original_quote": "Improve Mobility, Accessibility and Safety. Remaining active begins with safe, accessible neighbourhoods.",
+    "source_url": "https://nwprogress.ca/aging-well-commitment/"
+  },
+  {
+    "title": "Strengthen Community Connections",
+    "category": "community-services",
+    "description": "Help older adults stay active, engaged and connected as part of healthy aging.",
+    "original_quote": "Strengthen Community Connections. Healthy aging means remaining active, engaged and connected.",
+    "source_url": "https://nwprogress.ca/aging-well-commitment/"
+  },
+  {
+    "title": "Improve Emergency Preparedness and Community Support",
+    "category": "public-safety",
+    "description": "Strengthen emergency preparedness and community support, recognizing that older adults can be especially vulnerable in emergencies.",
+    "original_quote": "Improve Emergency Preparedness and Community Support. Older adults can be among the most vulnerable during emergencies.",
+    "source_url": "https://nwprogress.ca/aging-well-commitment/"
+  },
+  {
+    "title": "Deliver a Heritage Plan in 18 Months",
+    "category": "community-services",
+    "description": "Complete a comprehensive Heritage Plan within the first 18 months, with clear actions, timelines and annual public progress reports.",
+    "original_quote": "We will finish the unfinished work, address outstanding issues, and deliver a comprehensive Heritage Plan within our first 18 months, with clear actions and timelines and annual public reporting on progress.",
+    "source_url": "https://nwprogress.ca/heritage-commitment/"
+  },
+  {
+    "title": "Make Heritage Preservation Practical",
+    "category": "community-services",
+    "description": "Modernize heritage preservation through the Heritage Plan by integrating heritage into city planning, finishing work on Heritage Revitalization Agreements, and offering practical incentives and simpler processes.",
+    "original_quote": "Through the 18-month Heritage Plan, we will modernize the City's approach to heritage preservation, integrate Heritage considerations into City planning where appropriate, complete unfinished work on Heritage Revitalization Agreements, and identify practical incentives and simpler City processes that make heritage preservation easier.",
+    "source_url": "https://nwprogress.ca/heritage-commitment/"
+  },
+  {
+    "title": "Put Residents Back at the Table",
+    "category": "governance-accountability",
+    "description": "Where public hearings have been removed, give residents meaningful input on heritage features and streetscapes within the city's authority.",
+    "original_quote": "Where this has removed a public hearing residents would once have had, we will provide meaningful opportunities for residents to have input on heritage features and streetscapes within the City's authority.",
+    "source_url": "https://nwprogress.ca/heritage-commitment/"
+  },
+  {
+    "title": "Heritage Belongs to Everyone",
+    "category": "community-services",
+    "description": "Use the Heritage Plan to ensure the city's shared history is recognized and carried forward.",
+    "original_quote": "Through the Heritage Plan, we will ensure our shared history is recognized and carried forward.",
+    "source_url": "https://nwprogress.ca/heritage-commitment/"
+  },
+  {
+    "title": "Build on Our Heritage as an Economic Asset",
+    "category": "recreation-culture",
+    "description": "Promote heritage sites as an economic asset, including working with local heritage, tourism and community partners on a made-in New West self-guided heritage tour.",
+    "original_quote": "We will do more to connect and promote them – including working with local heritage, tourism and community partners to develop a made-in New West self-guided tour of unique heritage sites.",
+    "source_url": "https://nwprogress.ca/heritage-commitment/"
+  },
+  {
+    "title": "Support community organizations that deliver results",
+    "category": "community-services",
+    "description": "Provide backing to community groups that achieve measurable outcomes, since strong local organizations are key to strong neighbourhoods.",
+    "original_quote": "Support community organizations that deliver results. Strong community organizations help build strong neighbourhoods.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Celebrate the people who make New Westminster great",
+    "category": "recreation-culture",
+    "description": "Recognize and honour residents who contribute to the community through everyday acts that make a difference.",
+    "original_quote": "Celebrate the people who make New Westminster great. Our City's greatest strength is the people who quietly make a difference every day.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Build a stronger culture of volunteerism and neighbour-to-neighbour support",
+    "category": "community-services",
+    "description": "Encourage volunteering and mutual help among neighbours to strengthen community bonds.",
+    "original_quote": "Build a stronger culture of volunteerism and neighbour-to-neighbour support. Strong communities are built when neighbours help neighbours.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Strengthen emergency preparedness and community response",
+    "category": "public-safety",
+    "description": "Improve the city's readiness for emergencies and its ability to respond at the community level.",
+    "original_quote": "Strengthen emergency preparedness and community response. Preparing today means protecting tomorrow.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Strengthen community partnerships",
+    "category": "governance-accountability",
+    "description": "Have the City convene partners and advocate for results by bringing people together.",
+    "original_quote": "Strengthen community partnerships. The City's role is to bring people together and advocate for results.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Build healthier and more inclusive neighbourhoods",
+    "category": "community-services",
+    "description": "Foster neighbourhoods where everyone has the chance to take part in community life.",
+    "original_quote": "Build healthier and more inclusive neighbourhoods. Healthy communities ensure everyone has the opportunity to participate.",
+    "source_url": "https://nwprogress.ca/stronger-together/"
+  },
+  {
+    "title": "Cut the 3.5% electricity climate tax",
+    "category": "affordability",
+    "description": "Eliminate the 3.5% climate tax on electricity to give households and businesses immediate financial relief.",
+    "original_quote": "Cut the 3.5% electricity climate tax. Deliver immediate relief for New Westminster households and businesses.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Put affordability back into the budget",
+    "category": "affordability",
+    "description": "Begin the 2027 budget with a focus on affordability and core services, including an immediate 10% cut to consultant spending and a target of at least 20% reduction within two years.",
+    "original_quote": "Put affordability back into the budget. Get the 2027 budget underway with a renewed focus on affordability and core services, including an immediate 10% reduction in consultant spending — putting the City on track to cut consultant costs by at least 20% within two years.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Freeze mayor, council and senior executive pay",
+    "category": "governance-accountability",
+    "description": "Immediately halt pay increases for the mayor, council members and senior executives until the city's finances are stabilized.",
+    "original_quote": "Freeze mayor, council and senior executive pay. Immediately freeze mayor, council and senior executive pay until we get our fiscal house back in order.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Launch an independent core services review",
+    "category": "governance-accountability",
+    "description": "Commission an independent review to define what City Hall must, should and should stop doing, protecting frontline services while finding savings through better processes, technology, attrition and redeployment.",
+    "original_quote": "Launch an independent core services review. Determine what City Hall must do, should do and should stop doing — protecting frontline services while finding savings through better processes, technology, attrition and redeployment.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Cancel the Sue Big Oil campaign",
+    "category": "environment-climate",
+    "description": "Withdraw the city's $90,000 participation in the Sue Big Oil class-action lawsuit and redirect the savings to local climate efforts such as tree planting and Queensborough flood protection.",
+    "original_quote": "Cancel the Sue Big Oil campaign. Cancel the city's $90,000 bill to participate in the Sue Big Oil class-action lawsuit, and reinvest savings into local climate action such as urban tree planting and enhanced Queensborough flood protection.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Start hiring 12 new community enforcement and safety officers",
+    "category": "public-safety",
+    "description": "Add 12 community enforcement and safety officers to increase visible foot and bicycle patrols in neighbourhoods and commercial areas.",
+    "original_quote": "Start hiring 12 new community enforcement and safety officers. Increase visible foot and bicycle patrols in neighbourhoods and commercial districts.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Clean up and repair our neighbourhoods",
+    "category": "community-services",
+    "description": "Speed up graffiti removal and street cleaning, install 100 new waste and recycling bins, begin priority sidewalk repairs and launch a street-tree planting plan.",
+    "original_quote": "Clean up and repair our neighbourhoods. Accelerate graffiti removal and street cleaning, begin installing 100 new waste and recycling receptacles, start priority sidewalk repairs and launch a street-tree planting plan.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Give residents their voice back",
+    "category": "governance-accountability",
+    "description": "Replace the Community Advisory Assembly with focused citizen advisory committees so residents have meaningful input before major decisions.",
+    "original_quote": "Give residents their voice back. Replace the Community Advisory Assembly with focused, meaningful citizen advisory committees so residents have a real voice before major decisions are made.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Make New West the Royal City again",
+    "category": "recreation-culture",
+    "description": "Cancel the $500,000 rebranding project and redirect the funds to priorities residents can see and feel.",
+    "original_quote": "Make New West the Royal City again. Cancel the wasteful $500,000 rebranding project and redirect those resources to priorities residents can see and feel.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Get the waterfront pier rebuild moving",
+    "category": "transit-infrastructure",
+    "description": "Present Council with a clear repair plan, construction timeline and funding strategy for the waterfront pier.",
+    "original_quote": "Get the waterfront pier rebuild moving. Put a clear repair plan, construction timeline and funding strategy before Council.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Get the City and schools working together again",
+    "category": "education-childcare",
+    "description": "Strengthen formal coordination between the City and schools so growth, schools, childcare, recreation and community infrastructure are planned together.",
+    "original_quote": "Get the City and schools working together again. Enhance formal City–Schools coordination so growth, schools, childcare, recreation and community infrastructure are better planned together.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Cut red tape at City Hall",
+    "category": "economy-jobs",
+    "description": "Create a Red Tape Reduction Task Force and a Permit Concierge to make City Hall easier for residents, builders and businesses to navigate.",
+    "original_quote": "Cut red tape at City Hall. Launch the Red Tape Reduction Task Force and Permit Concierge to make City Hall easier to navigate for residents, builders and businesses.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Kickstart the Columbia District",
+    "category": "economy-jobs",
+    "description": "Deliver at least 10 new micro-retail spaces, remove patio permit fees and launch a business-led effort to attract restaurants, employers and investment.",
+    "original_quote": "Kickstart the Columbia District. Begin delivering at least 10 new micro-retail opportunities, eliminate patio permit fees and launch a business-led push to attract new restaurants, employers and investment.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Tackle our 20 worst traffic bottlenecks",
+    "category": "transit-infrastructure",
+    "description": "Identify the 20 worst congestion points and begin developing practical fixes such as signal timing, intersection and traffic flow improvements.",
+    "original_quote": "Tackle our 20 worst traffic bottlenecks. Identify the problem locations and begin developing practical fixes involving signal timing, intersections and traffic flow.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Take action on train noise",
+    "category": "community-services",
+    "description": "Re-establish the Railway Community Advisory Panel and continue advocating for more quiet zones and improved neighbourhood livability.",
+    "original_quote": "Take action on train noise. Re-establish the Railway Community Advisory Panel and renew the push for additional quiet zones and more livable neighbourhoods.",
+    "source_url": "https://nwprogress.ca/100-day-plan/"
+  },
+  {
+    "title": "Strong learning, well-being, and support so every student can succeed",
+    "category": "education-childcare",
+    "description": "Ensure every student has the learning, well-being, and support they need to succeed.",
+    "original_quote": "Strong learning, well-being, and support so every student can succeed.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Safe, Inclusive and Healthy Schools",
+    "category": "education-childcare",
+    "description": "Create schools where students feel safe, respected, supported, and ready to learn.",
+    "original_quote": "Schools where students feel safe, respected, supported, and ready to learn.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Collaborative and Transparent Leadership",
+    "category": "governance-accountability",
+    "description": "Make clear decisions, spend responsibly, and lead in a way families can trust.",
+    "original_quote": "Clear decisions, responsible spending, and leadership families can trust.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Put Students First",
+    "category": "education-childcare",
+    "description": "Make students the top priority in every decision.",
+    "original_quote": "Put students first in every decision.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Communicate Openly, Transparently and Timely",
+    "category": "governance-accountability",
+    "description": "Communicate openly, transparently, and promptly, especially during major changes, so families can help shape priorities, raise concerns, get responses, and see how their input affects decisions.",
+    "original_quote": "Communicate openly, transparently and timely — particularly during times of intensive change — so families and caregivers can help shape priorities, raise issues and receive responses, and see how their input influences decisions.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Advocate for Increased and Fair Funding",
+    "category": "education-childcare",
+    "description": "Push for more and fairer funding that accounts for growth, inflation, and students' real needs.",
+    "original_quote": "Advocate for increased and fair funding that reflects growth, inflation, and the real needs of students.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Build Strong Partnerships",
+    "category": "community-services",
+    "description": "Partner with families, caregivers, educators, support staff, Indigenous communities, community organizations, public partners, and neighbouring districts to amplify student voice and improve results.",
+    "original_quote": "Build strong partnerships with families, caregivers, educators, support staff, Indigenous communities, community organizations, public partners, and neighbouring districts to increase student voice and improve outcomes for students and families.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  },
+  {
+    "title": "Strengthen City–School District Collaboration",
+    "category": "governance-accountability",
+    "description": "Work more closely with the City, including reviving the City-Schools Joint Committee to meet regularly on school sites, responsible growth, before- and after-care, park access, and safe transportation.",
+    "original_quote": "Strengthen City–School District collaboration, including reconstituting the City-Schools Joint Committee to meet regularly and work together on school sites, responsible growth, before- and after-care, access to parks, and safe transportation.",
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+  }
+]

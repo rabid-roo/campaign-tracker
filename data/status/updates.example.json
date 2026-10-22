@@ -1,0 +1,20 @@
+[
+  {
+    "party": "bc-ndp",
+    "promise": "Cut gas prices by 30 cents a litre and cracking down on gouging",
+    "status": "completed",
+    "summary": "10 cents/litre of the provincial motor fuel tax suspended.",
+    "evidence_url": "https://news.gov.bc.ca/releases/2026XXXX0001-000001",
+    "evidence_source": "BC Government News Release",
+    "dated_on": "2026-03-15"
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Make Heritage Preservation Practical",
+    "status": "in_progress",
+    "summary": "Heritage Plan underway; first draft expected mid-2027.",
+    "evidence_url": "https://www.newwestcity.ca/council/agendas",
+    "evidence_source": "City Council agenda",
+    "dated_on": "2026-10-01"
+  }
+]
