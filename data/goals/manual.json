@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "party": "bc-ndp",
+    "promise": "Crack down on bad drivers",
+    "label": "Red light cameras",
+    "target": "Add red light cameras at busy community intersections",
+    "status": "not_started",
+    "sort_order": 0
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Crack down on bad drivers",
+    "label": "Dedicated highway patrol",
+    "target": "Create a dedicated highway patrol to improve safety on BC's busiest highways",
+    "status": "not_started",
+    "sort_order": 1
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Protect 30% of BC's lands and waters by 2030",
+    "label": "Protected land and water",
+    "target": "Protect 30% of lands and waters by 2030",
+    "unit": "%",
+    "target_value": 30,
+    "current_value": 20,
+    "status": "in_progress",
+    "source_url": "https://news.gov.bc.ca/releases/2026WLRS0032-000798",
+    "sort_order": 0
+  },
+  {
+    "party": "bc-ndp",
+    "promise": "Double public EV charging stations by 2030",
+    "label": "Public EV chargers",
+    "target": "Double the number of public chargers by 2030",
+    "unit": "chargers",
+    "current_value": 8900,
+    "status": "in_progress",
+    "source_url": "https://news.gov.bc.ca/releases/2026ECS0041-000855",
+    "sort_order": 0
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Enhance street cleaning and add 100 new waste and recycling bins",
+    "label": "New waste and recycling bins",
+    "target": "Install 100 additional waste and recycling bins in busy pedestrian areas",
+    "unit": "bins",
+    "target_value": 100,
+    "status": "not_started",
+    "sort_order": 0
+  }
+]
