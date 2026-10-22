@@ -16,7 +16,8 @@
     "refs:generate": "tsx scripts/references/generate.ts",
     "refs:import": "tsx scripts/references/import.ts",
     "goals:import": "tsx scripts/goals/import.ts",
-    "goals:migrate": "tsx scripts/goals/migrate-metrics.ts"
+    "goals:migrate": "tsx scripts/goals/migrate-metrics.ts",
+    "goals:derive": "tsx scripts/goals/derive.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
