@@ -65,7 +65,7 @@ export const PARTIES: Party[] = [
     raw: "data/raw/bc-conservatives-2026.txt",
     out: "data/items/bc-conservatives-2026.promises.json",
     sourceUrl:
-      "https://campaign-tracker-jet-zeta.vercel.app/bc-conservatives-2026.pdf",
+      "https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf",
     sourceType: "pdf",
   },
 ];
