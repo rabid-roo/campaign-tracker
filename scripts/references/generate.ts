@@ -45,25 +45,24 @@ function findPage(
   return null;
 }
 
+function buildPages(raw: string): { n: number; text: string }[] {
+  const pages: { n: number; text: string }[] = [];
+  const re = /-- (\d+) of (\d+) --/g;
+  const ms = [...raw.matchAll(re)];
+  for (let i = 0; i < ms.length; i++) {
+    const n = parseInt(ms[i][1], 10);
+    const start = ms[i].index;
+    const end = i + 1 < ms.length ? ms[i + 1].index : raw.length;
+    pages.push({ n, text: norm(raw.slice(start, end)) });
+  }
+  return pages;
+}
+
 async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error("Missing Supabase env vars");
   const supabase = createClient(url, key);
-
-  const bcndp = PARTIES.find((p) => p.key === "bcndp-2024");
-  const bcndpPages: { n: number; text: string }[] = [];
-  if (bcndp) {
-    const raw = await readFile(bcndp.raw, "utf8");
-    const re = /-- (\d+) of 66 --/g;
-    const ms = [...raw.matchAll(re)];
-    for (let i = 0; i < ms.length; i++) {
-      const n = parseInt(ms[i][1], 10);
-      const start = ms[i].index;
-      const end = i + 1 < ms.length ? ms[i + 1].index : raw.length;
-      bcndpPages.push({ n, text: norm(raw.slice(start, end)) });
-    }
-  }
 
   let inserted = 0;
   let paged = 0;
@@ -82,10 +81,10 @@ async function main() {
       .eq("party_id", partyRow.id);
     if (!promises) continue;
 
-    const label =
-      party.key === "bcndp-2024"
-        ? "BC NDP 2024 Platform"
-        : "New Westminster Progressives Platform";
+    const label = `${party.name} ${party.year} Platform`;
+
+    const pages =
+      party.sourceType === "pdf" ? buildPages(await readFile(party.raw, "utf8")) : [];
 
     for (const pr of promises) {
       await supabase
@@ -94,10 +93,9 @@ async function main() {
         .eq("promise_id", pr.id)
         .eq("source_type", "platform");
 
-      let page: string | null = null;
-      if (party.key === "bcndp-2024") {
-        page = findPage(pr.title, pr.original_quote ?? "", bcndpPages);
-      }
+      const page = pages.length
+        ? findPage(pr.title, pr.original_quote ?? "", pages)
+        : null;
 
       if (page) paged++;
 
