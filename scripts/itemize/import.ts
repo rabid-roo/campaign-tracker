@@ -25,6 +25,8 @@ async function main() {
 
   const supabase = createClient(url, key);
 
+  const onlyKey = process.argv[2];
+
   for (const p of PARTIES) {
     const { error } = await supabase.from("parties").upsert(
       {
@@ -58,6 +60,8 @@ async function main() {
 
   let total = 0;
   for (const p of PARTIES) {
+    if (onlyKey && p.key !== onlyKey) continue;
+
     const pid = partyId.get(p.slug);
     if (!pid) throw new Error(`no party id for ${p.slug}`);
 
@@ -71,7 +75,7 @@ async function main() {
       original_quote: it.original_quote || null,
       source_url: it.source_url ?? p.sourceUrl ?? null,
       source_type: p.sourceType,
-      metric: it.metric ?? null,
+      metric: it.metric?.trim() || null,
       metric_source: it.metric_source ?? null,
       current_status: "not_started",
     }));

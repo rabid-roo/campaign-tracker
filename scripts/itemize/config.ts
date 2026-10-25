@@ -55,4 +55,17 @@ export const PARTIES: Party[] = [
     out: "data/items/newwest-2026.promises.json",
     sourceType: "web",
   },
+  {
+    key: "bc-conservatives-2026",
+    name: "BC Conservatives",
+    slug: "bc-conservatives",
+    election: "2026 BC Provincial Election",
+    year: 2026,
+    description: "BC Conservatives 2026 platform — 'Stronger BC'",
+    raw: "data/raw/bc-conservatives-2026.txt",
+    out: "data/items/bc-conservatives-2026.promises.json",
+    sourceUrl:
+      "https://campaign-tracker-jet-zeta.vercel.app/bc-conservatives-2026.pdf",
+    sourceType: "pdf",
+  },
 ];

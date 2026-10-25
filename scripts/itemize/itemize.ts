@@ -27,7 +27,7 @@ Given a section of a platform:
 - Do NOT create a separate item for each bullet or sub-clause.
 
 Return STRICT JSON only, in exactly this shape:
-{"promises":[{"title":"short headline-style title","category":"<slug>","description":"1-3 sentence summary consolidating everything promised under this commitment","original_quote":"verbatim heading or the key sentence(s) stating the promise"}]}
+{"promises":[{"title":"short headline-style title","category":"<slug>","description":"1-3 sentence summary consolidating everything promised under this commitment","original_quote":"verbatim heading or the key sentence(s) stating the promise","metric":"a short quantifiable target or deadline if the promise has one (e.g. '30% land by 2030', '45,000 workers', 'double EV chargers'), otherwise empty string"}]}
 
 Category must be exactly one of: ${CATEGORY_SLUGS}
 
@@ -37,7 +37,9 @@ Rules:
 - Prefer the document's own heading text as the title.
 - Do not invent promises that are not in the text.
 - Exclude past accomplishments ("we already did/are doing X") — only forward-looking promises.
-- Keep original_quote concise and verbatim.`;
+- Keep original_quote concise and verbatim.
+- Set "metric" to a concrete target only when the text states a number, percentage, deadline or
+  measurable goal; otherwise use empty string.`;
 
 type PromiseItem = {
   title: string;
@@ -45,6 +47,7 @@ type PromiseItem = {
   description: string;
   original_quote: string;
   source_url?: string;
+  metric?: string;
 };
 
 type Chunk = { text: string; sourceUrl?: string };
@@ -160,6 +163,7 @@ function normalize(item: PromiseItem): PromiseItem {
     category,
     description: (item.description ?? "").trim(),
     original_quote: (item.original_quote ?? "").trim(),
+    metric: (item.metric ?? "").trim(),
   };
 }
 
