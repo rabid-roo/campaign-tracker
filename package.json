@@ -13,6 +13,7 @@
     "import": "tsx scripts/itemize/import.ts",
     "status:list": "tsx scripts/status/list.ts",
     "status:import": "tsx scripts/status/import.ts",
+    "status:merge": "tsx scripts/status/merge.ts",
     "refs:generate": "tsx scripts/references/generate.ts",
     "refs:import": "tsx scripts/references/import.ts",
     "goals:import": "tsx scripts/goals/import.ts",
