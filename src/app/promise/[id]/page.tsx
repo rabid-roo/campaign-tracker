@@ -10,7 +10,7 @@ import {
   getVoteScore,
 } from "@/lib/supabase/data";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({
   params,
@@ -53,9 +53,11 @@ export default async function PromisePage({
   if (!detail) notFound();
 
   const { promise, party, category, updates } = detail;
-  const voteScore = await getVoteScore(id);
-  const references = await getReferences(id);
-  const goals = await getGoals(id);
+  const [voteScore, references, goals] = await Promise.all([
+    getVoteScore(id),
+    getReferences(id),
+    getGoals(id),
+  ]);
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
@@ -97,8 +99,11 @@ export default async function PromisePage({
         )}
 
         <div className="mt-4 flex items-center gap-3">
-          <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            Accurate?
+          <span
+            className="text-sm text-zinc-500 dark:text-zinc-400"
+            title="Is this promise's delivery status accurate?"
+          >
+            Is this status accurate?
           </span>
           <VoteButtons promiseId={promise.id} initialScore={voteScore} />
         </div>

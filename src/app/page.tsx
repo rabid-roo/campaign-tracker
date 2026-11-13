@@ -1,13 +1,25 @@
 import Link from "next/link";
-import { getAllStatusCounts, getParties } from "@/lib/supabase/data";
+import { getAllStatusCounts, getLatestActivityDate, getParties } from "@/lib/supabase/data";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
+
+function formatDate(iso: string | null): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("en-CA", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 export default async function Home() {
-  const [parties, statusCounts] = await Promise.all([
+  const [parties, statusCounts, latestUpdate] = await Promise.all([
     getParties(),
     getAllStatusCounts(),
+    getLatestActivityDate(),
   ]);
 
   return (
@@ -23,7 +35,8 @@ export default async function Home() {
       </header>
 
       <div className="mb-8 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
-        <strong>BETA — in progress</strong> (updated October 21, 2026). All
+        <strong>BETA — in progress</strong>
+        {latestUpdate ? ` (updated ${formatDate(latestUpdate)})` : ""}. All
         promises are still under review and categorization.
       </div>
 

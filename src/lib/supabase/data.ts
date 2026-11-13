@@ -190,6 +190,16 @@ export const getVoteScore = cache(
   },
 );
 
+export const getLatestActivityDate = cache(async (): Promise<string | null> => {
+  const supabase = createClient();
+  const { data } = await supabase
+    .from("status_updates")
+    .select("created_at")
+    .order("created_at", { ascending: false })
+    .limit(1);
+  return data?.[0]?.created_at ?? null;
+});
+
 export type Reference = {
   id: string;
   promise_id: string;

@@ -9,8 +9,9 @@ import {
   getStatusCountsByParty,
 } from "@/lib/supabase/data";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
+import { TAGS } from "@/lib/tags";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export async function generateMetadata({
   params,
@@ -41,15 +42,13 @@ export default async function PartyPage({
     getStatusCountsByParty(party.id),
   ]);
 
+  const activeTag = TAGS.find((t) => t.slug === tag);
   const filtered = (() => {
-    if (tag === "100-day-plan")
-      return promises.filter((p) => p.tag === "100-Day Plan");
+    if (activeTag) return promises.filter((p) => p.tag === activeTag.label);
     if (status && (STATUSES as readonly string[]).includes(status))
       return promises.filter((p) => p.current_status === status);
     return promises;
   })();
-
-  const taggedCount = promises.filter((p) => p.tag === "100-Day Plan").length;
 
   const categoryMap = new Map(categories.map((c) => [c.id, c]));
   const groups = new Map<string, typeof promises>();
@@ -90,25 +89,30 @@ export default async function PartyPage({
         <Link
           href={`/party/${party.slug}`}
           className={`rounded-full px-3 py-1 text-sm font-medium ${
-            !status && !tag
+            !status && !activeTag
               ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
               : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
           }`}
         >
           All ({total})
         </Link>
-        {taggedCount > 0 && (
-          <Link
-            href={`/party/${party.slug}?tag=100-day-plan`}
-            className={`rounded-full px-3 py-1 text-sm font-medium ${
-              tag === "100-day-plan"
-                ? "bg-purple-600 text-white dark:bg-purple-500"
-                : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
-            }`}
-          >
-            100-Day Plan ({taggedCount})
-          </Link>
-        )}
+        {TAGS.map((t) => {
+          const n = promises.filter((p) => p.tag === t.label).length;
+          if (n === 0) return null;
+          return (
+            <Link
+              key={t.slug}
+              href={`/party/${party.slug}?tag=${t.slug}`}
+              className={`rounded-full px-3 py-1 text-sm font-medium ${
+                tag === t.slug
+                  ? "bg-purple-600 text-white dark:bg-purple-500"
+                  : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
+              }`}
+            >
+              {t.label} ({n})
+            </Link>
+          );
+        })}
         {STATUSES.map((s) => {
           const n = counts[s] ?? 0;
           if (n === 0) return null;
