@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campaign Promise Tracker
 
-## Getting Started
+Track election campaign promises and whether the elected government is delivering on them — with cited evidence (agendas, minutes, news) and a status timeline per promise.
 
-First, run the development server:
+## Trackers
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **New Westminster Progressives (2026)** — municipal council + school board platform (~121 promises)
+- **BC NDP (2024)** — provincial "An Action Plan for You" platform
+- **BC Conservatives (2026)** — provincial "Stronger BC" (hidden on the site)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Scrape** platform text → `data/raw/`
+2. **Itemize** into promises → `data/items/<party>.promises.json`
+3. **Import** to Supabase (`npm run import`)
+4. **Research** delivery status from agendas, minutes and news → `status:merge` + `status:import`
+5. **Surface** on the site: status badges, plan tags (e.g. "100-Day Plan"), evidence timeline, references, goals, and an "accurate?" vote.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Stack
 
-## Learn More
+- **Next.js 16** (App Router, Turbopack) + TypeScript + Tailwind CSS
+- **Supabase** (Postgres) — public read-only (RLS); writes via service-role key
+- **Deployed on Vercel** (`campaign-tracker-jet-zeta.vercel.app`), auto-deploying from the private GitHub repo
 
-To learn more about Next.js, take a look at the following resources:
+## Getting started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. `npm install`
+2. Copy `.env.local.example` → `.env.local` and fill in:
+   - `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` (public reads)
+   - `SUPABASE_SERVICE_ROLE_KEY` (local writes/imports only — never commit)
+3. `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data management
 
-## Deploy on Vercel
+| Command | Purpose |
+|---|---|
+| `npm run itemize:newwest` | Itemize the NWP platform |
+| `npm run import` | Import itemized promises to Supabase (**⚠️ destructive** — deletes + re-inserts a party's promises) |
+| `npm run status:merge -- <file.json>` | Merge a research agent's JSON into `data/status/updates.json` |
+| `npm run status:import` | Import status updates to Supabase (dedupes) |
+| `npm run refs:import` | Import references from `data/references/manual.json` |
+| `npm run goals:import` | Import goals |
+| `npx tsx scripts/tag/100-day-plan.ts` | Tag the NWP 100-day-plan promises |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Docs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `PLAN.md` — architecture, data model, roadmap
+- `docs/status-research.md` — the repeatable status-research workflow
+- `AGENTS.md` — agent guide (scripts, gotchas)
