@@ -12,7 +12,8 @@ Three trackers:
 
 ## Current state (Nov 2026)
 
-- **Deployed on Vercel** (`campaign-tracker-jet-zeta.vercel.app`), linked to the private GitHub repo (`rabid-roo/campaign-tracker`) for auto-deploys.
+- **Deployed on Vercel** (`campaign-tracker-jet-zeta.vercel.app`), auto-deploying from the private GitHub repo (`rabid-roo/campaign-tracker`) on push to `master`.
+- **Data auto-imports via GitHub Actions** — pushing `data/status/**`, `data/references/**`, or `data/goals/**` auto-runs `status:import` + `refs:import` + `goals:import` (`.github/workflows/import-data.yml`). Migrations stay manual (SQL editor / `supabase db push`).
 - **NWP is the active tracker**: 121 promises itemized, statuses researched from the new council's inaugural + Nov 6 special meeting, a `100-Day Plan` tag on the 17 first-100-days promises, and evidence + references (agendas, Freshet News, Daily Hive, WCEL).
 - **Status research is a repeatable loop** — see `docs/status-research.md`.
 

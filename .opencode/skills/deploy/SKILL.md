@@ -19,9 +19,8 @@ Ship code to production.
 - The pages are `force-dynamic`, so **data** changes flow through with no deploy — only **code** changes need a deploy.
 - The repo uses `master` as the default branch (not `main`).
 
-## Auto-deploy from GitHub (one-time setup)
+## Auto-deploy from GitHub
 
-1. Vercel dashboard → account → add a **GitHub Login Connection** (OAuth).
-2. Project → Settings → Git → connect `rabid-roo/campaign-tracker`, production branch `master`.
+Already wired: every push to `master` auto-deploys production. `npx vercel --prod --yes` is only for a manual deploy.
 
-After that, every push to `master` deploys automatically.
+Note: **data** changes don't need a deploy (pages are `force-dynamic`) — they auto-import to Supabase via the `import-data` GitHub Action (see `AGENTS.md`). Only **code** changes need a deploy.

@@ -20,7 +20,8 @@ Attach a supplementary source link to a promise.
      "note": "Optional one-line context."
    }
    ```
-2. `npm run refs:import`
+2. `npm run refs:import` (idempotent — safe to re-run)
+   - Or just commit + push `manual.json`; the `import-data` GitHub Action auto-imports it on push.
 
 ## Fields
 

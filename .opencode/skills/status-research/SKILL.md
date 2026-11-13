@@ -36,6 +36,7 @@ The research agent has **no DB access** — it only returns JSON. Import happens
 1. Save the agent's JSON to a file.
 2. `npm run status:merge -- path/to/agent-output.json`
 3. `npm run status:import`
+   - Alternatively, commit + push `data/status/updates.json` — the `import-data` GitHub Action runs `status:import` automatically on push.
 
 ## Rules
 

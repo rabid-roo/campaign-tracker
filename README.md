@@ -13,7 +13,7 @@ Track election campaign promises and whether the elected government is deliverin
 1. **Scrape** platform text → `data/raw/`
 2. **Itemize** into promises → `data/items/<party>.promises.json`
 3. **Import** to Supabase (`npm run import`)
-4. **Research** delivery status from agendas, minutes and news → `status:merge` + `status:import`
+4. **Research** delivery status from agendas, minutes and news → `status:merge` (the `status:import` step auto-runs via CI on push)
 5. **Surface** on the site: status badges, plan tags (e.g. "100-Day Plan"), evidence timeline, references, goals, and an "accurate?" vote.
 
 ## Stack
@@ -41,6 +41,12 @@ Track election campaign promises and whether the elected government is deliverin
 | `npm run refs:import` | Import references from `data/references/manual.json` |
 | `npm run goals:import` | Import goals |
 | `npx tsx scripts/tag/100-day-plan.ts` | Tag the NWP 100-day-plan promises |
+
+## Automation
+
+- **Code** — push to `master` → Vercel auto-deploys production.
+- **Data** — push `data/status/**`, `data/references/**`, or `data/goals/**` → the `import-data` GitHub Action auto-runs the import scripts (idempotent). See `.github/workflows/import-data.yml`.
+- **Migrations** — manual (SQL editor / `supabase db push`).
 
 ## Docs
 

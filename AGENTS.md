@@ -46,8 +46,14 @@ Semantics: `in_progress` = action actually began (motion passed / staff directed
 | `npm run import` | Import itemized promises → Supabase. **⚠️ Destructive** — deletes + re-inserts all promises for each party, cascading to `status_updates`, `votes`, `references`, and `goals`. Never use for one-off edits. |
 | `npm run status:merge -- <file.json>` | Merge research JSON into `data/status/updates.json` |
 | `npm run status:import` | Import `updates.json` → `status_updates` (dedupes) |
-| `npm run refs:import` | Import references from `data/references/manual.json` |
-| `npm run goals:import` | Import goals |
+| `npm run refs:import` | Import references from `data/references/manual.json` (idempotent) |
+| `npm run goals:import` | Import goals (idempotent) |
+
+## Automation (deploy & data)
+
+- **Code** — push to `master` → Vercel auto-deploys production (`campaign-tracker-jet-zeta.vercel.app`). No manual deploy step.
+- **Data** — push changes to `data/status/**`, `data/references/**`, or `data/goals/**` → the `import-data` GitHub Action auto-runs `status:import` + `refs:import` + `goals:import`. So you normally just commit + push the data file; you don't need to run the import scripts by hand. (`status:import`/`refs:import`/`goals:import` are idempotent, so the CI re-runs are safe.)
+- **Migrations** — manual (SQL editor / `supabase db push`). See the `apply-migration` skill.
 
 ## Gotchas
 
