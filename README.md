@@ -35,7 +35,7 @@ Track election campaign promises and whether the elected government is deliverin
 | Command | Purpose |
 |---|---|
 | `npm run itemize:newwest` | Itemize the NWP platform |
-| `npm run import` | Import itemized promises to Supabase (**⚠️ destructive** — deletes + re-inserts a party's promises) |
+| `npm run import` | Import itemized promises to Supabase (**⚠️ destructive** — deletes + re-inserts a party's promises, cascading to `status_updates`, `votes`, `references`, and `goals`) |
 | `npm run status:merge -- <file.json>` | Merge a research agent's JSON into `data/status/updates.json` |
 | `npm run status:import` | Import status updates to Supabase (dedupes) |
 | `npm run refs:import` | Import references from `data/references/manual.json` |

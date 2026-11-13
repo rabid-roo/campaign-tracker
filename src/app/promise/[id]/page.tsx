@@ -15,7 +15,13 @@ export const dynamic = "force-dynamic";
 
 function formatDate(value: string | null): string {
   if (!value) return "";
-  const d = new Date(value);
+  const d = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? new Date(
+        Number(value.slice(0, 4)),
+        Number(value.slice(5, 7)) - 1,
+        Number(value.slice(8, 10)),
+      )
+    : new Date(value);
   if (Number.isNaN(d.getTime())) return value;
   return d.toLocaleDateString("en-CA", {
     year: "numeric",

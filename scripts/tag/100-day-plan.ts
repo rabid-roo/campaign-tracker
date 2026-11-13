@@ -1,9 +1,14 @@
-import { readFileSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
 
-const env = readFileSync(".env.local", "utf8");
-const url = env.match(/NEXT_PUBLIC_SUPABASE_URL\s*=\s*(.+)/)![1].trim();
-const key = env.match(/SUPABASE_SERVICE_ROLE_KEY\s*=\s*(.+)/)![1].trim();
+try {
+  process.loadEnvFile(".env.local");
+} catch {
+  // env vars may come from the shell instead
+}
+
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!url || !key) throw new Error("Missing Supabase env vars");
 const sb = createClient(url, key);
 
 const TITLES = [

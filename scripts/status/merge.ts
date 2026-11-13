@@ -7,13 +7,16 @@ async function main() {
     process.exit(1);
   }
 
-  const incoming = JSON.parse(await readFile(src, "utf8")) as Record<string, unknown>[];
-  const existing = JSON.parse(
-    await readFile("data/status/updates.json", "utf8"),
-  ) as Record<string, unknown>[];
+  const readJson = async (p: string) =>
+    JSON.parse(
+      (await readFile(p, "utf8")).replace(/^\uFEFF/, ""),
+    ) as Record<string, unknown>[];
+
+  const incoming = await readJson(src);
+  const existing = await readJson("data/status/updates.json");
 
   const key = (e: Record<string, unknown>) =>
-    `${e.party}|${e.promise}|${e.status}|${e.summary}`;
+    `${e.party}|${e.promise}|${e.status}|${e.summary}|${e.evidence_url}|${e.evidence_source}|${e.dated_on}`;
   const seen = new Set(existing.map(key));
 
   let added = 0;

@@ -147,9 +147,11 @@ export const getPromiseById = cache(
 
     const { data: party } = await supabase
       .from("parties")
-      .select("id, name, slug, election, year, description")
+      .select("id, name, slug, election, year, description, hidden")
       .eq("id", promise.party_id)
+      .eq("hidden", false)
       .single();
+    if (!party) return null;
 
     let category: Category | null = null;
     if (promise.category_id) {
@@ -179,12 +181,11 @@ export const getPromiseById = cache(
 export const getVoteScore = cache(
   async (promiseId: string): Promise<number> => {
     const supabase = createClient();
-    const { data, error } = await supabase
-      .from("votes")
-      .select("vote")
-      .eq("promise_id", promiseId);
+    const { data, error } = await supabase.rpc("get_vote_score", {
+      p_id: promiseId,
+    });
     if (error) return 0;
-    return (data ?? []).reduce((sum, row) => sum + row.vote, 0);
+    return typeof data === "number" ? data : 0;
   },
 );
 

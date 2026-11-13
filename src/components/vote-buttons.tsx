@@ -48,7 +48,8 @@ export default function VoteButtons({
           vote: next,
         }),
       });
-      const d = await res.json();
+      const d = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error("vote failed");
       if (typeof d.score === "number") setScore(d.score);
       if (typeof d.myVote === "number") setMyVote(d.myVote);
     } catch {

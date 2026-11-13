@@ -89,7 +89,7 @@ async function main() {
   const supabase = createClient(url, key);
 
   const updates = JSON.parse(
-    await readFile("data/status/updates.json", "utf8"),
+    (await readFile("data/status/updates.json", "utf8")).replace(/^\uFEFF/, ""),
   ) as Update[];
 
   if (updates.length === 0) {
