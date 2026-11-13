@@ -9,9 +9,22 @@ import {
   getReferences,
   getVoteScore,
 } from "@/lib/supabase/data";
-import { statusLabel } from "@/lib/status";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const detail = await getPromiseById(id);
+  return {
+    title: detail
+      ? `${detail.promise.title} — ${detail.party.name}`
+      : "Campaign Promise Tracker",
+  };
+}
 
 function formatDate(value: string | null): string {
   if (!value) return "";
@@ -201,9 +214,6 @@ export default async function PromisePage({
                   <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full bg-zinc-400 dark:bg-zinc-500" />
                   <div className="flex items-center gap-2">
                     <StatusBadge status={u.status} />
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400">
-                      {statusLabel(u.status)}
-                    </span>
                   </div>
                   {u.summary && (
                     <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">

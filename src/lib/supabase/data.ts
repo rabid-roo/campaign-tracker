@@ -167,6 +167,7 @@ export const getPromiseById = cache(
       .from("status_updates")
       .select("*")
       .eq("promise_id", id)
+      .order("dated_on", { ascending: false, nullsFirst: false })
       .order("created_at", { ascending: false });
 
     return {

@@ -12,6 +12,16 @@ import { STATUSES, STATUS_LABELS } from "@/lib/status";
 
 export const dynamic = "force-dynamic";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const party = await getPartyBySlug(slug);
+  return { title: party ? `${party.name} — Promise Tracker` : "Campaign Promise Tracker" };
+}
+
 export default async function PartyPage({
   params,
   searchParams,
