@@ -10,6 +10,7 @@ export type Party = {
   election: string;
   year: number;
   description: string | null;
+  hidden: boolean;
 };
 
 export type Category = {
@@ -49,7 +50,8 @@ export const getParties = cache(async (): Promise<Party[]> => {
   const supabase = createClient();
   const { data, error } = await supabase
     .from("parties")
-    .select("id, name, slug, election, year, description")
+    .select("id, name, slug, election, year, description, hidden")
+    .eq("hidden", false)
     .order("year", { ascending: true });
   if (error) throw error;
   return data as Party[];
@@ -60,8 +62,9 @@ export const getPartyBySlug = cache(
     const supabase = createClient();
     const { data, error } = await supabase
       .from("parties")
-      .select("id, name, slug, election, year, description")
+      .select("id, name, slug, election, year, description, hidden")
       .eq("slug", slug)
+      .eq("hidden", false)
       .single();
     if (error) return null;
     return data as Party;
