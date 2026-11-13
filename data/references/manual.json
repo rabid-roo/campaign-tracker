@@ -12,5 +12,53 @@
     "label": "Wayback Machine archive",
     "url": "https://web.archive.org/web/*/https://conservativebc.ca/plan/conservatives-will-cut-your-taxes-by-1000/",
     "source_type": "archive"
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Cancel the 'Sue Big Oil' Initiative",
+    "label": "West Coast Environmental Law — open letter",
+    "url": "https://www.wcel.org/sites/default/files/publications/2026-11-06_NewWestminster_ClimateCosts_ClassAction.pdf",
+    "source_type": "news",
+    "note": "Opposed the Sue Big Oil withdrawal; warned taxpayers 'may be on the hook' for ever-increasing climate costs."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Eliminate the Electricity Surtax",
+    "label": "Daily Hive — Fontaine inaugural speech",
+    "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
+    "source_type": "news",
+    "note": "Claimed eliminating the surtax saves ratepayers over $8 million over the term."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Freeze mayor, council and senior executive pay",
+    "label": "Daily Hive — Fontaine inaugural speech",
+    "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
+    "source_type": "news",
+    "note": "Estimated the pay freeze saves ~$600,000 next year."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Create the Columbia District",
+    "label": "Daily Hive — Fontaine inaugural speech",
+    "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
+    "source_type": "news",
+    "note": "Pledged at least 10 micro-retail spaces within 24 months."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Increase voter turnout by 5% by 2030",
+    "label": "Daily Hive — Fontaine inaugural speech",
+    "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
+    "source_type": "news",
+    "note": "Noted turnout already rose to 40% (from 27%)."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Establish twice-yearly New Westminster Caucus meetings",
+    "label": "Daily Hive — Fontaine inaugural speech",
+    "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
+    "source_type": "news",
+    "note": "Said he will chair the inaugural New West Caucus early next year."
   }
 ]

@@ -33,6 +33,7 @@ export type PromiseRow = {
   status_summary: string | null;
   metric: string | null;
   metric_source: string | null;
+  tag: string | null;
 };
 
 export type StatusUpdate = {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StatusBadge from "@/components/status-badge";
+import TagBadge from "@/components/tag-badge";
 import VoteButtons from "@/components/vote-buttons";
 import {
   getGoals,
@@ -51,7 +52,10 @@ export default async function PromisePage({
           <h1 className="text-2xl font-semibold leading-tight tracking-tight">
             {promise.title}
           </h1>
-          <StatusBadge status={promise.current_status} />
+          <div className="flex items-center gap-2">
+            {promise.tag && <TagBadge tag={promise.tag} />}
+            <StatusBadge status={promise.current_status} />
+          </div>
         </div>
 
         {category && (

@@ -6,7 +6,8 @@
     "original_quote": "Eliminating the $2.1 million electricity surtax (3.5%) currently charged only to New Westminster residents ($1.1M) and businesses ($1M) through the New Westminster Electrical Utility.",
     "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/",
     "metric": "Remove 3.5% electricity surtax (~$2.1M)",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Create a Financial Accountability and Budget Oversight Committee",
@@ -22,7 +23,8 @@
     "original_quote": "Reducing external consultant spending by at least 20% within the first two years compared to the 2026 baseline budget",
     "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/",
     "metric": "Cut consultant spending 20% within 2 years",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Eliminate Patio Permit Fees and Expand Patio Seating",
@@ -31,7 +33,8 @@
     "original_quote": "Permanently eliminating all patio permit fees and setting a goal of increasing patio seating capacity citywide by 25% over the next term of office",
     "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/",
     "metric": "Free patio permits; +25% patio seating",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Introduce a Lower-Cost Three-Year Business License",
@@ -61,7 +64,8 @@
     "category": "environment-climate",
     "description": "End the expensive \"Sue Big Oil\" initiative and use the money instead for practical local environmental priorities.",
     "original_quote": "Cancelling the costly \"Sue Big Oil\" initiative and redirecting those funds toward practical local environmental priorities instead",
-    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/"
+    "source_url": "https://nwprogress.ca/nwp-launches-new-west-works-economic-plan-focused-on-affordability-accountability-and-downtown-r/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Place at least 12 new Community Enforcement and Safety Officers",
@@ -70,7 +74,8 @@
     "original_quote": "Place at least 12 new Community Enforcement and Safety Officers (CESO) on foot and bicycle patrols in the Downtown, Uptown, Sapperton and Queensborough.",
     "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/",
     "metric": "12+ Community Enforcement and Safety Officers",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Triple investment in I's On the Street program",
@@ -102,7 +107,8 @@
     "original_quote": "Enhance regular street cleaning and add 100 new waste and recycling bins in busy pedestrian areas.",
     "source_url": "https://nwprogress.ca/plan-for-safer-cleaner-and-welcoming-neighbourhoods/",
     "metric": "100 new waste/recycling bins",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Keep SkyTrain stations clean and secure",
@@ -195,21 +201,24 @@
     "category": "transit-infrastructure",
     "description": "Address the city's most severe traffic bottlenecks with practical fixes rather than further studies.",
     "original_quote": "Fix New Westminster's worst traffic bottlenecks. Residents don't want more studies – they want practical solutions.",
-    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+    "source_url": "https://nwprogress.ca/common-sense-transportation/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Bring Political Leadership Back to Rail Issues",
     "category": "transit-infrastructure",
     "description": "Provide consistent political leadership and advocacy on rail issues, one of the city's biggest transportation challenges.",
     "original_quote": "Bring Political Leadership Back to Rail Issues. Railways are one of New Westminster's biggest transportation challenges and require consistent political leadership and advocacy.",
-    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+    "source_url": "https://nwprogress.ca/common-sense-transportation/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Advocate to reduce train whistles",
     "category": "transit-infrastructure",
     "description": "Push for fewer train whistles, responding to residents' long-standing calls for action.",
     "original_quote": "Advocate to reduce train whistles. Residents have waited long enough for action.",
-    "source_url": "https://nwprogress.ca/common-sense-transportation/"
+    "source_url": "https://nwprogress.ca/common-sense-transportation/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Champion major transportation investments",
@@ -286,7 +295,8 @@
     "category": "governance-accountability",
     "description": "Speed up approvals and improve customer service for residents and businesses.",
     "original_quote": "Modernize City Hall. Residents and businesses deserve faster approvals and better customer service.",
-    "source_url": "https://nwprogress.ca/build-complete-communities/"
+    "source_url": "https://nwprogress.ca/build-complete-communities/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Deliver a Customer Service Guarantee",
@@ -453,7 +463,8 @@
     "original_quote": "Create the Columbia District We will give our historic commercial core a renewed identity and aggressively promote it as one of Metro Vancouver's premier destinations for dining, entertainment, arts, culture and shopping.",
     "source_url": "https://nwprogress.ca/downtown-dcommitment/",
     "metric": "10+ micro-retail spaces",
-    "metric_source": "NWP Platform"
+    "metric_source": "NWP Platform",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Make Downtown Safer, Cleaner and More Welcoming",
@@ -632,7 +643,8 @@
     "original_quote": "Freeze mayor, council and senior executive pay. Immediately freeze mayor, council and senior executive pay until we get our fiscal house back in order.",
     "source_url": "https://nwprogress.ca/100-day-plan/",
     "metric": "Freeze mayor/council/exec pay",
-    "metric_source": "NWP 100-Day Plan"
+    "metric_source": "NWP 100-Day Plan",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Launch an independent core services review",
@@ -641,21 +653,24 @@
     "original_quote": "Launch an independent core services review. Determine what City Hall must do, should do and should stop doing — protecting frontline services while finding savings through better processes, technology, attrition and redeployment.",
     "source_url": "https://nwprogress.ca/100-day-plan/",
     "metric": "Independent core services review",
-    "metric_source": "NWP 100-Day Plan"
+    "metric_source": "NWP 100-Day Plan",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Give residents their voice back",
     "category": "governance-accountability",
     "description": "Replace the Community Advisory Assembly with focused citizen advisory committees so residents have meaningful input before major decisions.",
     "original_quote": "Give residents their voice back. Replace the Community Advisory Assembly with focused, meaningful citizen advisory committees so residents have a real voice before major decisions are made.",
-    "source_url": "https://nwprogress.ca/100-day-plan/"
+    "source_url": "https://nwprogress.ca/100-day-plan/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Make New West the Royal City again",
     "category": "recreation-culture",
     "description": "Cancel the $500,000 rebranding project and redirect the funds to priorities residents can see and feel.",
     "original_quote": "Make New West the Royal City again. Cancel the wasteful $500,000 rebranding project and redirect those resources to priorities residents can see and feel.",
-    "source_url": "https://nwprogress.ca/100-day-plan/"
+    "source_url": "https://nwprogress.ca/100-day-plan/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Get the waterfront pier rebuild moving",
@@ -664,7 +679,8 @@
     "original_quote": "Get the waterfront pier rebuild moving. Put a clear repair plan, construction timeline and funding strategy before Council.",
     "source_url": "https://nwprogress.ca/100-day-plan/",
     "metric": "Pier rebuild plan before Council",
-    "metric_source": "NWP 100-Day Plan"
+    "metric_source": "NWP 100-Day Plan",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Strong learning, well-being, and support so every student can succeed",
@@ -720,7 +736,8 @@
     "category": "governance-accountability",
     "description": "Work more closely with the City, including reviving the City-Schools Joint Committee to meet regularly on school sites, responsible growth, before- and after-care, park access, and safe transportation.",
     "original_quote": "Strengthen City–School District collaboration, including reconstituting the City-Schools Joint Committee to meet regularly and work together on school sites, responsible growth, before- and after-care, access to parks, and safe transportation.",
-    "source_url": "https://nwprogress.ca/plan-to-put-students-first/"
+    "source_url": "https://nwprogress.ca/plan-to-put-students-first/",
+    "tag": "100-Day Plan"
   },
   {
     "title": "Publish Council agendas at least 7 calendar days before meetings",

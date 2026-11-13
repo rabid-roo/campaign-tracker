@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import StatusBadge from "@/components/status-badge";
+import TagBadge from "@/components/tag-badge";
 import {
   getCategories,
   getPartyBySlug,
@@ -16,10 +17,10 @@ export default async function PartyPage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ status?: string }>;
+  searchParams: Promise<{ status?: string; tag?: string }>;
 }) {
   const { slug } = await params;
-  const { status } = await searchParams;
+  const { status, tag } = await searchParams;
 
   const party = await getPartyBySlug(slug);
   if (!party) notFound();
@@ -30,10 +31,15 @@ export default async function PartyPage({
     getStatusCountsByParty(party.id),
   ]);
 
-  const filtered =
-    status && (STATUSES as readonly string[]).includes(status)
-      ? promises.filter((p) => p.current_status === status)
-      : promises;
+  const filtered = (() => {
+    if (tag === "100-day-plan")
+      return promises.filter((p) => p.tag === "100-Day Plan");
+    if (status && (STATUSES as readonly string[]).includes(status))
+      return promises.filter((p) => p.current_status === status);
+    return promises;
+  })();
+
+  const taggedCount = promises.filter((p) => p.tag === "100-Day Plan").length;
 
   const categoryMap = new Map(categories.map((c) => [c.id, c]));
   const groups = new Map<string, typeof promises>();
@@ -74,13 +80,25 @@ export default async function PartyPage({
         <Link
           href={`/party/${party.slug}`}
           className={`rounded-full px-3 py-1 text-sm font-medium ${
-            !status
+            !status && !tag
               ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
               : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
           }`}
         >
           All ({total})
         </Link>
+        {taggedCount > 0 && (
+          <Link
+            href={`/party/${party.slug}?tag=100-day-plan`}
+            className={`rounded-full px-3 py-1 text-sm font-medium ${
+              tag === "100-day-plan"
+                ? "bg-purple-600 text-white dark:bg-purple-500"
+                : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
+            }`}
+          >
+            100-Day Plan ({taggedCount})
+          </Link>
+        )}
         {STATUSES.map((s) => {
           const n = counts[s] ?? 0;
           if (n === 0) return null;
@@ -118,7 +136,10 @@ export default async function PartyPage({
                     href={`/promise/${p.id}`}
                     className="flex items-center justify-between gap-4 px-5 py-4 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                   >
-                    <span className="font-medium">{p.title}</span>
+                    <span className="flex items-center gap-2">
+                      <span className="font-medium">{p.title}</span>
+                      {p.tag && <TagBadge tag={p.tag} />}
+                    </span>
                     <StatusBadge status={p.current_status} />
                   </Link>
                 </li>
