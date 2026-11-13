@@ -80,6 +80,7 @@ async function main() {
 
   const validParties = new Set(PARTIES.map((p) => p.slug));
   let inserted = 0;
+  let skipped = 0;
   let failed = 0;
 
   for (const r of refs) {
@@ -92,6 +93,17 @@ async function main() {
     if (!pid) {
       console.warn(`SKIP promise not found: "${r.promise}"`);
       failed++;
+      continue;
+    }
+    const { data: existing } = await supabase
+      .from("references")
+      .select("label, url")
+      .eq("promise_id", pid);
+    const dup = (existing ?? []).some(
+      (row) => row.label === r.label && (row.url ?? null) === (r.url ?? null),
+    );
+    if (dup) {
+      skipped++;
       continue;
     }
     const { error } = await supabase.from("references").insert({
@@ -110,7 +122,7 @@ async function main() {
     inserted++;
   }
 
-  console.log(`Done: ${inserted} inserted, ${failed} failed`);
+  console.log(`Done: ${inserted} inserted, ${skipped} skipped, ${failed} failed`);
 }
 
 main().catch((err) => {
