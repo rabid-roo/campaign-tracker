@@ -104,22 +104,26 @@ export default async function PromisePage({
           {reviewedOn ? (
             <>
               Last reviewed{" "}
-              <time dateTime={reviewedOn}>{formatDate(reviewedOn)}</time>
+              <time className="whitespace-nowrap" dateTime={reviewedOn}>
+                {formatDate(reviewedOn)}
+              </time>
             </>
           ) : lastChange ? (
             <>
               Latest status update{" "}
-              <time dateTime={lastChange}>{formatDate(lastChange)}</time>
+              <time className="whitespace-nowrap" dateTime={lastChange}>
+                {formatDate(lastChange)}
+              </time>
             </>
           ) : (
             "No review recorded yet"
           )}
           {goals.length > 0 && (
-            <>
+            <span className="whitespace-nowrap">
               {" · "}
               {goalsMet} of {goals.length} {goals.length === 1 ? "goal" : "goals"}{" "}
               met
-            </>
+            </span>
           )}
         </p>
 
