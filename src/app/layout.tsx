@@ -46,12 +46,12 @@ export default function RootLayout({
               aria-label="Trackers"
               className="flex items-baseline gap-5 font-sans text-[0.8rem] text-muted"
             >
-              <Link href="/" className="hover:text-ink">
+              <Link href="/" className="inline-block py-1 hover:text-ink">
                 Trackers
               </Link>
               <a
                 href="https://github.com/rabid-roo/campaign-tracker"
-                className="hover:text-ink"
+                className="inline-block py-1 hover:text-ink"
               >
                 Method
               </a>
