@@ -52,6 +52,14 @@ function hostOf(value: string): string {
   }
 }
 
+// Each history entry prints its own date line, so drop a leading ISO date that
+// only repeats it (e.g. "2026-11-06 Special Council Meeting").
+function stripDatedSource(source: string, datedOn: string | null): string {
+  if (!datedOn) return source;
+  const prefix = `${datedOn} `;
+  return source.startsWith(prefix) ? source.slice(prefix.length) : source;
+}
+
 export default async function PromisePage({
   params,
 }: {
@@ -85,7 +93,7 @@ export default async function PromisePage({
 
       <article className="mt-6">
         <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-4">
-          <h1 className="min-w-0 text-balance text-xl font-semibold leading-tight tracking-tight md:text-2xl">
+          <h1 className="min-w-0 text-balance break-words text-xl font-semibold leading-tight tracking-tight md:text-2xl">
             {promise.title}
           </h1>
           <div className="flex flex-wrap items-center gap-2 md:shrink-0">
@@ -234,14 +242,16 @@ export default async function PromisePage({
                     <StatusBadge status={u.status} />
                   </div>
                   {u.summary && (
-                    <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                    <p className="mt-1 break-words text-sm text-zinc-600 dark:text-zinc-400">
                       {u.summary}
                     </p>
                   )}
                   {(u.evidence_url || u.evidence_source) && (
                     <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
                       {u.evidence_source && (
-                        <span className="mr-2">{u.evidence_source}</span>
+                        <span className="mr-2">
+                          {stripDatedSource(u.evidence_source, u.dated_on)}
+                        </span>
                       )}
                       {u.evidence_url && (
                         <a
