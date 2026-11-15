@@ -1,0 +1,12 @@
+{
+  "name": "Campaign Promise Tracker",
+  "world": "findings-register",
+  "directionSeed": "seed:8b770d9a01d2b1da",
+  "state": {
+    "focusRing": "2px solid var(--ink), offset 2px",
+    "hoverBackground": "var(--hover)",
+    "statusEncoding": ["outline", "hatch", "fill", "strike"]
+  },
+  "motion": { "rowBackground": "120ms linear", "radius": "0" },
+  "responsive": { "contentMax": "72rem", "readingMeasure": "33rem", "bleed": "rules run to viewport edge; html overflow-x clip" }
+}
