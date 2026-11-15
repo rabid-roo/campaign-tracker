@@ -95,13 +95,10 @@ export default async function PromisePage({
   const finding = String(
     numberingByPromise(partyPromises, categories).get(id) ?? 0,
   ).padStart(3, "0");
-  // Newest first: dated_on desc, then created_at desc (see getPromiseById).
-  const lastChange = updates[0]?.dated_on ?? updates[0]?.created_at ?? null;
   const reviewedOn = promise.reviewed_on ?? null;
   const goalsMet = goals.filter((g) => g.status === "completed").length;
   // The page column only earns its 48px when at least one reference cites a page.
   const hasPageRef = references.some((r) => r.page);
-  const examined = reviewedOn ?? lastChange;
 
   return (
     <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
@@ -120,8 +117,10 @@ export default async function PromisePage({
         {/* Finding head */}
         <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_11rem] md:py-10">
           <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
-            <p className="label">Finding</p>
-            <p className="refnum mt-1 text-[1.1rem] text-ink">{finding}</p>
+            <p className="label hidden md:block">Finding</p>
+            <p className="refnum mt-1 hidden text-[1.1rem] text-ink md:block">
+              {finding}
+            </p>
             {promise.tag && (
               <p className="mt-3 md:mt-4">
                 <TagBadge tag={promise.tag} />
@@ -149,12 +148,12 @@ export default async function PromisePage({
         <section className="bleed pt-4">
           <div className="grid grid-cols-2 gap-y-4 sm:grid-cols-3">
             <div className="px-1">
-              <p className="refnum text-[0.95rem]">{category?.name ?? "—"}</p>
+              <p className="text-[0.95rem]">{category?.name ?? "—"}</p>
               <p className="label mt-1">Sector</p>
             </div>
             <div className="px-1">
               <p className="refnum text-[0.95rem]">
-                {formatDate(examined) || "—"}
+                {formatDate(reviewedOn) || "—"}
               </p>
               <p className="label mt-1">Last examined</p>
             </div>
@@ -165,11 +164,11 @@ export default async function PromisePage({
               <p className="label mt-1">Measures met</p>
             </div>
           </div>
-          <details className="reading mt-4 border-t border-rule pb-3">
+          <details className="mt-4 border-t border-rule pb-3">
             <summary className="cursor-pointer py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
               What “{statusLabel(promise.current_status)}” means
             </summary>
-            <dl className="mt-3 space-y-2 text-[0.95rem]">
+            <dl className="reading mt-3 space-y-2 text-[0.95rem]">
               {STATUSES.map((s) => (
                 <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
                   <dt className="font-sans text-[0.8rem] font-semibold text-muted">
