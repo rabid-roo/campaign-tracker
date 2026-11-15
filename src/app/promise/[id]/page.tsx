@@ -171,7 +171,7 @@ export default async function PromisePage({
         )}
 
         {promise.original_quote && (
-          <blockquote className="mt-4 rounded-lg border-l-4 border-zinc-300 bg-zinc-50 p-4 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
+          <blockquote className="mt-4 rounded-lg border-l-4 border-zinc-300 bg-white p-4 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
             &ldquo;{promise.original_quote}&rdquo;
           </blockquote>
         )}

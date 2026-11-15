@@ -108,14 +108,14 @@ export default function VoteButtons({
       <button
         type="button"
         onClick={() => cast(1)}
-        disabled={pending}
+        aria-disabled={pending}
         aria-label="Mark as accurate"
         aria-pressed={myVote === 1}
         title="Accurate"
-        className={`flex h-11 w-11 items-center justify-center rounded transition-colors disabled:opacity-40 ${
+        className={`flex h-11 w-11 items-center justify-center rounded transition-colors aria-disabled:opacity-40 ${
           myVote === 1
             ? "bg-green-100 ring-2 ring-green-600 dark:bg-green-900/40 dark:ring-green-400"
-            : "opacity-50 hover:opacity-100 focus-visible:opacity-100"
+            : "opacity-60 hover:opacity-100 focus-visible:opacity-100"
         }`}
       >
         <ThumbIcon />
@@ -132,24 +132,23 @@ export default function VoteButtons({
       <button
         type="button"
         onClick={() => cast(-1)}
-        disabled={pending}
+        aria-disabled={pending}
         aria-label="Mark as inaccurate"
         aria-pressed={myVote === -1}
         title="Inaccurate"
-        className={`flex h-11 w-11 items-center justify-center rounded transition-colors disabled:opacity-40 ${
+        className={`flex h-11 w-11 items-center justify-center rounded transition-colors aria-disabled:opacity-40 ${
           myVote === -1
             ? "bg-red-100 ring-2 ring-red-600 dark:bg-red-900/40 dark:ring-red-400"
-            : "opacity-50 hover:opacity-100 focus-visible:opacity-100"
+            : "opacity-60 hover:opacity-100 focus-visible:opacity-100"
         }`}
       >
         <ThumbIcon down />
       </button>
       </div>
-      {error && (
-        <p role="status" aria-live="polite" className="text-xs text-red-700 dark:text-red-400">
-          {error}
-        </p>
-      )}
+      {/* Mounted always: a live region that appears with its text is often not announced. */}
+      <p role="status" className="min-h-4 text-xs text-red-700 dark:text-red-400">
+        {error}
+      </p>
     </div>
   );
 }
