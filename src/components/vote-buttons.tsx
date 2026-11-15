@@ -103,7 +103,7 @@ export default function VoteButtons({
   }
 
   return (
-    <div className="flex flex-col items-start gap-1">
+    <div className="relative flex flex-col items-start gap-1">
       <div className="flex items-center gap-1">
       <button
         type="button"
@@ -145,8 +145,12 @@ export default function VoteButtons({
         <ThumbIcon down />
       </button>
       </div>
-      {/* Mounted always: a live region that appears with its text is often not announced. */}
-      <p role="status" className="min-h-4 text-xs text-red-700 dark:text-red-400">
+      {/* Mounted always, out of flow: a live region that appears with its text is often not
+          announced, and reserving a line here would push the thumbs off the label's centre. */}
+      <p
+        role="status"
+        className="absolute left-0 top-full mt-1 w-max max-w-[min(22rem,85vw)] text-xs text-red-700 dark:text-red-400"
+      >
         {error}
       </p>
     </div>
