@@ -70,6 +70,7 @@ export default async function PromisePage({
   // Newest first: dated_on desc, then created_at desc (see getPromiseById).
   const lastChange = updates[0]?.dated_on ?? updates[0]?.created_at ?? null;
   const reviewedOn = promise.reviewed_on ?? null;
+  const goalsMet = goals.filter((g) => g.status === "completed").length;
   // The page column only earns its 48px when at least one reference cites a page.
   const hasPageRef = references.some((r) => r.page);
 
@@ -112,6 +113,13 @@ export default async function PromisePage({
         ) : (
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             No review recorded yet
+          </p>
+        )}
+
+        {goals.length > 0 && (
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            {goalsMet} of {goals.length}{" "}
+            {goals.length === 1 ? "goal" : "goals"} met
           </p>
         )}
 
@@ -158,10 +166,7 @@ export default async function PromisePage({
 
         {goals.length > 0 && (
           <section className="mt-10">
-            <h2 className="mb-1 text-lg font-semibold">Goals</h2>
-            <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">
-              Goal status is tracked separately from the promise status above.
-            </p>
+            <h2 className="mb-3 text-lg font-semibold">Goals</h2>
             <ul className="space-y-2">
               {goals.map((g) => (
                 <li
@@ -301,7 +306,7 @@ export default async function PromisePage({
 
         <div className="mt-10 flex flex-col items-start gap-2 border-t border-zinc-200 pt-6 sm:flex-row sm:items-center sm:gap-3 dark:border-zinc-800">
           <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            Does this status match the evidence?
+            Does the evidence support “{statusLabel(promise.current_status)}”?
           </span>
           <VoteButtons promiseId={promise.id} initialScore={voteScore} />
         </div>
