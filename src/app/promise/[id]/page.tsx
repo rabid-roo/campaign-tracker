@@ -9,7 +9,12 @@ import {
   getReferences,
   getVoteScore,
 } from "@/lib/supabase/data";
-import { STATUSES, STATUS_LABELS, STATUS_MEANINGS, statusLabel } from "@/lib/status";
+import {
+  STATUSES,
+  STATUS_LABELS,
+  STATUS_MEANINGS,
+  statusLabel,
+} from "@/lib/status";
 
 export const revalidate = 300;
 
@@ -60,6 +65,25 @@ function stripDatedSource(source: string, datedOn: string | null): string {
   return source.startsWith(prefix) ? source.slice(prefix.length) : source;
 }
 
+function SectionLabel({
+  children,
+  count,
+}: {
+  children: React.ReactNode;
+  count?: number;
+}) {
+  return (
+    <h2 className="label flex items-baseline gap-3 pt-4">
+      {children}
+      {count != null && (
+        <span className="refnum text-[0.7rem] tracking-normal text-muted normal-case">
+          {String(count).padStart(2, "0")}
+        </span>
+      )}
+    </h2>
+  );
+}
+
 export default async function PromisePage({
   params,
 }: {
@@ -81,249 +105,287 @@ export default async function PromisePage({
   const goalsMet = goals.filter((g) => g.status === "completed").length;
   // The page column only earns its 48px when at least one reference cites a page.
   const hasPageRef = references.some((r) => r.page);
+  const examined = reviewedOn ?? lastChange;
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-12">
-      <Link
-        href={`/party/${party.slug}`}
-        className="py-1 text-sm text-zinc-500 hover:underline dark:text-zinc-400"
-      >
-        &larr; {party.name}
-      </Link>
-
-      <article className="mt-6">
-        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-4">
-          <h1 className="min-w-0 text-balance break-words text-xl font-semibold leading-tight tracking-tight md:text-2xl">
-            {promise.title}
-          </h1>
-          <div className="flex flex-wrap items-center gap-2 md:shrink-0">
-            {promise.tag && <TagBadge tag={promise.tag} />}
-            <StatusBadge status={promise.current_status} />
-          </div>
-        </div>
-
-        {category && (
-          <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-            {category.name}
-          </p>
-        )}
-
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          {reviewedOn ? (
-            <>
-              Last reviewed{" "}
-              <time className="whitespace-nowrap" dateTime={reviewedOn}>
-                {formatDate(reviewedOn)}
-              </time>
-            </>
-          ) : lastChange ? (
-            <>
-              Latest status update{" "}
-              <time className="whitespace-nowrap" dateTime={lastChange}>
-                {formatDate(lastChange)}
-              </time>
-            </>
-          ) : (
-            "No review recorded yet"
-          )}
-          {goals.length > 0 && (
-            <span className="whitespace-nowrap">
-              {" · "}
-              {goalsMet} of {goals.length} {goals.length === 1 ? "goal" : "goals"}{" "}
-              met
-            </span>
-          )}
+    <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
+      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
+        <Link
+          href={`/party/${party.slug}`}
+          className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
+        >
+          ← {party.name}
+        </Link>
+        <p className="label">
+          Finding · {statusLabel(promise.current_status)}
         </p>
+      </div>
 
-        <details className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <summary className="cursor-pointer select-none hover:text-zinc-900 dark:hover:text-zinc-200">
-            What “{statusLabel(promise.current_status)}” means
-          </summary>
-          <dl className="mt-2 space-y-1.5">
-            {STATUSES.map((s) => (
-              <div key={s}>
-                <dt className="inline font-medium text-zinc-700 dark:text-zinc-300">
-                  {STATUS_LABELS[s]}
-                </dt>
-                <dd className="inline"> — {STATUS_MEANINGS[s]}</dd>
-              </div>
-            ))}
-          </dl>
-        </details>
-
-        {promise.metric && (
-          <p className="mt-2 text-sm">
-            <span className="text-zinc-500 dark:text-zinc-400">Target: </span>
-            <span className="font-medium">{promise.metric}</span>
-            {promise.metric_source && (
-              <span className="text-zinc-600 dark:text-zinc-400">
-                {" "}
-                · {promise.metric_source}
-              </span>
-            )}
-          </p>
-        )}
-
-        {promise.description && (
-          <p className="mt-5 max-w-[var(--measure)] text-pretty text-zinc-700 dark:text-zinc-300">
-            {promise.description}
-          </p>
-        )}
-
-        {promise.original_quote && (
-          <blockquote className="mt-4 max-w-[var(--measure)] rounded-lg border-l-4 border-zinc-300 bg-white p-4 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
-            &ldquo;{promise.original_quote}&rdquo;
-          </blockquote>
-        )}
-
-        {goals.length > 0 && (
-          <section className="mt-10">
-            <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Goals</h2>
-            <ul className="space-y-2">
-              {goals.map((g) => (
-                <li
-                  key={g.id}
-                  className="rounded-lg border border-zinc-200 bg-white px-4 py-3 dark:border-zinc-700 dark:bg-zinc-900"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium">{g.label}</span>
-                    <StatusBadge status={g.status} />
-                  </div>
-                  {g.target && g.target !== g.label && (
-                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                      {g.target}
-                    </div>
-                  )}
-                  {(g.target_value != null || g.current_value != null) && (
-                    <div className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                      {g.target_value != null && (
-                        <span className="mr-4">
-                          Target: {g.target_value}
-                          {g.unit ? ` ${g.unit}` : ""}
-                        </span>
-                      )}
-                      {g.current_value != null && (
-                        <span>
-                          Current: {g.current_value}
-                          {g.unit ? ` ${g.unit}` : ""}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                  {g.source_url && (
-                    <a
-                      href={g.source_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={g.source_url}
-                      className="mt-1 block truncate text-sm leading-6 text-blue-600 hover:underline dark:text-blue-400"
-                    >
-                      {hostOf(g.source_url)}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        <section className="mt-10">
-          <h2 className="mb-4 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Status history</h2>
-          {updates.length === 0 ? (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              No status changes recorded yet.
+      <article>
+        {/* Finding head */}
+        <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_11rem] md:py-10">
+          <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
+            <p className="label">Reference</p>
+            <p className="refnum mt-1 text-[0.85rem] text-ink">
+              {promise.id.slice(0, 8).toUpperCase()}
             </p>
-          ) : (
-            <ol className="space-y-4 border-l-2 border-zinc-400 pl-5 dark:border-zinc-600">
-              {updates.map((u) => (
-                <li key={u.id} className="relative">
-                  <span className="absolute -left-[27px] top-1 h-3 w-3 rounded-full bg-zinc-500 dark:bg-zinc-400" />
-                  <div className="flex items-center gap-2">
-                    <StatusBadge status={u.status} />
-                  </div>
-                  {u.summary && (
-                    <p className="mt-1 max-w-[var(--measure)] text-pretty break-words text-sm text-zinc-600 dark:text-zinc-400">
-                      {u.summary}
-                    </p>
-                  )}
-                  {(u.evidence_url || u.evidence_source) && (
-                    <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                      {u.evidence_source && (
-                        <span className="mr-2">
-                          {stripDatedSource(u.evidence_source, u.dated_on)}
-                        </span>
-                      )}
-                      {u.evidence_url && (
-                        <a
-                          href={u.evidence_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`View source: ${
-                            u.evidence_source ?? "cited record"
-                          }`}
-                          className="text-blue-600 hover:underline dark:text-blue-400"
-                        >
-                          View source
-                        </a>
-                      )}
-                    </p>
-                  )}
-                  <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
-                    {formatDate(u.dated_on) || formatDate(u.created_at)}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          )}
+            {promise.tag && (
+              <p className="mt-3 md:mt-4">
+                <TagBadge tag={promise.tag} />
+              </p>
+            )}
+            {category && (
+              <div className="w-full md:w-auto">
+                <p className="label mt-3 md:mt-4">Sector</p>
+                <p className="mt-1 text-[0.95rem]">{category.name}</p>
+              </div>
+            )}
+          </aside>
+
+          <div className="min-w-0">
+            <h1 className="max-w-[24ch] text-balance break-words font-sans text-[clamp(1.75rem,3.2vw,2.35rem)] leading-[1.1] font-bold tracking-[-0.015em]">
+              {promise.title}
+            </h1>
+            {promise.description && (
+              <p className="reading mt-5 text-[1.0625rem] leading-relaxed text-ink/90">
+                {promise.description}
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-wrap items-start gap-3 md:block md:text-right">
+            <StatusBadge status={promise.current_status} />
+            <p className="refnum mt-0 text-[0.8rem] text-muted md:mt-3">
+              examined {formatDate(examined) || "—"}
+            </p>
+          </div>
+        </header>
+
+        {/* Ruled strip: the finding's standing, in print */}
+        <section className="bleed grid grid-cols-2 gap-y-4 pt-4 sm:grid-cols-4">
+          <div className="px-1">
+            <p className="refnum text-[0.95rem]">
+              {goals.length > 0 ? `${goalsMet} of ${goals.length}` : "—"}
+            </p>
+            <p className="label mt-1">Measures met</p>
+          </div>
+          <div className="px-1">
+            <p className="refnum text-[0.95rem]">{updates.length}</p>
+            <p className="label mt-1">Instruments</p>
+          </div>
+          <div className="px-1">
+            <p className="refnum text-[0.95rem]">{references.length}</p>
+            <p className="label mt-1">Sources cited</p>
+          </div>
+          <div className="px-1">
+            <p className="refnum text-[0.95rem]">
+              {promise.metric ? promise.metric : "—"}
+            </p>
+            <p className="label mt-1">Stated measure</p>
+          </div>
         </section>
 
-        {references.length > 0 && (
-          <section className="mt-10">
-            <h2 className="mb-4 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">References</h2>
-            <ul className="space-y-3">
-              {references.map((r) => (
-                <li key={r.id} className="flex items-start gap-2 text-sm">
-                  {hasPageRef && (
-                    <div className="mt-0.5 min-w-12 shrink-0">
-                      {r.page && (
-                        <span className="inline-block whitespace-nowrap rounded bg-zinc-100 px-1.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
-                          {r.page}
-                        </span>
+        {/* Reading column */}
+        <div className="ml-0 md:ml-[7rem]">
+          {promise.original_quote && (
+            <figure className="reading mt-10 border-y border-rule py-5">
+              <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
+                <p>“{promise.original_quote}”</p>
+              </blockquote>
+              <figcaption className="label mt-3">
+                Stated in the platform
+                {promise.source_url ? (
+                  <>
+                    {" · "}
+                    <a
+                      href={promise.source_url}
+                      className="underline decoration-rule-strong underline-offset-2 hover:text-ink"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {hostOf(promise.source_url)}
+                    </a>
+                  </>
+                ) : null}
+              </figcaption>
+            </figure>
+          )}
+
+          <details className="reading mt-6 border-b border-rule pb-4">
+            <summary className="cursor-pointer py-1 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
+              What “{statusLabel(promise.current_status)}” means
+            </summary>
+            <dl className="mt-3 space-y-2 text-[0.95rem]">
+              {STATUSES.map((s) => (
+                <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
+                  <dt className="refnum text-[0.78rem] text-muted">
+                    {STATUS_LABELS[s]}
+                  </dt>
+                  <dd
+                    className={
+                      s === promise.current_status
+                        ? "text-ink"
+                        : "text-muted"
+                    }
+                  >
+                    {STATUS_MEANINGS[s]}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </details>
+
+          {/* Record of instruments */}
+          <section className="mt-12">
+            <SectionLabel count={updates.length}>
+              Record of instruments
+            </SectionLabel>
+            {updates.length === 0 ? (
+              <p className="mt-3 border-t border-rule py-4 text-[0.95rem] text-muted">
+                No instrument in the record yet — no government action has been
+                found against this finding.
+              </p>
+            ) : (
+              <ol className="mt-2">
+                {updates.map((u) => (
+                  <li key={u.id} className="border-t border-rule py-5">
+                    <div className="grid gap-x-6 gap-y-2 md:grid-cols-[7.5rem_minmax(0,1fr)]">
+                      <div>
+                        <p className="refnum text-[0.8rem] text-muted">
+                          <time dateTime={u.dated_on ?? u.created_at}>
+                            {formatDate(u.dated_on) || formatDate(u.created_at)}
+                          </time>
+                        </p>
+                        <div className="mt-2">
+                          <StatusBadge status={u.status} size="small" />
+                        </div>
+                      </div>
+                      <div className="min-w-0">
+                        {u.summary && (
+                          <p className="reading text-[1rem] leading-relaxed">
+                            {u.summary}
+                          </p>
+                        )}
+                        {(u.evidence_url || u.evidence_source) && (
+                          <p className="mt-2 text-[0.9rem] text-muted">
+                            {u.evidence_source && (
+                              <span>
+                                {stripDatedSource(u.evidence_source, u.dated_on)}
+                              </span>
+                            )}
+                            {u.evidence_url && (
+                              <a
+                                href={u.evidence_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={u.evidence_url}
+                                className="ml-2 inline-block whitespace-nowrap font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                              >
+                                Open source ↗
+                              </a>
+                            )}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </section>
+
+          {/* Measures */}
+          {goals.length > 0 && (
+            <section className="mt-12">
+              <SectionLabel count={goals.length}>Measures</SectionLabel>
+              <ul className="reading mt-2">
+                {goals.map((g) => (
+                  <li
+                    key={g.id}
+                    className="grid gap-x-6 gap-y-2 border-t border-rule py-4 md:grid-cols-[minmax(0,1fr)_auto]"
+                  >
+                    <div className="min-w-0">
+                      <p className="font-sans text-[1rem] font-medium">
+                        {g.label}
+                      </p>
+                      {g.target && g.target !== g.label && (
+                        <p className="reading mt-1 text-[0.92rem] text-muted">
+                          {g.target}
+                        </p>
+                      )}
+                      {g.target_value != null && (
+                        <p className="refnum mt-2 text-[0.78rem] text-muted">
+                          target {g.target_value}
+                          {g.current_value != null
+                            ? ` · recorded ${g.current_value}`
+                            : " · nothing recorded"}
+                        </p>
                       )}
                     </div>
-                  )}
-                  <div className="min-w-0">
-                    <span className="font-medium">{r.label}</span>
-                    {r.note && (
-                      <span className="text-zinc-500 dark:text-zinc-400">
-                        {" "}
-                        — {r.note}
-                      </span>
-                    )}
-                    {r.url && (
-                      <a
-                        href={r.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={r.url}
-                        className="block truncate leading-6 text-blue-600 hover:underline dark:text-blue-400"
-                      >
-                        {hostOf(r.url)}
-                      </a>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+                    <div className="md:justify-self-end">
+                      <StatusBadge status={g.status} size="small" />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
-        <div className="mt-10 flex flex-col items-start gap-2 border-t border-zinc-200 pt-6 sm:flex-row sm:items-center sm:gap-3 dark:border-zinc-800">
-          <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            Does the evidence support “{statusLabel(promise.current_status)}”?
-          </span>
-          <VoteButtons promiseId={promise.id} initialScore={voteScore} />
+          {/* Evidence register */}
+          {references.length > 0 && (
+            <section className="mt-12">
+              <SectionLabel count={references.length}>
+                Evidence register
+              </SectionLabel>
+              <ul className="mt-2">
+                {references.map((r, i) => (
+                  <li
+                    key={r.id}
+                    className="grid grid-cols-[2rem_minmax(0,1fr)] gap-x-4 gap-y-1 border-t border-rule py-3"
+                  >
+                    <span className="refnum text-[0.78rem] text-muted">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-[0.98rem]">
+                        <span className="font-medium">{r.label}</span>
+                        {r.note && (
+                          <span className="text-muted"> — {r.note}</span>
+                        )}
+                        {hasPageRef && r.page && (
+                          <span className="refnum ml-2 text-[0.72rem] text-muted">
+                            p. {r.page}
+                          </span>
+                        )}
+                      </p>
+                      {r.url && (
+                        <a
+                          href={r.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={r.url}
+                          className="mt-0.5 block truncate font-sans text-[0.78rem] leading-6 font-semibold tracking-[0.06em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                        >
+                          {hostOf(r.url)} ↗
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
         </div>
+        {/* Reader assessment */}
+        <section className="bleed mt-14">
+          <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
+              Does this record match the evidence?
+            </p>
+            <VoteButtons promiseId={promise.id} initialScore={voteScore} />
+          </div>
+        </section>
       </article>
     </main>
   );

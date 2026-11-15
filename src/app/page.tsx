@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getAllStatusCounts, getLatestActivityDate, getParties } from "@/lib/supabase/data";
-import { STATUSES, STATUS_LABELS } from "@/lib/status";
 
 export const revalidate = 300;
 
@@ -22,63 +21,102 @@ export default async function Home() {
     getLatestActivityDate(),
   ]);
 
+  const totals = parties.map((party) => {
+    const counts = statusCounts[party.id] ?? {};
+    const total = Object.values(counts).reduce((a, b) => a + b, 0);
+    return {
+      party,
+      total,
+      completed: counts.completed ?? 0,
+      inProgress: counts.in_progress ?? 0,
+    };
+  });
+
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-12">
-      <header className="mb-10">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Campaign Promise Tracker
-        </h1>
-        <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-          Itemized election promises and their delivery status, backed by
-          evidence.
-        </p>
-      </header>
+    <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
+      <section className="grid gap-10 py-12 md:grid-cols-[1fr_20rem] md:items-end md:py-16">
+        <div>
+          <p className="label">Public record · {parties.length} trackers</p>
+          <h1 className="mt-4 max-w-[20ch] font-sans text-[clamp(2.3rem,5.4vw,3.6rem)] leading-[1.03] font-bold tracking-[-0.02em]">
+            Campaign promise tracker
+          </h1>
+          <p className="reading mt-6 text-[1.0625rem] leading-relaxed">
+            Every itemized promise from a published platform, with a dated
+            record of what government did about it and the source behind each
+            change. No score, no verdict — the evidence is the argument.
+          </p>
+        </div>
+        <dl className="border-l border-rule pl-6 font-mono text-[0.8rem] leading-relaxed text-muted">
+          <dt className="label">Examination date</dt>
+          <dd className="mb-3 text-ink">{formatDate(latestUpdate) || "—"}</dd>
+          <dt className="label">Standing</dt>
+          <dd className="text-ink">
+            Provisional — all promises are still under review and
+            categorization.
+          </dd>
+        </dl>
+      </section>
 
-      <div className="mb-8 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
-        <strong>BETA — in progress</strong>
-        {latestUpdate ? ` (updated ${formatDate(latestUpdate)})` : ""}. All
-        promises are still under review and categorization.
-      </div>
+      <section className="bleed bleed-strong pt-8">
+        <h2 className="label">Trackers in the record</h2>
+        <ul className="mt-4">
+          {totals.map(({ party, total, completed, inProgress }) => (
+            <li key={party.id}>
+              <Link
+                href={`/party/${party.slug}`}
+                className="ledger-row grid grid-cols-[1fr_auto] items-baseline gap-x-6 gap-y-1 border-t border-rule px-1 py-6 md:grid-cols-[minmax(0,1fr)_6rem_6rem_8rem_2rem]"
+              >
+                <div className="min-w-0">
+                  <h3 className="font-sans text-[1.35rem] font-semibold leading-tight">
+                    {party.name}
+                  </h3>
+                  <p className="mt-1 text-[0.9rem] text-muted">{party.election}</p>
+                  <p className="refnum mt-2 text-[0.75rem] text-muted md:hidden">
+                    {total} findings · {completed} delivered · {inProgress} in
+                    progress
+                  </p>
+                </div>
+                <div className="hidden md:block">
+                  <p className="refnum text-[0.95rem]">{total}</p>
+                  <p className="label">findings</p>
+                </div>
+                <div className="hidden md:block">
+                  <p className="refnum text-[0.95rem]">{completed}</p>
+                  <p className="label">delivered</p>
+                </div>
+                <div className="hidden text-right md:block">
+                  <p className="refnum text-[0.8rem] text-muted">
+                    {inProgress} in progress
+                  </p>
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="hidden font-sans text-[1.1rem] md:block"
+                >
+                  →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-      <div className="grid gap-6 sm:grid-cols-2">
-        {parties.map((party) => {
-          const counts = statusCounts[party.id] ?? {};
-          const total = Object.values(counts).reduce((a, b) => a + b, 0);
-          return (
-            <Link
-              key={party.id}
-              href={`/party/${party.slug}`}
-              className="group rounded-xl border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600"
-            >
-              <h2 className="text-xl font-semibold group-hover:underline">
-                {party.name}
-              </h2>
-              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-                {party.election}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {STATUSES.map((status) => {
-                  const n = counts[status] ?? 0;
-                  if (n === 0) return null;
-                  return (
-                    <span
-                      key={status}
-                      className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300"
-                    >
-                      {STATUS_LABELS[status]}: {n}
-                    </span>
-                  );
-                })}
-              </div>
-
-              <p className="mt-4 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                {total} promises tracked
-              </p>
-            </Link>
-          );
-        })}
-      </div>
+      <section className="bleed mt-14 grid gap-6 pt-8 md:grid-cols-[14rem_minmax(0,1fr)]">
+        <h2 className="label">How this record is made</h2>
+        <div className="reading">
+          <p>
+            Platform text is itemized into promises, then each promise is
+            checked against council agendas and minutes, Hansard, provincial
+            news and archived pages. A status changes only when a linkable
+            source supports it, and the source is printed with the change.
+          </p>
+          <p className="mt-4 text-[0.92rem] text-muted">
+            A promise marked in progress records that action began — not that
+            the result was delivered. Absence of a record means no action was
+            found, not that the promise was abandoned.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }

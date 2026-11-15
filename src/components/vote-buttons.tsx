@@ -13,7 +13,12 @@ const ICON = {
 // Lucide thumbs-up / thumbs-down (ISC), 24x24 viewBox.
 function ThumbIcon({ down = false }: { down?: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" {...ICON}>
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="h-[18px] w-[18px]"
+      {...ICON}
+    >
       {down ? (
         <>
           <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z" />
@@ -63,7 +68,7 @@ export default function VoteButtons({
     if (pending) return;
     const voterId = voterIdRef.current;
     if (!voterId) {
-      setError("Couldn’t save your vote. Reload the page and try again.");
+      setError("Couldn’t save your mark. Reload the page and try again.");
       return;
     }
     const next: 0 | 1 | -1 = myVote === vote ? 0 : vote;
@@ -94,62 +99,59 @@ export default function VoteButtons({
       setScore((s) => s + prev - next);
       setError(
         status === 429
-          ? "Too many votes in a short time. Try again in a few minutes."
-          : "Couldn’t save your vote. Try again.",
+          ? "Too many marks in a short time. Try again in a few minutes."
+          : "Couldn’t save your mark. Try again.",
       );
     } finally {
       setPending(false);
     }
   }
 
+  const buttonClass = (active: boolean) =>
+    `flex h-11 w-12 items-center justify-center transition-colors aria-disabled:opacity-40 ${
+      active ? "bg-ink text-paper" : "bg-transparent text-ink hover:bg-[var(--hover)]"
+    }`;
+
   return (
     <div className="relative flex flex-col items-start gap-1">
-      <div className="flex items-center gap-1">
-      <button
-        type="button"
-        onClick={() => cast(1)}
-        aria-disabled={pending}
-        aria-label="Mark as accurate"
-        aria-pressed={myVote === 1}
-        title="Accurate"
-        className={`flex h-11 w-11 items-center justify-center rounded transition-colors aria-disabled:opacity-40 ${
-          myVote === 1
-            ? "bg-green-100 ring-2 ring-green-600 dark:bg-green-900/40 dark:ring-green-400"
-            : "opacity-60 hover:opacity-100 focus-visible:opacity-100"
-        }`}
-      >
-        <ThumbIcon />
-      </button>
-      <span
-        aria-live="polite"
-        className="min-w-8 text-center text-sm font-medium tabular-nums"
-      >
-        {score}
-        <span className="sr-only">
-          {Math.abs(score) === 1 ? " net vote" : " net votes"}
+      <div className="flex items-stretch border border-ink">
+        <button
+          type="button"
+          onClick={() => cast(1)}
+          aria-disabled={pending}
+          aria-label="Mark as accurate"
+          aria-pressed={myVote === 1}
+          title="Accurate"
+          className={`${buttonClass(myVote === 1)} border-r border-ink`}
+        >
+          <ThumbIcon />
+        </button>
+        <span
+          aria-live="polite"
+          className="refnum flex min-w-12 items-center justify-center px-2 text-[0.85rem] tabular-nums"
+        >
+          {score}
+          <span className="sr-only">
+            {Math.abs(score) === 1 ? " net mark" : " net marks"}
+          </span>
         </span>
-      </span>
-      <button
-        type="button"
-        onClick={() => cast(-1)}
-        aria-disabled={pending}
-        aria-label="Mark as inaccurate"
-        aria-pressed={myVote === -1}
-        title="Inaccurate"
-        className={`flex h-11 w-11 items-center justify-center rounded transition-colors aria-disabled:opacity-40 ${
-          myVote === -1
-            ? "bg-red-100 ring-2 ring-red-600 dark:bg-red-900/40 dark:ring-red-400"
-            : "opacity-60 hover:opacity-100 focus-visible:opacity-100"
-        }`}
-      >
-        <ThumbIcon down />
-      </button>
+        <button
+          type="button"
+          onClick={() => cast(-1)}
+          aria-disabled={pending}
+          aria-label="Mark as inaccurate"
+          aria-pressed={myVote === -1}
+          title="Inaccurate"
+          className={`${buttonClass(myVote === -1)} border-l border-ink`}
+        >
+          <ThumbIcon down />
+        </button>
       </div>
       {/* Mounted always, out of flow: a live region that appears with its text is often not
-          announced, and reserving a line here would push the thumbs off the label's centre. */}
+          announced, and reserving a line here would push the buttons off the label's centre. */}
       <p
         role="status"
-        className="absolute left-0 top-full mt-1 w-max max-w-[min(22rem,85vw)] text-xs text-red-700 dark:text-red-400"
+        className="absolute top-full left-0 mt-1 w-max max-w-[min(22rem,85vw)] text-[0.78rem] text-alert"
       >
         {error}
       </p>
