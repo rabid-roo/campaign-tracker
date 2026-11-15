@@ -182,4 +182,22 @@
     border-top: 1px solid var(--rule);
     padding-top: 0.5rem;
   }
+
+  /* The browser's own triangle is the one piece of chrome the sheet does not print. */
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1.25rem;
+    font-family: var(--font-courier), ui-monospace, monospace;
+    font-weight: 400;
+  }
+  details[open] > summary::before {
+    content: "−";
+  }
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft } from "@/components/arrows";
 import StatusBadge from "@/components/status-badge";
 import TagBadge from "@/components/tag-badge";
 import {
@@ -8,6 +9,7 @@ import {
   getPromisesByParty,
   getStatusCountsByParty,
 } from "@/lib/supabase/data";
+import { numberingByPromise } from "@/lib/findings";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
 import { TAGS } from "@/lib/tags";
 
@@ -51,6 +53,7 @@ export default async function PartyPage({
   })();
 
   const categoryMap = new Map(categories.map((c) => [c.id, c]));
+  const numbers = numberingByPromise(promises, categories);
   const groups = new Map<string, typeof promises>();
   for (const p of filtered) {
     const key = p.category_id ?? "__none__";
@@ -66,14 +69,6 @@ export default async function PartyPage({
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
   const active = Boolean(status || activeTag);
-  // Finding numbers continue across sectors, so a filtered list still reads 001..n.
-  const numbered = ordered.reduce<
-    { catId: string; items: typeof promises; start: number }[]
-  >((acc, [catId, items]) => {
-    const previous = acc[acc.length - 1];
-    const start = previous ? previous.start + previous.items.length : 0;
-    return [...acc, { catId, items, start }];
-  }, []);
 
   return (
     <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
@@ -82,10 +77,12 @@ export default async function PartyPage({
           href="/"
           className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
         >
-          ← All trackers
+          <ArrowLeft className="mr-2" />
+          All trackers
         </Link>
-        <p className="refnum text-[0.8rem] text-muted">
-          {total} findings · examination {party.election}
+        <p className="text-[0.85rem] text-muted">
+          <span className="refnum">{total}</span> findings ·{" "}
+          examination {party.election}
         </p>
       </div>
 
@@ -94,9 +91,7 @@ export default async function PartyPage({
           <h1 className="max-w-[22ch] font-sans text-[clamp(2rem,4.4vw,3rem)] leading-[1.05] font-bold tracking-[-0.02em]">
             {party.name}
           </h1>
-          <p className="refnum mt-3 text-[0.85rem] text-muted">
-            {party.election}
-          </p>
+          <p className="mt-3 text-[0.85rem] text-muted">{party.election}</p>
         </div>
         {party.description && (
           <p className="reading text-[0.95rem] leading-relaxed text-muted md:max-w-none">
@@ -161,14 +156,14 @@ export default async function PartyPage({
         </div>
       </div>
 
-      {numbered.map(({ catId, items, start }) => {
+      {ordered.map(([catId, items]) => {
         const cat = catId === "__none__" ? null : categoryMap.get(catId);
         return (
           <section key={catId} className="bleed pt-6">
             <h2 className="label pt-4">{cat?.name ?? "Uncategorized"}</h2>
             <ul>
-              {items.map((p, i) => {
-                const number = start + i + 1;
+              {items.map((p) => {
+                const number = numbers.get(p.id) ?? 0;
                 return (
                   <li key={p.id}>
                     <Link

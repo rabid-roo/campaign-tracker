@@ -108,7 +108,7 @@ export default function VoteButtons({
   }
 
   const buttonClass = (active: boolean) =>
-    `flex h-11 w-12 items-center justify-center transition-colors aria-disabled:opacity-40 ${
+    `flex h-11 items-center justify-center gap-2 px-3 transition-colors aria-disabled:opacity-40 ${
       active ? "bg-ink text-paper" : "bg-transparent text-ink hover:bg-[var(--hover)]"
     }`;
 
@@ -125,6 +125,7 @@ export default function VoteButtons({
           className={`${buttonClass(myVote === 1)} border-r border-ink`}
         >
           <ThumbIcon />
+          <span className="font-sans text-[0.8rem] font-semibold">Accurate</span>
         </button>
         <span
           aria-live="polite"
@@ -145,6 +146,7 @@ export default function VoteButtons({
           className={`${buttonClass(myVote === -1)} border-l border-ink`}
         >
           <ThumbIcon down />
+          <span className="font-sans text-[0.8rem] font-semibold">Inaccurate</span>
         </button>
       </div>
       {/* Mounted always, out of flow: a live region that appears with its text is often not

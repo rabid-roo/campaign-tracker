@@ -49,12 +49,9 @@ export default function RootLayout({
               <Link href="/" className="inline-block py-1 hover:text-ink">
                 Trackers
               </Link>
-              <a
-                href="https://github.com/rabid-roo/campaign-tracker"
-                className="inline-block py-1 hover:text-ink"
-              >
+              <Link href="/#method" className="inline-block py-1 hover:text-ink">
                 Method
-              </a>
+              </Link>
             </nav>
           </div>
         </header>
@@ -62,9 +59,6 @@ export default function RootLayout({
         <footer className="bleed mt-16">
           <div className="mx-auto flex w-full max-w-6xl flex-wrap items-baseline justify-between gap-2 px-6 py-6 md:px-8">
             <p className="label">Source-linked record · updated as evidence is found</p>
-            <p className="refnum text-xs text-muted">
-              Not affiliated with any party
-            </p>
           </div>
         </footer>
       </body>

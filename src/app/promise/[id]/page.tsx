@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowUpRight } from "@/components/arrows";
 import StatusBadge from "@/components/status-badge";
 import TagBadge from "@/components/tag-badge";
 import VoteButtons from "@/components/vote-buttons";
 import {
+  getCategories,
   getGoals,
   getPromiseById,
+  getPromisesByParty,
   getReferences,
   getVoteScore,
 } from "@/lib/supabase/data";
+import { numberingByPromise } from "@/lib/findings";
 import {
   STATUSES,
   STATUS_LABELS,
@@ -65,23 +69,8 @@ function stripDatedSource(source: string, datedOn: string | null): string {
   return source.startsWith(prefix) ? source.slice(prefix.length) : source;
 }
 
-function SectionLabel({
-  children,
-  count,
-}: {
-  children: React.ReactNode;
-  count?: number;
-}) {
-  return (
-    <h2 className="label flex items-baseline gap-3 pt-4">
-      {children}
-      {count != null && (
-        <span className="refnum text-[0.7rem] tracking-normal text-muted normal-case">
-          {String(count).padStart(2, "0")}
-        </span>
-      )}
-    </h2>
-  );
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <h2 className="label pt-4">{children}</h2>;
 }
 
 export default async function PromisePage({
@@ -94,11 +83,18 @@ export default async function PromisePage({
   if (!detail) notFound();
 
   const { promise, party, category, updates } = detail;
-  const [voteScore, references, goals] = await Promise.all([
-    getVoteScore(id),
-    getReferences(id),
-    getGoals(id),
-  ]);
+  const [voteScore, references, goals, partyPromises, categories] =
+    await Promise.all([
+      getVoteScore(id),
+      getReferences(id),
+      getGoals(id),
+      getPromisesByParty(party.id),
+      getCategories(),
+    ]);
+  // The same register numbering the party page prints, never a UUID slice.
+  const finding = String(
+    numberingByPromise(partyPromises, categories).get(id) ?? 0,
+  ).padStart(3, "0");
   // Newest first: dated_on desc, then created_at desc (see getPromiseById).
   const lastChange = updates[0]?.dated_on ?? updates[0]?.created_at ?? null;
   const reviewedOn = promise.reviewed_on ?? null;
@@ -114,31 +110,22 @@ export default async function PromisePage({
           href={`/party/${party.slug}`}
           className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
         >
-          ← {party.name}
+          <ArrowLeft className="mr-2" />
+          {party.name}
         </Link>
-        <p className="label">
-          Finding · {statusLabel(promise.current_status)}
-        </p>
+        <p className="refnum text-[0.8rem] text-muted">Finding {finding}</p>
       </div>
 
       <article>
         {/* Finding head */}
         <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_11rem] md:py-10">
           <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
-            <p className="label">Reference</p>
-            <p className="refnum mt-1 text-[0.85rem] text-ink">
-              {promise.id.slice(0, 8).toUpperCase()}
-            </p>
+            <p className="label">Finding</p>
+            <p className="refnum mt-1 text-[1.1rem] text-ink">{finding}</p>
             {promise.tag && (
               <p className="mt-3 md:mt-4">
                 <TagBadge tag={promise.tag} />
               </p>
-            )}
-            {category && (
-              <div className="w-full md:w-auto">
-                <p className="label mt-3 md:mt-4">Sector</p>
-                <p className="mt-1 text-[0.95rem]">{category.name}</p>
-              </div>
             )}
           </aside>
 
@@ -155,38 +142,50 @@ export default async function PromisePage({
 
           <div className="flex flex-wrap items-start gap-3 md:block md:text-right">
             <StatusBadge status={promise.current_status} />
-            <p className="refnum mt-0 text-[0.8rem] text-muted md:mt-3">
-              examined {formatDate(examined) || "—"}
-            </p>
           </div>
         </header>
 
-        {/* Ruled strip: the finding's standing, in print */}
-        <section className="bleed grid grid-cols-2 gap-y-4 pt-4 sm:grid-cols-4">
-          <div className="px-1">
-            <p className="refnum text-[0.95rem]">
-              {goals.length > 0 ? `${goalsMet} of ${goals.length}` : "—"}
-            </p>
-            <p className="label mt-1">Measures met</p>
+        {/* Ruled strip: sector, last examination, tally, and what the stamp claims */}
+        <section className="bleed pt-4">
+          <div className="grid grid-cols-2 gap-y-4 sm:grid-cols-3">
+            <div className="px-1">
+              <p className="refnum text-[0.95rem]">{category?.name ?? "—"}</p>
+              <p className="label mt-1">Sector</p>
+            </div>
+            <div className="px-1">
+              <p className="refnum text-[0.95rem]">
+                {formatDate(examined) || "—"}
+              </p>
+              <p className="label mt-1">Last examined</p>
+            </div>
+            <div className="px-1">
+              <p className="refnum text-[0.95rem]">
+                {goals.length > 0 ? `${goalsMet} of ${goals.length}` : "—"}
+              </p>
+              <p className="label mt-1">Measures met</p>
+            </div>
           </div>
-          <div className="px-1">
-            <p className="refnum text-[0.95rem]">{updates.length}</p>
-            <p className="label mt-1">Instruments</p>
-          </div>
-          <div className="px-1">
-            <p className="refnum text-[0.95rem]">{references.length}</p>
-            <p className="label mt-1">Sources cited</p>
-          </div>
-          <div className="px-1">
-            <p className="refnum text-[0.95rem]">
-              {promise.metric ? promise.metric : "—"}
-            </p>
-            <p className="label mt-1">Stated measure</p>
-          </div>
+          <details className="reading mt-4 border-t border-rule pb-3">
+            <summary className="cursor-pointer py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
+              What “{statusLabel(promise.current_status)}” means
+            </summary>
+            <dl className="mt-3 space-y-2 text-[0.95rem]">
+              {STATUSES.map((s) => (
+                <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
+                  <dt className="font-sans text-[0.8rem] font-semibold text-muted">
+                    {STATUS_LABELS[s]}
+                  </dt>
+                  <dd className={s === promise.current_status ? "text-ink" : "text-muted"}>
+                    {STATUS_MEANINGS[s]}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </details>
         </section>
 
         {/* Reading column */}
-        <div className="ml-0 md:ml-[7rem]">
+        <div className="ml-0 md:ml-[9rem]">
           {promise.original_quote && (
             <figure className="reading mt-10 border-y border-rule py-5">
               <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
@@ -211,35 +210,9 @@ export default async function PromisePage({
             </figure>
           )}
 
-          <details className="reading mt-6 border-b border-rule pb-4">
-            <summary className="cursor-pointer py-1 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
-              What “{statusLabel(promise.current_status)}” means
-            </summary>
-            <dl className="mt-3 space-y-2 text-[0.95rem]">
-              {STATUSES.map((s) => (
-                <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
-                  <dt className="refnum text-[0.78rem] text-muted">
-                    {STATUS_LABELS[s]}
-                  </dt>
-                  <dd
-                    className={
-                      s === promise.current_status
-                        ? "text-ink"
-                        : "text-muted"
-                    }
-                  >
-                    {STATUS_MEANINGS[s]}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </details>
-
           {/* Record of instruments */}
           <section className="mt-12">
-            <SectionLabel count={updates.length}>
-              Record of instruments
-            </SectionLabel>
+            <SectionLabel>Record of instruments</SectionLabel>
             {updates.length === 0 ? (
               <p className="mt-3 border-t border-rule py-4 text-[0.95rem] text-muted">
                 No instrument in the record yet — no government action has been
@@ -281,7 +254,7 @@ export default async function PromisePage({
                                 title={u.evidence_url}
                                 className="ml-2 inline-block whitespace-nowrap py-1 font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
                               >
-                                Open source ↗
+                                Open source <ArrowUpRight className="ml-1" />
                               </a>
                             )}
                           </p>
@@ -297,7 +270,7 @@ export default async function PromisePage({
           {/* Measures */}
           {goals.length > 0 && (
             <section className="mt-12">
-              <SectionLabel count={goals.length}>Measures</SectionLabel>
+              <SectionLabel>Measures</SectionLabel>
               <ul className="reading mt-2">
                 {goals.map((g) => (
                   <li
@@ -334,9 +307,7 @@ export default async function PromisePage({
           {/* Evidence register */}
           {references.length > 0 && (
             <section className="mt-12">
-              <SectionLabel count={references.length}>
-                Evidence register
-              </SectionLabel>
+              <SectionLabel>Evidence register</SectionLabel>
               <ul className="mt-2">
                 {references.map((r, i) => (
                   <li
@@ -366,7 +337,7 @@ export default async function PromisePage({
                           title={r.url}
                           className="mt-0.5 block truncate font-sans text-[0.78rem] leading-6 font-semibold tracking-[0.06em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
                         >
-                          {hostOf(r.url)} ↗
+                          {hostOf(r.url)} <ArrowUpRight className="ml-1" />
                         </a>
                       )}
                     </div>

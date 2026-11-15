@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "@/components/arrows";
 import { getAllStatusCounts, getLatestActivityDate, getParties } from "@/lib/supabase/data";
 
 export const revalidate = 300;
@@ -45,9 +46,9 @@ export default async function Home() {
             change. No score, no verdict — the evidence is the argument.
           </p>
         </div>
-        <dl className="border-l border-rule pl-6 font-mono text-[0.8rem] leading-relaxed text-muted">
+        <dl className="border-l border-rule pl-6 font-sans text-[0.85rem] leading-relaxed text-muted">
           <dt className="label">Examination date</dt>
-          <dd className="mb-3 text-ink">{formatDate(latestUpdate) || "—"}</dd>
+          <dd className="mb-3 text-ink refnum">{formatDate(latestUpdate) || "—"}</dd>
           <dt className="label">Standing</dt>
           <dd className="text-ink">
             Provisional — all promises are still under review and
@@ -92,7 +93,7 @@ export default async function Home() {
                   aria-hidden="true"
                   className="hidden font-sans text-[1.1rem] md:block"
                 >
-                  →
+                  <ArrowRight className="ml-2" />
                 </span>
               </Link>
             </li>
@@ -100,7 +101,10 @@ export default async function Home() {
         </ul>
       </section>
 
-      <section className="bleed mt-14 grid gap-6 pt-8 md:grid-cols-[14rem_minmax(0,1fr)]">
+      <section
+        id="method"
+        className="bleed mt-14 grid gap-6 pt-8 md:grid-cols-[14rem_minmax(0,1fr)]"
+      >
         <h2 className="label">How this record is made</h2>
         <div className="reading">
           <p>
