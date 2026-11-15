@@ -100,28 +100,28 @@ export default async function PromisePage({
           </p>
         )}
 
-        {reviewedOn ? (
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            Last reviewed{" "}
-            <time dateTime={reviewedOn}>{formatDate(reviewedOn)}</time>
-          </p>
-        ) : lastChange ? (
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            Latest status update{" "}
-            <time dateTime={lastChange}>{formatDate(lastChange)}</time>
-          </p>
-        ) : (
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            No review recorded yet
-          </p>
-        )}
-
-        {goals.length > 0 && (
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            {goalsMet} of {goals.length}{" "}
-            {goals.length === 1 ? "goal" : "goals"} met
-          </p>
-        )}
+        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          {reviewedOn ? (
+            <>
+              Last reviewed{" "}
+              <time dateTime={reviewedOn}>{formatDate(reviewedOn)}</time>
+            </>
+          ) : lastChange ? (
+            <>
+              Latest status update{" "}
+              <time dateTime={lastChange}>{formatDate(lastChange)}</time>
+            </>
+          ) : (
+            "No review recorded yet"
+          )}
+          {goals.length > 0 && (
+            <>
+              {" · "}
+              {goalsMet} of {goals.length} {goals.length === 1 ? "goal" : "goals"}{" "}
+              met
+            </>
+          )}
+        </p>
 
         <details className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           <summary className="cursor-pointer select-none hover:text-zinc-900 dark:hover:text-zinc-200">
