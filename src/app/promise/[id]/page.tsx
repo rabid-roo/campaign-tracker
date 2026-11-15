@@ -279,7 +279,7 @@ export default async function PromisePage({
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title={u.evidence_url}
-                                className="ml-2 inline-block whitespace-nowrap font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                                className="ml-2 inline-block whitespace-nowrap py-1 font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
                               >
                                 Open source ↗
                               </a>
