@@ -36,8 +36,7 @@ export default async function Home() {
     <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
       <section className="grid gap-10 py-12 md:grid-cols-[1fr_20rem] md:items-end md:py-16">
         <div>
-          <p className="label">Public record · {parties.length} trackers</p>
-          <h1 className="mt-4 max-w-[20ch] font-sans text-[clamp(2.3rem,5.4vw,3.6rem)] leading-[1.03] font-bold tracking-[-0.02em]">
+          <h1 className="max-w-[20ch] font-sans text-[clamp(2.3rem,5.4vw,3.6rem)] leading-[1.03] font-bold tracking-[-0.02em]">
             Campaign promise tracker
           </h1>
           <p className="reading mt-6 text-[1.0625rem] leading-relaxed">

@@ -91,8 +91,7 @@ export default async function PartyPage({
 
       <header className="grid gap-6 py-10 md:grid-cols-[minmax(0,1fr)_20rem] md:items-end">
         <div>
-          <p className="label">Tracker</p>
-          <h1 className="mt-3 max-w-[22ch] font-sans text-[clamp(2rem,4.4vw,3rem)] leading-[1.05] font-bold tracking-[-0.02em]">
+          <h1 className="max-w-[22ch] font-sans text-[clamp(2rem,4.4vw,3rem)] leading-[1.05] font-bold tracking-[-0.02em]">
             {party.name}
           </h1>
           <p className="refnum mt-3 text-[0.85rem] text-muted">

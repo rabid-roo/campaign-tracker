@@ -17,7 +17,7 @@ export default function StatusBadge({
   const label = STATUS_LABELS[s] ?? status;
   return (
     <span
-      className={`stamp ${variant} ${size === "small" ? "text-[0.625rem] px-1.5 py-1" : ""}`}
+      className={`stamp ${variant} ${size === "small" ? "px-1.5 py-1" : ""}`}
       data-status={s}
     >
       {label}
