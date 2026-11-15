@@ -4,3 +4,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+/* One focus ring for the whole site: the UA default is a hairline on dark. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-zinc-900);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :focus-visible {
+      outline-color: var(--color-zinc-100);
+    }
+  }
+}

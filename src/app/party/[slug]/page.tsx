@@ -67,7 +67,7 @@ export default async function PartyPage({
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-12">
+    <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <Link
         href="/"
         className="text-sm text-zinc-500 hover:underline dark:text-zinc-400"
@@ -150,7 +150,7 @@ export default async function PartyPage({
                     href={`/promise/${p.id}`}
                     className="flex items-center justify-between gap-4 px-5 py-4 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex min-w-0 items-center gap-2">
                       <span className="font-medium">{p.title}</span>
                       {p.tag && <TagBadge tag={p.tag} />}
                     </span>

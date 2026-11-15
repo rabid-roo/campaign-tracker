@@ -28,6 +28,15 @@ export const STATUS_STYLES: Record<Status, string> = {
   cancelled: "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300",
 };
 
+export const STATUS_MEANINGS: Record<Status, string> = {
+  not_started: "No government action recorded yet.",
+  in_progress:
+    "Action has begun — a motion passed, staff were directed, or work started.",
+  partially_complete: "Some of the promised work is in place; the rest is not.",
+  completed: "Delivered as promised.",
+  cancelled: "Abandoned or reversed.",
+};
+
 export function statusLabel(status: string): string {
   return STATUS_LABELS[status as Status] ?? status;
 }

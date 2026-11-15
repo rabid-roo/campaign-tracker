@@ -34,6 +34,7 @@ export type PromiseRow = {
   metric: string | null;
   metric_source: string | null;
   tag: string | null;
+  reviewed_on: string | null;
 };
 
 export type StatusUpdate = {

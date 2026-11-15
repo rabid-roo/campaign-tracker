@@ -2,6 +2,33 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const ICON = {
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+} as const;
+
+// Lucide thumbs-up / thumbs-down (ISC), 24x24 viewBox.
+function ThumbIcon({ down = false }: { down?: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" {...ICON}>
+      {down ? (
+        <>
+          <path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z" />
+          <path d="M17 14V2" />
+        </>
+      ) : (
+        <>
+          <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+          <path d="M7 10v12" />
+        </>
+      )}
+    </svg>
+  );
+}
+
 export default function VoteButtons({
   promiseId,
   initialScore,
@@ -61,31 +88,41 @@ export default function VoteButtons({
   return (
     <div className="flex items-center gap-1">
       <button
+        type="button"
         onClick={() => cast(1)}
         aria-label="Mark as accurate"
+        aria-pressed={myVote === 1}
         title="Accurate"
-        className={`rounded px-2 py-1 text-lg leading-none transition-colors ${
+        className={`flex h-11 w-11 items-center justify-center rounded transition-colors ${
           myVote === 1
-            ? "bg-green-100 dark:bg-green-900/40"
-            : "opacity-50 hover:opacity-100"
+            ? "bg-green-100 ring-2 ring-green-600 dark:bg-green-900/40 dark:ring-green-400"
+            : "opacity-50 hover:opacity-100 focus-visible:opacity-100"
         }`}
       >
-        👍
+        <ThumbIcon />
       </button>
-      <span className="min-w-8 text-center text-sm font-medium tabular-nums">
+      <span
+        aria-live="polite"
+        className="min-w-8 text-center text-sm font-medium tabular-nums"
+      >
         {score}
+        <span className="sr-only">
+          {Math.abs(score) === 1 ? " net vote" : " net votes"}
+        </span>
       </span>
       <button
+        type="button"
         onClick={() => cast(-1)}
         aria-label="Mark as inaccurate"
+        aria-pressed={myVote === -1}
         title="Inaccurate"
-        className={`rounded px-2 py-1 text-lg leading-none transition-colors ${
+        className={`flex h-11 w-11 items-center justify-center rounded transition-colors ${
           myVote === -1
-            ? "bg-red-100 dark:bg-red-900/40"
-            : "opacity-50 hover:opacity-100"
+            ? "bg-red-100 ring-2 ring-red-600 dark:bg-red-900/40 dark:ring-red-400"
+            : "opacity-50 hover:opacity-100 focus-visible:opacity-100"
         }`}
       >
-        👎
+        <ThumbIcon down />
       </button>
     </div>
   );
