@@ -68,3 +68,17 @@ Semantics: `in_progress` = action actually began (motion passed / staff directed
 ## Skills
 
 Step-by-step workflows live as skills in `.opencode/skills/` (loaded on demand): `status-research`, `news-scrape`, `promise-audit`, `add-promise`, `add-reference`, `tag-promises`, `apply-migration`, `deploy`.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live as GitHub issues in `rabid-roo/campaign-tracker`, via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Canonical five: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `GLOSSARY.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.

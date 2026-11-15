@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-zinc-50 font-sans text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
         <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900">
-          <div className="mx-auto flex w-full max-w-4xl items-center justify-between px-6 py-4">
+          <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-6 py-4">
             <Link href="/" className="font-semibold">
               Campaign Promise Tracker
             </Link>

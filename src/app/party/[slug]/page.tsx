@@ -67,10 +67,10 @@ export default async function PartyPage({
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-12">
+    <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <Link
         href="/"
-        className="text-sm text-zinc-500 hover:underline dark:text-zinc-400"
+        className="py-1 text-sm text-zinc-500 hover:underline dark:text-zinc-400"
       >
         &larr; All trackers
       </Link>
@@ -140,7 +140,7 @@ export default async function PartyPage({
         const cat = catId === "__none__" ? null : categoryMap.get(catId);
         return (
           <section key={catId} className="mb-10">
-            <h2 className="mb-3 text-lg font-semibold">
+            <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
               {cat?.name ?? "Uncategorized"}
             </h2>
             <ul className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 bg-white dark:divide-zinc-800 dark:border-zinc-800 dark:bg-zinc-900">
@@ -150,7 +150,7 @@ export default async function PartyPage({
                     href={`/promise/${p.id}`}
                     className="flex items-center justify-between gap-4 px-5 py-4 transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex min-w-0 items-center gap-2">
                       <span className="font-medium">{p.title}</span>
                       {p.tag && <TagBadge tag={p.tag} />}
                     </span>
