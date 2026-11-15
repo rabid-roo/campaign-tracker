@@ -12,7 +12,7 @@ export default function PromiseNotFound() {
       </p>
       <Link
         href="/"
-        className="mt-6 inline-block text-sm font-medium text-blue-700 hover:underline dark:text-blue-400"
+        className="mt-6 inline-block py-0.5 text-sm font-medium text-blue-700 hover:underline dark:text-blue-400"
       >
         Back to the trackers
       </Link>
