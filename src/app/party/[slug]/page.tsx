@@ -140,7 +140,7 @@ export default async function PartyPage({
         const cat = catId === "__none__" ? null : categoryMap.get(catId);
         return (
           <section key={catId} className="mb-10">
-            <h2 className="mb-3 text-lg font-semibold">
+            <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
               {cat?.name ?? "Uncategorized"}
             </h2>
             <ul className="divide-y divide-zinc-200 rounded-xl border border-zinc-200 bg-white dark:divide-zinc-800 dark:border-zinc-800 dark:bg-zinc-900">

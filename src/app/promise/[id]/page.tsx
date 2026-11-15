@@ -103,7 +103,7 @@ export default async function PromisePage({
         </div>
 
         {category && (
-          <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="mt-2 font-mono text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
             {category.name}
           </p>
         )}
@@ -165,20 +165,20 @@ export default async function PromisePage({
         )}
 
         {promise.description && (
-          <p className="mt-5 text-zinc-700 dark:text-zinc-300">
+          <p className="mt-5 max-w-[var(--measure)] text-pretty text-zinc-700 dark:text-zinc-300">
             {promise.description}
           </p>
         )}
 
         {promise.original_quote && (
-          <blockquote className="mt-4 rounded-lg border-l-4 border-zinc-300 bg-white p-4 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
+          <blockquote className="mt-4 max-w-[var(--measure)] rounded-lg border-l-4 border-zinc-300 bg-white p-4 text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
             &ldquo;{promise.original_quote}&rdquo;
           </blockquote>
         )}
 
         {goals.length > 0 && (
           <section className="mt-10">
-            <h2 className="mb-3 text-lg font-semibold">Goals</h2>
+            <h2 className="mb-3 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Goals</h2>
             <ul className="space-y-2">
               {goals.map((g) => (
                 <li
@@ -228,7 +228,7 @@ export default async function PromisePage({
         )}
 
         <section className="mt-10">
-          <h2 className="mb-4 text-lg font-semibold">Status history</h2>
+          <h2 className="mb-4 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Status history</h2>
           {updates.length === 0 ? (
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               No status changes recorded yet.
@@ -242,7 +242,7 @@ export default async function PromisePage({
                     <StatusBadge status={u.status} />
                   </div>
                   {u.summary && (
-                    <p className="mt-1 break-words text-sm text-zinc-600 dark:text-zinc-400">
+                    <p className="mt-1 max-w-[var(--measure)] text-pretty break-words text-sm text-zinc-600 dark:text-zinc-400">
                       {u.summary}
                     </p>
                   )}
@@ -268,7 +268,7 @@ export default async function PromisePage({
                       )}
                     </p>
                   )}
-                  <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                  <p className="mt-1 font-mono text-xs tabular-nums text-zinc-500 dark:text-zinc-400">
                     {formatDate(u.dated_on) || formatDate(u.created_at)}
                   </p>
                 </li>
@@ -279,7 +279,7 @@ export default async function PromisePage({
 
         {references.length > 0 && (
           <section className="mt-10">
-            <h2 className="mb-4 text-lg font-semibold">References</h2>
+            <h2 className="mb-4 font-mono text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">References</h2>
             <ul className="space-y-3">
               {references.map((r) => (
                 <li key={r.id} className="flex items-start gap-2 text-sm">
