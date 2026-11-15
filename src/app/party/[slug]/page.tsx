@@ -70,7 +70,7 @@ export default async function PartyPage({
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <Link
         href="/"
-        className="text-sm text-zinc-500 hover:underline dark:text-zinc-400"
+        className="py-1 text-sm text-zinc-500 hover:underline dark:text-zinc-400"
       >
         &larr; All trackers
       </Link>

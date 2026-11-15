@@ -86,7 +86,7 @@ export default async function PromisePage({
     <main className="mx-auto w-full max-w-3xl px-6 py-12">
       <Link
         href={`/party/${party.slug}`}
-        className="text-sm text-zinc-500 hover:underline dark:text-zinc-400"
+        className="py-1 text-sm text-zinc-500 hover:underline dark:text-zinc-400"
       >
         &larr; {party.name}
       </Link>
@@ -216,7 +216,7 @@ export default async function PromisePage({
                       target="_blank"
                       rel="noopener noreferrer"
                       title={g.source_url}
-                      className="mt-1 block truncate text-sm text-blue-600 hover:underline dark:text-blue-400"
+                      className="mt-1 block truncate text-sm leading-6 text-blue-600 hover:underline dark:text-blue-400"
                     >
                       {hostOf(g.source_url)}
                     </a>
@@ -306,7 +306,7 @@ export default async function PromisePage({
                         target="_blank"
                         rel="noopener noreferrer"
                         title={r.url}
-                        className="block truncate text-blue-600 hover:underline dark:text-blue-400"
+                        className="block truncate leading-6 text-blue-600 hover:underline dark:text-blue-400"
                       >
                         {hostOf(r.url)}
                       </a>
