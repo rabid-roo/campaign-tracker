@@ -28,7 +28,7 @@ Every promise carries a dated status timeline with a linkable source per change,
 
 ## Capabilities and Constraints
 
-- Next.js (App Router) + Supabase (Postgres), public read-only through RLS; every write goes through the service-role key in scripts, never the browser.
+- Next.js (App Router) + Supabase (Postgres), public read-only through RLS. Data writes run in scripts with the service-role key; visitor votes go through the server-side `/api/vote` route. The browser never holds the key.
 - `npm run import` is destructive (deletes and re-inserts a party's promises, cascading to status updates, votes, references, and goals); one-off edits never use it.
 - Schema changes require the Supabase SQL editor or `supabase db push` — PostgREST cannot run DDL.
 - Visitors can vote a promise "accurate / inaccurate" anonymously; votes are net counts with a per-visitor basic rate limit, no accounts.
