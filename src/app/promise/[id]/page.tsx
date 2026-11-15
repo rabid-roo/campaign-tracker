@@ -103,7 +103,7 @@ export default async function PromisePage({
         </div>
 
         {category && (
-          <p className="mt-2 font-mono text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
+          <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
             {category.name}
           </p>
         )}
