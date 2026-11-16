@@ -118,7 +118,7 @@ export default async function PromisePage({
 
       <article>
         {/* Finding head */}
-        <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_11rem] md:py-10">
+        <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_minmax(11rem,max-content)] md:py-10">
           <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
             <p className="label hidden md:block">Finding</p>
             <p className="refnum mt-1 hidden text-[1.05rem] text-ink md:block">
@@ -165,7 +165,7 @@ export default async function PromisePage({
               </p>
               <p className="label sm:mt-1">Last examined</p>
             </div>
-            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+            <div className="flex min-w-0 items-center justify-between gap-3 border-b border-rule/50 py-0 sm:block sm:border-0 sm:py-0 sm:px-1">
               <div className="min-w-0">
                 {promise.source_url ? (
                   <SourceLink
@@ -251,7 +251,7 @@ export default async function PromisePage({
               <ol className="mt-2">
                 {updates.map((u) => (
                   <li key={u.id} className="border-t border-rule py-5">
-                    <div className="grid gap-x-6 gap-y-2 md:grid-cols-[7.5rem_minmax(0,1fr)]">
+                    <div className="grid gap-x-6 gap-y-2 md:grid-cols-[11rem_minmax(0,1fr)]">
                       <div>
                         <p className="refnum text-[0.8rem] text-muted">
                           <time dateTime={u.dated_on ?? u.created_at}>
