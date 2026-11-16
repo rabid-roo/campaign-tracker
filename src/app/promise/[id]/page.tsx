@@ -62,6 +62,11 @@ function hostOf(value: string): string {
   }
 }
 
+// The tracker's own deployment is an archived copy, not an independent source.
+function sourceLabel(value: string): string {
+  return /(^|\.)vercel\.app$/.test(hostOf(value)) ? "Archived copy" : hostOf(value);
+}
+
 // Each history entry prints its own date line, so drop a leading ISO date that
 // only repeats it (e.g. "2026-11-06 Special Council Meeting").
 function stripDatedSource(source: string, datedOn: string | null): string {
@@ -184,7 +189,7 @@ export default async function PromisePage({
                     href={promise.source_url}
                     className="sm:min-h-0"
                   >
-                    {hostOf(promise.source_url)}
+                    {sourceLabel(promise.source_url)}
                   </SourceLink>
                 ) : (
                   <p className="text-[0.95rem]">None recorded</p>
@@ -244,16 +249,8 @@ export default async function PromisePage({
                 <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
                   <p>“{promise.original_quote}”</p>
                 </blockquote>
-                <figcaption className="mt-2 flex flex-wrap items-center gap-x-3">
+                <figcaption className="mt-2">
                   <span className="label">Stated in the platform</span>
-                  {promise.source_url && (
-                    <SourceLink
-                      href={promise.source_url}
-                      className="sm:min-h-0"
-                    >
-                      {hostOf(promise.source_url)}
-                    </SourceLink>
-                  )}
                 </figcaption>
               </div>
             </figure>
@@ -380,9 +377,15 @@ export default async function PromisePage({
                         )}
                       </p>
                       {r.url && (
-                        <SourceLink href={r.url} className="mt-1">
-                          {hostOf(r.url)}
-                        </SourceLink>
+                        <div className="mt-1 flex flex-wrap items-center gap-x-3">
+                          <SourceLink href={r.url}>
+                            Open source
+                            <span className="sr-only"> for {r.label}</span>
+                          </SourceLink>
+                          {sourceLabel(r.url) === "Archived copy" && (
+                            <span className="label">Archived copy</span>
+                          )}
+                        </div>
                       )}
                     </div>
                   </li>
@@ -395,9 +398,14 @@ export default async function PromisePage({
         {/* Reader assessment */}
         <section className="bleed mt-14">
           <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
-              Is this record accurate?
-            </p>
+            <div>
+              <p className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
+                Is this record accurate?
+              </p>
+              <p className="label mt-1">
+                Anonymous · one mark per visitor · tap it again to withdraw
+              </p>
+            </div>
             <VoteButtons promiseId={promise.id} initialScore={voteScore} />
           </div>
         </section>
