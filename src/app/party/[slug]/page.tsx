@@ -48,7 +48,7 @@ export default async function PartyPage({
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
         <Link
           href="/"
-          className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
+          className="inline-flex min-h-11 items-center font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
         >
           <ArrowLeft className="mr-2" />
           All trackers

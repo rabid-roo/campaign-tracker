@@ -44,7 +44,7 @@ export default function RootLayout({
           <div className="mx-auto flex w-full max-w-6xl flex-wrap items-baseline justify-between gap-x-6 gap-y-2 px-6 py-4 md:px-8">
             <Link
               href="/"
-              className="font-sans text-[0.95rem] font-bold tracking-[0.14em] uppercase"
+              className="inline-flex min-h-11 items-center font-sans text-[0.95rem] font-bold tracking-[0.14em] uppercase"
             >
               Campaign Promise Tracker
             </Link>
@@ -52,10 +52,16 @@ export default function RootLayout({
               aria-label="Trackers"
               className="flex items-baseline gap-5 font-sans text-[0.8rem] text-muted"
             >
-              <Link href="/" className="inline-block py-1 hover:text-ink">
+              <Link
+                href="/"
+                className="inline-flex min-h-11 items-center hover:text-ink"
+              >
                 Trackers
               </Link>
-              <Link href="/#method" className="inline-block py-1 hover:text-ink">
+              <Link
+                href="/#method"
+                className="inline-flex min-h-11 items-center hover:text-ink"
+              >
                 Method
               </Link>
             </nav>

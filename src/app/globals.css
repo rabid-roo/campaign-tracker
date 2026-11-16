@@ -78,6 +78,16 @@
     outline: 2px solid var(--ink);
     outline-offset: 2px;
   }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  html {
+    caret-color: var(--ink);
+    scrollbar-color: var(--rule-strong) transparent;
+  }
 }
 
 @layer components {
@@ -127,7 +137,8 @@
   }
   .stamp-none {
     color: var(--muted);
-    border-color: var(--rule-strong);
+    /* The outline is the only shape cue for this state, so it clears 3:1. */
+    border-color: var(--muted);
   }
   .stamp-progress {
     color: var(--alert);
@@ -149,9 +160,16 @@
   }
   .stamp-cancelled {
     color: var(--muted);
-    border-color: var(--rule-strong);
+    border-color: var(--muted);
     text-decoration: line-through;
     text-decoration-thickness: 1.5px;
+  }
+
+  /* The finding's own verdict: the stamp at reading scale, never a badge. */
+  .stamp-lead {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem 0.45rem;
+    border-width: 2px;
   }
 
   /* Plan tag as a printed mark, not a pill. */
@@ -168,6 +186,8 @@
 
   .reading {
     max-width: var(--measure);
+    /* Kills the one-word last line without hand-breaking sentences. */
+    text-wrap: pretty;
   }
 
   .ledger-row {

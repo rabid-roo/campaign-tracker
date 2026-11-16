@@ -107,18 +107,24 @@ Zero radius is a system rule, not an omission: stamps, buttons, count strip, led
 
 ## Components
 
-- **Status stamp** (`.stamp`): 1.5px current-color border, uppercase Archivo, `0.13em`; variants `stamp-none`, `stamp-progress` (hatched), `stamp-partial`, `stamp-complete` (filled), `stamp-cancelled` (struck).
+- **Status stamp** (`.stamp`): 1.5px current-color border, uppercase Archivo, `0.13em`; variants `stamp-none`, `stamp-progress` (hatched), `stamp-partial`, `stamp-complete` (filled), `stamp-cancelled` (struck). `.stamp-lead` is the finding's verdict at 0.95rem with a 2px border; instrument and target rows keep the 11px stamp. Outline-only variants border in `--muted`, not `--rule-strong`, so the shape cue clears 3:1.
 - **Plan mark** (`.planmark`): uppercase Courier with a 1px underline; never a pill.
 - **Ledger row**: full-width grid row with a top hairline, hover/focus-within background `--hover`, no border on the outside.
 - **Count strip**: six cells — all findings plus the five statuses — each `refnum` count over a label, active cell marked by a 2px ink top border. It filters the tracker.
-- **Vote control**: two square-cornered 44px-high buttons labelled *Accurate* / *Inaccurate* beside a mono net count, pressed state filled with ink; an always-mounted `role="status"` line sits absolutely below so a failure announces without moving the row.
+- **Finding strip** (promise page): four cells — Last examined, Source, Area, Targets met — value over label on desktop, label/value row on phones; Source is a `SourceLink`, placed second so the citation clears the phone fold.
+- **Vote control**: two square-cornered 44px-high buttons labelled *Yes* / *No* beside a mono count that reads "No marks yet" at zero, pressed state filled with ink; an always-mounted `role="status"` line sits absolutely below so a failure announces without moving the row.
+- **Source link** (`SourceLink`): one affordance for every citation — accent caps, ruled underline, outbound arrow inside the box so truncation cannot clip it; minimum 44px tall on touch, auto height from `sm`.
 - **Section label** (`.label`): the only section heading style; no large section titles, and no numeral counters beside them.
+
+## Browser surfaces
+
+Selection is auditing green on paper, the caret is ink, and scrollbars use the strong rule. These are part of the sheet, not defaults to leave behind.
 
 ## Do's and Don'ts
 
 - Do set status as a stamp; don't reintroduce pills, chips or rounded badges.
 - Do draw rules edge to edge; don't enclose content in cards.
-- Do keep the reading column at 33rem; don't let prose run the full 72rem.
+- Do keep the reading column at 33rem with `text-wrap: pretty`; don't let prose run the full 72rem.
 - Do let colour carry meaning only alongside a second cue (hatch, strike, fill, outline).
 - Do keep Courier Prime for references, dates and counts only; never for running text or headings.
 - Don't add shadows, gradients or hover lifts; the sheet does not float.

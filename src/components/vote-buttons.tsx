@@ -119,34 +119,42 @@ export default function VoteButtons({
           type="button"
           onClick={() => cast(1)}
           aria-disabled={pending}
-          aria-label="Mark as accurate"
+          aria-label="Mark this record accurate"
           aria-pressed={myVote === 1}
           title="Accurate"
           className={`${buttonClass(myVote === 1)} border-r border-ink`}
         >
           <ThumbIcon />
-          <span className="font-sans text-[0.8rem] font-semibold">Accurate</span>
+          <span className="font-sans text-[0.8rem] font-semibold">Yes</span>
         </button>
         <span
           aria-live="polite"
-          className="refnum flex min-w-12 items-center justify-center px-2 text-[0.85rem] tabular-nums"
+          className="refnum flex min-w-12 items-center justify-center px-3 text-[0.85rem] tabular-nums"
         >
-          {score}
-          <span className="sr-only">
-            {Math.abs(score) === 1 ? " net mark" : " net marks"}
-          </span>
+          {score === 0 ? (
+            <span className="font-sans text-[0.75rem] font-normal text-muted">
+              No marks yet
+            </span>
+          ) : (
+            <>
+              {score}
+              <span className="sr-only">
+                {Math.abs(score) === 1 ? " net mark" : " net marks"}
+              </span>
+            </>
+          )}
         </span>
         <button
           type="button"
           onClick={() => cast(-1)}
           aria-disabled={pending}
-          aria-label="Mark as inaccurate"
+          aria-label="Mark this record inaccurate"
           aria-pressed={myVote === -1}
           title="Inaccurate"
           className={`${buttonClass(myVote === -1)} border-l border-ink`}
         >
           <ThumbIcon down />
-          <span className="font-sans text-[0.8rem] font-semibold">Inaccurate</span>
+          <span className="font-sans text-[0.8rem] font-semibold">No</span>
         </button>
       </div>
       {/* Mounted always, out of flow: a live region that appears with its text is often not

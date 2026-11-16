@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight } from "@/components/arrows";
+import { ArrowLeft } from "@/components/arrows";
+import SourceLink from "@/components/source-link";
 import StatusBadge from "@/components/status-badge";
 import TagBadge from "@/components/tag-badge";
 import VoteButtons from "@/components/vote-buttons";
@@ -105,7 +106,7 @@ export default async function PromisePage({
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
         <Link
           href={`/party/${party.slug}`}
-          className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
+          className="inline-flex min-h-11 items-center font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
         >
           <ArrowLeft className="mr-2" />
           {party.name}
@@ -120,7 +121,7 @@ export default async function PromisePage({
         <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_11rem] md:py-10">
           <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
             <p className="label hidden md:block">Finding</p>
-            <p className="refnum mt-1 hidden text-[1.1rem] text-ink md:block">
+            <p className="refnum mt-1 hidden text-[1.05rem] text-ink md:block">
               {finding}
             </p>
             {promise.tag && (
@@ -141,33 +142,65 @@ export default async function PromisePage({
             )}
           </div>
 
-          <div className="flex flex-wrap items-start gap-3 md:block md:text-right">
-            <StatusBadge status={promise.current_status} />
+          <div className="flex flex-wrap items-center gap-3 md:block md:text-right">
+            <p className="label md:mb-2">Status</p>
+            <StatusBadge status={promise.current_status} size="lead" />
           </div>
         </header>
 
         {/* Ruled strip: sector, last examination, tally, and what the stamp claims */}
         <section className="bleed pt-4">
-          <div className="grid sm:grid-cols-3 sm:gap-y-4">
-            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="text-[0.95rem]">{category?.name ?? "—"}</p>
-              <p className="label sm:mt-1">Sector</p>
+          <div className="grid grid-cols-1 sm:grid-cols-4 sm:gap-y-4">
+            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+              <p className="text-[0.95rem]">{category?.name ?? "Not categorized"}</p>
+              <p className="label sm:mt-1">Area</p>
             </div>
-            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="refnum text-[0.95rem]">{formatDate(reviewedOn) || "—"}</p>
+            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+              <p className="text-[0.95rem]">
+                {reviewedOn ? (
+                  <span className="refnum">{formatDate(reviewedOn)}</span>
+                ) : (
+                  "Not yet examined"
+                )}
+              </p>
               <p className="label sm:mt-1">Last examined</p>
             </div>
-            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="refnum text-[0.95rem]">
-                {goals.length > 0 ? `${goalsMet} of ${goals.length}` : "—"}
+            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+              <div className="min-w-0">
+                {promise.source_url ? (
+                  <SourceLink
+                    href={promise.source_url}
+                    className="sm:min-h-0"
+                  >
+                    {hostOf(promise.source_url)}
+                  </SourceLink>
+                ) : (
+                  <p className="text-[0.95rem]">None recorded</p>
+                )}
+              </div>
+              <p className="label sm:mt-1">Source</p>
+            </div>
+            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+              <p className="text-[0.95rem]">
+                {goals.length > 0 ? (
+                  <span className="refnum">
+                    {goalsMet} of {goals.length}
+                  </span>
+                ) : (
+                  "None recorded"
+                )}
               </p>
-              <p className="label sm:mt-1">Measures met</p>
+              <p className="label sm:mt-1">Targets met</p>
             </div>
           </div>
           <details className="mt-4 border-t border-rule pb-3">
-            <summary className="cursor-pointer py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
+            <summary className="flex min-h-11 cursor-pointer items-center py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
               What “{statusLabel(promise.current_status)}” means
             </summary>
+            <p className="border-b border-rule/50 pb-3 font-sans text-[0.8rem] text-muted">
+              Each promise is one numbered finding in this register; the stamp
+              is its delivery state.
+            </p>
             <dl className="reading mt-3 space-y-2 text-[0.95rem]">
               {STATUSES.map((s) => (
                 <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
@@ -186,36 +219,33 @@ export default async function PromisePage({
         {/* Reading column */}
         <div className="ml-0 md:ml-[9rem]">
           {promise.original_quote && (
-            <figure className="reading mt-6 border-y border-rule py-5">
-              <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
-                <p>“{promise.original_quote}”</p>
-              </blockquote>
-              <figcaption className="label mt-3">
-                Stated in the platform
-                {promise.source_url ? (
-                  <>
-                    {" · "}
-                    <a
+            <figure className="mt-6 border-y border-rule py-5">
+              <div className="reading">
+                <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
+                  <p>“{promise.original_quote}”</p>
+                </blockquote>
+                <figcaption className="mt-2 flex flex-wrap items-center gap-x-3">
+                  <span className="label">Stated in the platform</span>
+                  {promise.source_url && (
+                    <SourceLink
                       href={promise.source_url}
-                      className="underline decoration-rule-strong underline-offset-2 hover:text-ink"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      className="sm:min-h-0"
                     >
                       {hostOf(promise.source_url)}
-                    </a>
-                  </>
-                ) : null}
-              </figcaption>
+                    </SourceLink>
+                  )}
+                </figcaption>
+              </div>
             </figure>
           )}
 
-          {/* Record of instruments */}
+          {/* What the government did */}
           <section className="mt-12">
-            <SectionLabel>Record of instruments</SectionLabel>
+            <SectionLabel>What government did</SectionLabel>
             {updates.length === 0 ? (
-              <p className="mt-3 border-t border-rule py-4 text-[0.95rem] text-muted">
-                No instrument in the record yet — no government action has been
-                found against this finding.
+              <p className="reading mt-3 border-t border-rule py-4 text-[0.95rem] text-muted">
+                Nothing on the record yet — no government action has been found
+                for it.
               </p>
             ) : (
               <ol className="mt-2">
@@ -234,7 +264,7 @@ export default async function PromisePage({
                       </div>
                       <div className="min-w-0">
                         {u.summary && (
-                          <p className="reading text-[1rem] leading-relaxed">
+                          <p className="reading text-[1.0625rem] leading-relaxed">
                             {u.summary}
                           </p>
                         )}
@@ -246,15 +276,12 @@ export default async function PromisePage({
                               </span>
                             )}
                             {u.evidence_url && (
-                              <a
+                              <SourceLink
                                 href={u.evidence_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title={u.evidence_url}
-                                className="ml-2 inline-block whitespace-nowrap py-1 font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                                className="ml-2"
                               >
-                                Open source <ArrowUpRight className="ml-1" />
-                              </a>
+                                Open source
+                              </SourceLink>
                             )}
                           </p>
                         )}
@@ -269,7 +296,7 @@ export default async function PromisePage({
           {/* Measures */}
           {goals.length > 0 && (
             <section className="mt-12">
-              <SectionLabel>Measures</SectionLabel>
+              <SectionLabel>Targets</SectionLabel>
               <ul className="reading mt-2">
                 {goals.map((g) => (
                   <li
@@ -277,16 +304,16 @@ export default async function PromisePage({
                     className="grid gap-x-6 gap-y-2 border-t border-rule py-4 md:grid-cols-[minmax(0,1fr)_auto]"
                   >
                     <div className="min-w-0">
-                      <p className="font-sans text-[1rem] font-medium">
+                      <p className="font-sans text-[1.05rem] font-medium">
                         {g.label}
                       </p>
                       {g.target && g.target !== g.label && (
-                        <p className="reading mt-1 text-[0.92rem] text-muted">
+                        <p className="reading mt-1 text-[0.95rem] text-muted">
                           {g.target}
                         </p>
                       )}
                       {g.target_value != null && (
-                        <p className="refnum mt-2 text-[0.78rem] text-muted">
+                        <p className="refnum mt-2 text-[0.8rem] text-muted">
                           target {g.target_value}
                           {g.current_value != null
                             ? ` · recorded ${g.current_value}`
@@ -306,38 +333,32 @@ export default async function PromisePage({
           {/* Evidence register */}
           {references.length > 0 && (
             <section className="mt-12">
-              <SectionLabel>Evidence register</SectionLabel>
+              <SectionLabel>Sources</SectionLabel>
               <ul className="mt-2">
                 {references.map((r, i) => (
                   <li
                     key={r.id}
                     className="grid grid-cols-[2rem_minmax(0,1fr)] gap-x-4 gap-y-1 border-t border-rule py-3"
                   >
-                    <span className="refnum text-[0.78rem] text-muted">
+                    <span className="refnum text-[0.8rem] text-muted">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="min-w-0">
-                      <p className="text-[0.98rem]">
+                      <p className="text-pretty text-[1.0625rem]">
                         <span className="font-medium">{r.label}</span>
                         {r.note && (
                           <span className="text-muted"> — {r.note}</span>
                         )}
                         {hasPageRef && r.page && (
-                          <span className="refnum ml-2 text-[0.72rem] text-muted">
-                            p. {r.page}
+                          <span className="refnum ml-2 text-[0.8rem] text-muted">
+                            p. {r.page.replace(/^p\.?\s*/, "")}
                           </span>
                         )}
                       </p>
                       {r.url && (
-                        <a
-                          href={r.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title={r.url}
-                          className="mt-0.5 block truncate font-sans text-[0.78rem] leading-6 font-semibold tracking-[0.06em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
-                        >
-                          {hostOf(r.url)} <ArrowUpRight className="ml-1" />
-                        </a>
+                        <SourceLink href={r.url} className="mt-1">
+                          {hostOf(r.url)}
+                        </SourceLink>
                       )}
                     </div>
                   </li>
@@ -351,7 +372,7 @@ export default async function PromisePage({
         <section className="bleed mt-14">
           <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
-              Does this record match the evidence?
+              Is this record accurate?
             </p>
             <VoteButtons promiseId={promise.id} initialScore={voteScore} />
           </div>

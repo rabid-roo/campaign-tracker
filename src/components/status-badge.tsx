@@ -10,14 +10,16 @@ export default function StatusBadge({
   size = "default",
 }: {
   status: string;
-  size?: "default" | "small";
+  size?: "default" | "small" | "lead";
 }) {
   const s = status as Status;
   const variant = STATUS_STYLES[s] ?? "stamp-none";
   const label = STATUS_LABELS[s] ?? status;
   return (
     <span
-      className={`stamp ${variant} ${size === "small" ? "px-1.5 py-1" : ""}`}
+      className={`stamp ${variant} ${
+        size === "small" ? "px-1.5 py-1" : size === "lead" ? "stamp-lead" : ""
+      }`}
       data-status={s}
     >
       {label}
