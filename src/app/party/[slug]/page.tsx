@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "@/components/arrows";
@@ -10,6 +11,8 @@ import {
   getStatusCountsByParty,
 } from "@/lib/supabase/data";
 import { numberingByPromise } from "@/lib/findings";
+import type { Party } from "@/lib/supabase/data";
+import { RegisterRows } from "@/components/register-skeleton";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
 import { TAGS } from "@/lib/tags";
 
@@ -35,9 +38,62 @@ export default async function PartyPage({
   const { slug } = await params;
   const { status, tag } = await searchParams;
 
+  // Resolve the tracker before any streamed boundary so a hidden or missing one
+  // answers with a real 404 instead of a 200 carrying a not-found body.
   const party = await getPartyBySlug(slug);
   if (!party) notFound();
 
+  return (
+    <main id="main" className="mx-auto w-full max-w-6xl px-6 md:px-8">
+      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
+        <Link
+          href="/"
+          className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
+        >
+          <ArrowLeft className="mr-2" />
+          All trackers
+        </Link>
+        <p className="text-[0.85rem] text-muted">
+          examination {party.election}
+        </p>
+      </div>
+
+      <header className="grid gap-6 py-10 md:grid-cols-[minmax(0,1fr)_20rem] md:items-end">
+        <div>
+          <h1 className="max-w-[22ch] font-sans text-[clamp(2rem,4.4vw,3rem)] leading-[1.05] font-bold tracking-[-0.02em]">
+            {party.name}
+          </h1>
+          <p className="mt-3 text-[0.85rem] text-muted">{party.election}</p>
+        </div>
+        {party.description && (
+          <p className="reading text-[0.95rem] leading-relaxed text-muted md:max-w-none">
+            {party.description}
+          </p>
+        )}
+      </header>
+
+      <Suspense
+        fallback={
+          <div aria-busy="true" className="bleed py-6">
+            <RegisterRows rows={8} />
+          </div>
+        }
+      >
+        <PartyRegister party={party} status={status} tag={tag} />
+      </Suspense>
+    </main>
+  );
+}
+
+async function PartyRegister({
+  party,
+  status,
+  tag,
+}: {
+  party: Party;
+  status?: string;
+  tag?: string;
+}) {
   const [categories, promises, counts] = await Promise.all([
     getCategories(),
     getPromisesByParty(party.id),
@@ -71,35 +127,7 @@ export default async function PartyPage({
   const active = Boolean(status || activeTag);
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
-      <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
-        <Link
-          href="/"
-          className="py-1 font-sans text-[0.8rem] font-semibold tracking-[0.14em] text-muted uppercase hover:text-ink"
-        >
-          <ArrowLeft className="mr-2" />
-          All trackers
-        </Link>
-        <p className="text-[0.85rem] text-muted">
-          <span className="refnum">{total}</span> findings ·{" "}
-          examination {party.election}
-        </p>
-      </div>
-
-      <header className="grid gap-6 py-10 md:grid-cols-[minmax(0,1fr)_20rem] md:items-end">
-        <div>
-          <h1 className="max-w-[22ch] font-sans text-[clamp(2rem,4.4vw,3rem)] leading-[1.05] font-bold tracking-[-0.02em]">
-            {party.name}
-          </h1>
-          <p className="mt-3 text-[0.85rem] text-muted">{party.election}</p>
-        </div>
-        {party.description && (
-          <p className="reading text-[0.95rem] leading-relaxed text-muted md:max-w-none">
-            {party.description}
-          </p>
-        )}
-      </header>
-
+    <>
       {/* Count strip: the legend is printed before any status mark is shown. */}
       <section aria-label="Filter by status" className="bleed bleed-strong grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
         <Link
@@ -156,6 +184,22 @@ export default async function PartyPage({
         </div>
       </div>
 
+      {filtered.length === 0 && (
+        <section className="bleed pt-6">
+          <p className="border-t border-rule pt-4 text-[0.95rem] text-muted">
+            No finding in this record carries that mark.{" "}
+            {active && (
+              <Link
+                href={`/party/${party.slug}`}
+                className="inline-block py-1 font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-accent uppercase underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+              >
+                Show all {total} findings
+              </Link>
+            )}
+          </p>
+        </section>
+      )}
+
       {ordered.map(([catId, items]) => {
         const cat = catId === "__none__" ? null : categoryMap.get(catId);
         return (
@@ -192,6 +236,6 @@ export default async function PartyPage({
           </section>
         );
       })}
-    </main>
+    </>
   );
 }

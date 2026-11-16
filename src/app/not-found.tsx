@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { ArrowLeft } from "@/components/arrows";
 
 export default function NotFound() {
   return (
-    <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
+    <main id="main" className="mx-auto w-full max-w-6xl px-6 md:px-8">
       <div className="border-b border-rule py-3">
         <p className="label">The record ends here</p>
       </div>
@@ -19,6 +20,7 @@ export default function NotFound() {
             href="/"
             className="mt-8 inline-block border border-ink px-4 py-3 font-sans text-[0.8rem] font-semibold tracking-[0.12em] uppercase hover:bg-[var(--hover)]"
           >
+            <ArrowLeft className="mr-2" />
             Back to the trackers
           </Link>
         </div>

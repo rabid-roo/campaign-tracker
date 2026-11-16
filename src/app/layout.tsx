@@ -34,6 +34,12 @@ export default function RootLayout({
       <body
         className={`${archivo.variable} ${spectral.variable} ${courier.variable} flex min-h-dvh flex-col bg-paper text-ink antialiased`}
       >
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-10 focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:font-sans focus:text-[0.8rem] focus:font-semibold focus:tracking-[0.12em] focus:uppercase"
+        >
+          Skip to the record
+        </a>
         <header className="bleed bleed-strong bg-paper">
           <div className="mx-auto flex w-full max-w-6xl flex-wrap items-baseline justify-between gap-x-6 gap-y-2 px-6 py-4 md:px-8">
             <Link

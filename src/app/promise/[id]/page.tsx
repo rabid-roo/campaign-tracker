@@ -101,7 +101,7 @@ export default async function PromisePage({
   const hasPageRef = references.some((r) => r.page);
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-6 md:px-8">
+    <main id="main" className="mx-auto w-full max-w-6xl px-6 md:px-8">
       <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule py-3">
         <Link
           href={`/party/${party.slug}`}
@@ -110,7 +110,9 @@ export default async function PromisePage({
           <ArrowLeft className="mr-2" />
           {party.name}
         </Link>
-        <p className="refnum text-[0.8rem] text-muted">Finding {finding}</p>
+        <p className="refnum text-[0.8rem] text-muted md:hidden">
+          Finding {finding}
+        </p>
       </div>
 
       <article>
@@ -146,22 +148,20 @@ export default async function PromisePage({
 
         {/* Ruled strip: sector, last examination, tally, and what the stamp claims */}
         <section className="bleed pt-4">
-          <div className="grid grid-cols-2 gap-y-4 sm:grid-cols-3">
-            <div className="px-1">
+          <div className="grid sm:grid-cols-3 sm:gap-y-4">
+            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
               <p className="text-[0.95rem]">{category?.name ?? "—"}</p>
-              <p className="label mt-1">Sector</p>
+              <p className="label sm:mt-1">Sector</p>
             </div>
-            <div className="px-1">
-              <p className="refnum text-[0.95rem]">
-                {formatDate(reviewedOn) || "—"}
-              </p>
-              <p className="label mt-1">Last examined</p>
+            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
+              <p className="refnum text-[0.95rem]">{formatDate(reviewedOn) || "—"}</p>
+              <p className="label sm:mt-1">Last examined</p>
             </div>
-            <div className="px-1">
+            <div className="flex items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
               <p className="refnum text-[0.95rem]">
                 {goals.length > 0 ? `${goalsMet} of ${goals.length}` : "—"}
               </p>
-              <p className="label mt-1">Measures met</p>
+              <p className="label sm:mt-1">Measures met</p>
             </div>
           </div>
           <details className="mt-4 border-t border-rule pb-3">
@@ -186,7 +186,7 @@ export default async function PromisePage({
         {/* Reading column */}
         <div className="ml-0 md:ml-[9rem]">
           {promise.original_quote && (
-            <figure className="reading mt-10 border-y border-rule py-5">
+            <figure className="reading mt-6 border-y border-rule py-5">
               <blockquote className="text-[1.0625rem] leading-relaxed text-ink/90">
                 <p>“{promise.original_quote}”</p>
               </blockquote>

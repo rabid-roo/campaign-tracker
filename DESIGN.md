@@ -95,7 +95,7 @@ Prose holds a 33rem measure (about 66 characters at 17px). Labels are the world'
 
 ## Layout
 
-Content sits in a 72rem column with 1.5–2rem gutters. The promise page reserves a 7rem left margin for the finding reference, plan mark and sector, and runs the reading column to its right. Rules are full-bleed: the `.bleed` pseudo-element draws a hairline from viewport edge to edge, and `html { overflow-x: clip }` keeps those rules from creating scroll. There is no card grid anywhere; spacing rhythm is `1rem` between rows, `3rem` between sections.
+Content sits in a 72rem column with 1.5–2rem gutters. The promise page reserves a 7rem left margin for the finding number and plan mark and runs the reading column one gutter to its right, so every ruled block starts on the title's edge. Rules are full-bleed: the `.bleed` pseudo-element draws a hairline from viewport edge to edge, and `html { overflow-x: clip }` keeps those rules from creating scroll. There is no card grid anywhere; spacing rhythm is `1rem` between rows, `3rem` between sections.
 
 ## Elevation & Depth
 
@@ -111,8 +111,8 @@ Zero radius is a system rule, not an omission: stamps, buttons, count strip, led
 - **Plan mark** (`.planmark`): uppercase Courier with a 1px underline; never a pill.
 - **Ledger row**: full-width grid row with a top hairline, hover/focus-within background `--hover`, no border on the outside.
 - **Count strip**: six cells — all findings plus the five statuses — each `refnum` count over a label, active cell marked by a 2px ink top border. It filters the tracker.
-- **Vote control**: two square 44×48px buttons flanking a mono net count, pressed state filled with ink; an always-mounted `role="status"` line sits absolutely below so a failure announces without moving the row.
-- **Section label** (`.label` with an optional `refnum` count): the only section heading style; no large section titles.
+- **Vote control**: two square-cornered 44px-high buttons labelled *Accurate* / *Inaccurate* beside a mono net count, pressed state filled with ink; an always-mounted `role="status"` line sits absolutely below so a failure announces without moving the row.
+- **Section label** (`.label`): the only section heading style; no large section titles, and no numeral counters beside them.
 
 ## Do's and Don'ts
 
