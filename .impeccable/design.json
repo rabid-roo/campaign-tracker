@@ -1,12 +1,399 @@
 {
-  "name": "Campaign Promise Tracker",
-  "world": "findings-register",
-  "directionSeed": "seed:8b770d9a01d2b1da",
-  "state": {
-    "focusRing": "2px solid var(--ink), offset 2px",
-    "hoverBackground": "var(--hover)",
-    "statusEncoding": ["outline", "hatch", "fill", "strike"]
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T23:15:41+00:00",
+  "title": "Design System: Campaign Promise Tracker",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(96.6% 0.0066 106.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0039 106.5)",
+          "oklch(27.0% 0.0048 106.5)",
+          "oklch(40.0% 0.0053 106.5)",
+          "oklch(53.0% 0.0054 106.5)",
+          "oklch(66.0% 0.0051 106.5)",
+          "oklch(78.0% 0.0045 106.5)",
+          "oklch(89.0% 0.0035 106.5)",
+          "oklch(95.0% 0.0029 106.5)"
+        ]
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Raised Paper",
+        "canonical": "oklch(98.7% 0.0040 106.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0023 106.5)",
+          "oklch(27.0% 0.0029 106.5)",
+          "oklch(40.0% 0.0032 106.5)",
+          "oklch(53.0% 0.0033 106.5)",
+          "oklch(66.0% 0.0031 106.5)",
+          "oklch(78.0% 0.0027 106.5)",
+          "oklch(89.0% 0.0021 106.5)",
+          "oklch(95.0% 0.0017 106.5)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(19.8% 0.0102 248.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0060 248.3)",
+          "oklch(27.0% 0.0074 248.3)",
+          "oklch(40.0% 0.0082 248.3)",
+          "oklch(53.0% 0.0084 248.3)",
+          "oklch(66.0% 0.0079 248.3)",
+          "oklch(78.0% 0.0069 248.3)",
+          "oklch(89.0% 0.0055 248.3)",
+          "oklch(95.0% 0.0045 248.3)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Register",
+        "canonical": "oklch(48.3% 0.0149 149.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0088 149.0)",
+          "oklch(27.0% 0.0108 149.0)",
+          "oklch(40.0% 0.0120 149.0)",
+          "oklch(53.0% 0.0122 149.0)",
+          "oklch(66.0% 0.0115 149.0)",
+          "oklch(78.0% 0.0100 149.0)",
+          "oklch(89.0% 0.0080 149.0)",
+          "oklch(95.0% 0.0065 149.0)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(84.1% 0.0114 123.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0068 123.5)",
+          "oklch(27.0% 0.0083 123.5)",
+          "oklch(40.0% 0.0092 123.5)",
+          "oklch(53.0% 0.0094 123.5)",
+          "oklch(66.0% 0.0089 123.5)",
+          "oklch(78.0% 0.0077 123.5)",
+          "oklch(89.0% 0.0061 123.5)",
+          "oklch(95.0% 0.0050 123.5)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "oklch(66.7% 0.0172 139.4)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0102 139.4)",
+          "oklch(27.0% 0.0124 139.4)",
+          "oklch(40.0% 0.0138 139.4)",
+          "oklch(53.0% 0.0141 139.4)",
+          "oklch(66.0% 0.0133 139.4)",
+          "oklch(78.0% 0.0116 139.4)",
+          "oklch(89.0% 0.0092 139.4)",
+          "oklch(95.0% 0.0076 139.4)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Auditing Green",
+        "canonical": "oklch(44.2% 0.0711 159.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0421 159.7)",
+          "oklch(27.0% 0.0515 159.7)",
+          "oklch(40.0% 0.0573 159.7)",
+          "oklch(53.0% 0.0586 159.7)",
+          "oklch(66.0% 0.0552 159.7)",
+          "oklch(78.0% 0.0481 159.7)",
+          "oklch(89.0% 0.0381 159.7)",
+          "oklch(95.0% 0.0313 159.7)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Green Tint",
+        "canonical": "oklch(93.3% 0.0151 151.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0089 151.8)",
+          "oklch(27.0% 0.0109 151.8)",
+          "oklch(40.0% 0.0121 151.8)",
+          "oklch(53.0% 0.0124 151.8)",
+          "oklch(66.0% 0.0117 151.8)",
+          "oklch(78.0% 0.0102 151.8)",
+          "oklch(89.0% 0.0081 151.8)",
+          "oklch(95.0% 0.0066 151.8)"
+        ]
+      },
+      "alert": {
+        "role": "secondary",
+        "displayName": "Delivery Amber",
+        "canonical": "oklch(45.8% 0.0952 63.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0564 63.2)",
+          "oklch(27.0% 0.0690 63.2)",
+          "oklch(40.0% 0.0767 63.2)",
+          "oklch(53.0% 0.0784 63.2)",
+          "oklch(66.0% 0.0739 63.2)",
+          "oklch(78.0% 0.0643 63.2)",
+          "oklch(89.0% 0.0510 63.2)",
+          "oklch(95.0% 0.0419 63.2)"
+        ]
+      },
+      "alert-soft": {
+        "role": "secondary",
+        "displayName": "Amber Tint",
+        "canonical": "oklch(92.9% 0.0296 80.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0175 80.7)",
+          "oklch(27.0% 0.0214 80.7)",
+          "oklch(40.0% 0.0239 80.7)",
+          "oklch(53.0% 0.0244 80.7)",
+          "oklch(66.0% 0.0230 80.7)",
+          "oklch(78.0% 0.0200 80.7)",
+          "oklch(89.0% 0.0159 80.7)",
+          "oklch(95.0% 0.0130 80.7)"
+        ]
+      },
+      "slate": {
+        "role": "tertiary",
+        "displayName": "Plan Slate",
+        "canonical": "oklch(34.3% 0.0229 246.0)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0136 246.0)",
+          "oklch(27.0% 0.0166 246.0)",
+          "oklch(40.0% 0.0185 246.0)",
+          "oklch(53.0% 0.0189 246.0)",
+          "oklch(66.0% 0.0178 246.0)",
+          "oklch(78.0% 0.0155 246.0)",
+          "oklch(89.0% 0.0123 246.0)",
+          "oklch(95.0% 0.0101 246.0)"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "Hover Ground",
+        "canonical": "oklch(94.4% 0.0080 114.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0048 114.2)",
+          "oklch(27.0% 0.0058 114.2)",
+          "oklch(40.0% 0.0065 114.2)",
+          "oklch(53.0% 0.0066 114.2)",
+          "oklch(66.0% 0.0062 114.2)",
+          "oklch(78.0% 0.0054 114.2)",
+          "oklch(89.0% 0.0043 114.2)",
+          "oklch(95.0% 0.0035 114.2)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Tracker masthead only."
+      },
+      "title": {
+        "displayName": "Finding Title",
+        "purpose": "The promise title on the detail page."
+      },
+      "row": {
+        "displayName": "Row Title",
+        "purpose": "Promise titles in the ledger."
+      },
+      "body": {
+        "displayName": "Reading",
+        "purpose": "All prose at the 33rem measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field names, section headers, table columns."
+      },
+      "reference": {
+        "displayName": "Reference",
+        "purpose": "Dates, counts, finding numbers, plan marks."
+      },
+      "stamp": {
+        "displayName": "Stamp",
+        "purpose": "Instrument rows and target tallies."
+      },
+      "stamp-lead": {
+        "displayName": "Lead Stamp",
+        "purpose": "The finding's verdict at reading scale."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "row-hover",
+        "value": "background-color 120ms linear",
+        "purpose": "Ledger row hover and focus-within ground."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      }
+    ],
+    "extras": {
+      "darkColors": {
+        "paper": "#0f1210",
+        "paper-raised": "#141814",
+        "ink": "#e9ece6",
+        "muted": "#9aa49a",
+        "rule": "#2b322b",
+        "rule-strong": "#4c554c",
+        "accent": "#93c8a8",
+        "accent-soft": "#1b2a20",
+        "alert": "#d5a05c",
+        "alert-soft": "#2a2216",
+        "slate": "#b8c3cb",
+        "hover": "#171c17"
+      },
+      "measure": "33rem",
+      "contentMax": "72rem",
+      "browserSurfaces": {
+        "selection": "var(--accent) on var(--paper)",
+        "caret": "var(--ink)",
+        "scrollbar": "var(--rule-strong) transparent"
+      }
+    }
   },
-  "motion": { "rowBackground": "120ms linear", "radius": "0" },
-  "responsive": { "contentMax": "72rem", "readingMeasure": "33rem", "bleed": "rules run to viewport edge; html overflow-x clip" }
+  "components": [
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The smallest voice on the sheet: field names, section headers, table columns.",
+      "html": "<p class=\"ds-label\">What government did</p>",
+      "css": ".ds-label{font-family:var(--font-archivo), system-ui, sans-serif;font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}"
+    },
+    {
+      "name": "Status Stamp",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "Not started / cancelled: muted outline; the shape cue clears 3:1.",
+      "html": "<span class=\"ds-stamp\">Not started</span>",
+      "css": ".ds-stamp{display:inline-block;border:1.5px solid var(--muted);padding:.3rem .5rem .26rem;font-family:var(--font-archivo), system-ui, sans-serif;font-size:.6875rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--muted);}"
+    },
+    {
+      "name": "Completed Stamp",
+      "kind": "custom",
+      "refersTo": "stamp-complete",
+      "description": "Delivered: filled auditing green, paper text.",
+      "html": "<span class=\"ds-stamp-complete\">Completed</span>",
+      "css": ".ds-stamp-complete{display:inline-block;border:1.5px solid var(--muted);padding:.3rem .5rem .26rem;font-family:var(--font-archivo), system-ui, sans-serif;font-size:.6875rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--muted);border-color:var(--accent);background:var(--accent);color:var(--paper);}"
+    },
+    {
+      "name": "In-progress Stamp",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "Action begun: amber with a 45-degree hatch so colour is never the only cue.",
+      "html": "<span class=\"ds-stamp-progress\">In progress</span>",
+      "css": ".ds-stamp-progress{display:inline-block;border:1.5px solid var(--muted);padding:.3rem .5rem .26rem;font-family:var(--font-archivo), system-ui, sans-serif;font-size:.6875rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--muted);border-color:var(--alert);color:var(--alert);background:repeating-linear-gradient(-45deg,transparent 0 3px,color-mix(in srgb,var(--alert) 12%,transparent) 3px 6px);}"
+    },
+    {
+      "name": "Lead Stamp",
+      "kind": "custom",
+      "refersTo": "stamp-lead",
+      "description": "The finding's own verdict at reading scale: 0.95rem, 2px border.",
+      "html": "<span class=\"ds-stamp-lead\">Not started</span>",
+      "css": ".ds-stamp-lead{display:inline-block;border:1.5px solid var(--muted);padding:.3rem .5rem .26rem;font-family:var(--font-archivo), system-ui, sans-serif;font-size:.6875rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--muted);border-width:2px;font-size:.95rem;padding:.5rem .7rem .45rem;}"
+    },
+    {
+      "name": "Plan Mark",
+      "kind": "custom",
+      "refersTo": "planmark",
+      "description": "A plan tag printed as a mark, never a pill.",
+      "html": "<span class=\"ds-planmark\">100-Day Plan</span>",
+      "css": ".ds-planmark{font-family:var(--font-courier), ui-monospace, monospace;font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--rule-strong);padding-bottom:1px;white-space:nowrap;}"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "A promise row in the register: hairline top, reference column, hover ground.",
+      "html": "<a class=\"ds-ledger-row\" href=\"#\"><span class=\"ds-ref\">113</span><span class=\"ds-rowtitle\">Offer free transit for seniors in non-peak hours</span></a>",
+      "css": ".ds-ledger-row{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding:1rem .25rem;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none;transition:background-color 120ms linear;}.ds-ledger-row:hover,.ds-ledger-row:focus-visible{background:var(--hover);}.ds-ledger-row:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}.ds-ref{font-family:var(--font-courier), ui-monospace, monospace;font-variant-numeric:tabular-nums;font-size:.85rem;color:var(--muted);}.ds-rowtitle{font-family:var(--font-archivo), system-ui, sans-serif;font-size:1.05rem;font-weight:600;line-height:1.35;}"
+    },
+    {
+      "name": "Count Strip",
+      "kind": "custom",
+      "description": "All findings plus five statuses; the active cell takes a 2px ink top border.",
+      "html": "<div class=\"ds-counts\"><span class=\"ds-count is-active\"><b class=\"ds-ref\">384</b><span class=\"ds-label\">All findings</span></span><span class=\"ds-count\"><b class=\"ds-ref\">240</b><span class=\"ds-label\">Not started</span></span><span class=\"ds-count\"><b class=\"ds-ref\">12</b><span class=\"ds-label\">In progress</span></span></div>",
+      "css": ".ds-counts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--rule);}.ds-count{display:flex;flex-direction:column;gap:.25rem;padding:.75rem .5rem;border-right:1px solid var(--rule);border-top:2px solid transparent;background:transparent;color:var(--ink);font-family:inherit;text-align:left;cursor:pointer;}.ds-count:last-child{border-right:0;}.ds-count:hover{background:var(--hover);}.ds-count:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}.ds-count.is-active{border-top-color:var(--ink);}.ds-count b{font-family:var(--font-courier), ui-monospace, monospace;font-size:1.5rem;font-weight:400;line-height:1.1;}"
+    },
+    {
+      "name": "Source Link",
+      "kind": "custom",
+      "refersTo": "source-link",
+      "description": "Every citation: accent caps, ruled underline, outbound arrow inside the box.",
+      "html": "<a class=\"ds-source\" href=\"#\"><span>nwprogress.ca</span><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M7 17 17 7\"/><path d=\"M8 7h9v9\"/></svg></a>",
+      "css": ".ds-source{display:inline-flex;min-width:0;max-width:100%;min-height:44px;align-items:center;gap:.25rem;font-family:var(--font-archivo), system-ui, sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent);text-underline-offset:4px;}.ds-source:hover{text-decoration-color:var(--accent);}.ds-source:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}.ds-source span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.ds-source svg{flex-shrink:0;}"
+    },
+    {
+      "name": "Vote Control",
+      "kind": "custom",
+      "refersTo": "vote-control",
+      "description": "Yes / No marks with a Courier net count; the count reads 'No marks yet' at zero.",
+      "html": "<div class=\"ds-vote\"><button class=\"ds-vote-btn is-pressed\" type=\"button\" aria-pressed=\"true\">Yes</button><span class=\"ds-vote-count\">1</span><button class=\"ds-vote-btn\" type=\"button\" aria-pressed=\"false\">No</button></div>",
+      "css": ".ds-vote{display:inline-flex;align-items:stretch;border:1px solid var(--ink);}.ds-vote-btn{display:flex;height:44px;align-items:center;justify-content:center;gap:.5rem;padding:0 .75rem;background:transparent;border:0;color:var(--ink);font-family:var(--font-archivo), system-ui, sans-serif;font-size:.8rem;font-weight:600;cursor:pointer;}.ds-vote-btn:hover{background:var(--hover);}.ds-vote-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}.ds-vote-btn.is-pressed{background:var(--ink);color:var(--paper);}.ds-vote-count{display:flex;min-width:3rem;align-items:center;justify-content:center;padding:0 .75rem;border-left:1px solid var(--ink);border-right:1px solid var(--ink);font-family:var(--font-courier), ui-monospace, monospace;font-size:.85rem;font-variant-numeric:tabular-nums;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Findings Register",
+    "overview": "The product is an audit of a campaign, and the interface is that audit's report. It is a document to be read, not a dashboard to be operated: findings numbered in the margin, a verdict stamped against each one, evidence entered as instruments in a register. The anti-reference is the card-and-pill tracker the project replaced — rounded surfaces, coloured chips, a timeline of cards.\n\nThree faces carry the record. Archivo prints titles, labels and navigation; Spectral carries everything the reader actually reads; Courier Prime sets references, dates and counts. They meet on one sheet: a light paper ground that goes dark with the system scheme, rules that run to the viewport edge, and no container ever drawn as a card.",
+    "keyCharacteristics": [
+      "Paper and ink first; auditing green and amber only where status means something.",
+      "Status printed as a stamp with a second shape cue (outline, hatch, fill, strike), never colour alone.",
+      "Zero corner radius anywhere; the only curves are glyphs.",
+      "Numbered findings in a margin, ruled ledger rows, a register of sources.",
+      "Two voices per page: Archivo for apparatus, Spectral for prose at a 33rem measure."
+    ],
+    "rules": [
+      {
+        "name": "The Second Cue Rule",
+        "body": "Colour never carries status alone. In progress hatches, cancelled strikes through, completed fills, not started stays an outline. A reader who cannot separate green from amber still reads the verdict.",
+        "section": "colors"
+      },
+      {
+        "name": "The Rationed Ink Rule",
+        "body": "Green and amber appear only on status, sources, and the selection highlight. Nothing decorative gets the accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Archivo never sets a paragraph and Spectral never sets a label. Mixed families in one block are a register break.",
+        "section": "typography"
+      },
+      {
+        "name": "The Measure Rule",
+        "body": "Prose holds 33rem. Rules and data may run wider; sentences do not.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Card Rule",
+        "body": "A boundary is a rule or space, never a rounded box with a shadow. If a group needs separation, draw its top rule and leave the sheet visible between groups.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** set status as a stamp, with a second cue beyond colour (hatch, strike, fill, outline).",
+      "**Do** draw rules edge to edge with `.bleed`; keep `html { overflow-x: clip }` so they cannot scroll the page.",
+      "**Do** keep prose on the 33rem measure with `text-wrap: pretty`; let rules and data run wider.",
+      "**Do** keep Courier Prime for references, dates and counts only.",
+      "**Do** keep touch targets at 44px minimum (nav links, source links, vote buttons, disclosure summary).",
+      "**Do** route every citation through `SourceLink` so the outbound mark and truncation behave the same everywhere.",
+      "**Do** style selection, caret and scrollbar from the palette; they are part of the sheet."
+    ],
+    "donts": [
+      "**Don't** reintroduce pills, chips or rounded badges.",
+      "**Don't** enclose content in cards or add border-radius; the system sells 0px.",
+      "**Don't** add shadows, gradients or hover lifts; the sheet does not float.",
+      "**Don't** run prose past 33rem or set a paragraph in Archivo.",
+      "**Don't** let colour alone carry a status; always pair it with the shape cue."
+    ]
+  }
 }
