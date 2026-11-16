@@ -143,8 +143,20 @@ export default async function PromisePage({
           </div>
 
           <div className="flex flex-wrap items-center gap-3 md:block md:text-right">
-            <p className="label md:mb-2">Status</p>
-            <StatusBadge status={promise.current_status} size="lead" />
+            {reviewedOn ? (
+              <>
+                <p className="label md:mb-2">Status</p>
+                <StatusBadge status={promise.current_status} size="lead" />
+              </>
+            ) : (
+              <>
+                <p className="label md:mb-2">Verdict</p>
+                {/* No examination on file: print the absence, never a status. */}
+                <p className="font-sans text-[0.95rem] font-semibold tracking-[0.13em] text-muted uppercase">
+                  Not examined yet
+                </p>
+              </>
+            )}
           </div>
         </header>
 
@@ -195,7 +207,9 @@ export default async function PromisePage({
           </div>
           <details className="mt-4 border-t border-rule pb-3">
             <summary className="flex min-h-11 cursor-pointer items-center py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
-              What “{statusLabel(promise.current_status)}” means
+              {reviewedOn
+                ? `What “${statusLabel(promise.current_status)}” means`
+                : "How delivery states are recorded"}
             </summary>
             <p className="border-b border-rule/50 pb-3 font-sans text-[0.8rem] text-muted">
               Each promise is one numbered finding in this register; the stamp
@@ -207,7 +221,13 @@ export default async function PromisePage({
                   <dt className="font-sans text-[0.8rem] font-semibold text-muted">
                     {STATUS_LABELS[s]}
                   </dt>
-                  <dd className={s === promise.current_status ? "text-ink" : "text-muted"}>
+                  <dd
+                    className={
+                      reviewedOn && s === promise.current_status
+                        ? "text-ink"
+                        : "text-muted"
+                    }
+                  >
                     {STATUS_MEANINGS[s]}
                   </dd>
                 </div>
@@ -244,8 +264,9 @@ export default async function PromisePage({
             <SectionLabel>What government did</SectionLabel>
             {updates.length === 0 ? (
               <p className="reading mt-3 border-t border-rule py-4 text-[0.95rem] text-muted">
-                Nothing on the record yet — no government action has been found
-                for it.
+                {reviewedOn
+                  ? "Nothing on the record yet — no government action has been found for it."
+                  : "Not examined yet — no check against council or provincial sources has been recorded for it."}
               </p>
             ) : (
               <ol className="mt-2">
@@ -267,6 +288,9 @@ export default async function PromisePage({
                           <p className="reading text-[1.0625rem] leading-relaxed">
                             {u.summary}
                           </p>
+                        )}
+                        {!u.evidence_url && !u.evidence_source && (
+                          <p className="label mt-2">No source recorded for this entry</p>
                         )}
                         {(u.evidence_url || u.evidence_source) && (
                           <p className="mt-2 text-[0.9rem] text-muted">
