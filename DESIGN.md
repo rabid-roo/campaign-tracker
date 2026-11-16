@@ -7,7 +7,7 @@ colors:
   ink: "#12161a"
   muted: "#59615a"
   rule: "#c9ccc4"
-  rule-strong: "#8f978d"
+  rule-strong: "#7d877c"
   accent: "#2b5f45"
   accent-soft: "#e2ece4"
   alert: "#7c4a12"
@@ -45,6 +45,15 @@ typography:
   reference:
     fontFamily: "Courier Prime, ui-monospace, monospace"
     fontSize: "0.85rem"
+    fontWeight: 400
+  reference-small:
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "0.8rem"
+    fontWeight: 600
+    letterSpacing: "0.1em"
+  meta-small:
+    fontFamily: "Spectral, Georgia, serif"
+    fontSize: "0.9rem"
     fontWeight: 400
   stamp:
     fontFamily: "Archivo, system-ui, sans-serif"
@@ -131,7 +140,7 @@ A paper sheet with two meaning-bearing inks: auditing green and amber. Everythin
 ### Neutral
 - **Ink** (`#12161a`): titles, body copy, stamp borders that mean "not started", focus rings. Dark ink is `#e9ece6`.
 - **Muted Register** (`#59615a`): labels, secondary prose, cancelled; dark `#9aa49a`. Outline-only stamps border in this, not in the strong rule, so the shape cue clears 3:1.
-- **Hairline** (`#c9ccc4`) and **Strong Rule** (`#8f978d`): row dividers and section rules vs. the boundaries that must be seen — the masthead rule, plan-mark underline, scrollbar. Dark values `#2b322b` and `#4c554c`.
+- **Hairline** (`#c9ccc4`) and **Strong Rule** (`#7d877c`): row dividers and section rules vs. the boundaries that must be seen — the masthead rule, plan-mark underline, scrollbar. Dark values `#2b322b` and `#616b60`.
 - **Slate** (`#2f3a44`): plan-tag marks only; dark `#b8c3cb`.
 - **Hover Ground** (`#ecede7`): ledger-row hover and focus-within; dark `#171c17`.
 
@@ -154,7 +163,7 @@ A paper sheet with two meaning-bearing inks: auditing green and amber. Everythin
 - **Row** (600, `1.05–1.35rem`, 1.35): promise titles in the ledger.
 - **Body** (400, `1.0625rem`, 1.6): all prose, capped at 33rem (about 66 characters) with `text-wrap: pretty`.
 - **Label** (600, `0.6875rem`, `0.14em`, uppercase): field names, section headers, table columns. The smallest voice on the sheet.
-- **Reference** (400, `0.8–0.95rem`, tabular figures): dates, counts, finding numbers, plan marks.
+- **Reference** (400, `0.85rem`, tabular figures): dates, counts, finding numbers, plan marks. **Small reference** (`0.8rem`, 600, `0.1em`) is the in-sentence link and timeline date; **meta small** (Spectral `0.9rem`) is evidence metadata and the vote question.
 - **Stamp** (600, `0.6875rem`, `0.13em`, uppercase): instrument rows and target tallies. **Stamp lead** (`0.95rem`, 2px border) is the finding's own verdict.
 - **Stated record** (`1.0625rem`): the platform quote, set on the reading measure in straight quotes so it cannot be mistaken for the site's summary.
 
@@ -197,10 +206,12 @@ Full-width grid row (reference column + content) with a top hairline; hover and 
 Six cells — all findings plus the five statuses — each a Courier count over a label, `1px` rules between cells, active cell marked by a 2px ink top border. It filters the tracker in place.
 
 ### Finding strip (promise page)
-Four cells — Last examined, Source, Area, Targets met — value over label from `sm`, label/value row on phones. Source is a `SourceLink`, placed second so the citation clears the phone fold.
+A `dl` of four cells — Last examined, Source, Area, Targets met — value over term from `sm`, one label/value row on phones (term after value visually, `dt` before `dd` in the DOM). Source is a `SourceLink`, placed second so the citation clears the phone fold.
+
+**The Earned Verdict Rule.** No status stamp without a recorded examination. A promise with no `reviewed_on` prints "Not examined yet" as the verdict, its empty record says no check was recorded, and its update rows carry "No source recorded" when neither an evidence URL nor a source is stored.
 
 ### Source link
-One affordance for every citation: accent uppercase at `0.8rem`, `0.08em` tracking, ruled underline at 40% accent, and a `13px` outbound arrow inside the link's own box so truncation cannot clip it. Minimum 44px tall on touch, auto-height from `sm`. Truncation is expected — the host still reads.
+One affordance for every citation: accent uppercase at `0.8rem`, `0.08em` tracking, ruled underline at 40% accent, and a `13px` outbound arrow inside the link's own box so truncation cannot clip it. Minimum 44px tall on touch, `24px` floor from `sm` (inline use keeps prose line-height). Truncation is expected — the host still reads; a source on the tracker's own deployment is named "Archived copy", never a truncated Vercel host.
 
 ### Vote control
 "Is this record accurate?" with two square-cornered 44px-high buttons labelled Yes and No (thumbs set at 1.6 stroke), beside a Courier net count that reads "No marks yet" at zero. Pressed state fills ink with paper text; `aria-disabled` dims during the request. An always-mounted `role="status"` line sits absolutely below so a failure announces without moving the row.
@@ -218,6 +229,8 @@ Section headers are `.label` only — no large section titles, no numeral counte
 - **Do** keep touch targets at 44px minimum (nav links, source links, vote buttons, disclosure summary).
 - **Do** route every citation through `SourceLink` so the outbound mark and truncation behave the same everywhere.
 - **Do** style selection, caret and scrollbar from the palette; they are part of the sheet.
+- **Do** print "Not examined yet" rather than a status when no examination is on file, and label an unsourced update.
+- **Do** name the tracker's own archive "Archived copy"; a citation must say where it lives.
 
 ### Don't:
 - **Don't** reintroduce pills, chips or rounded badges.

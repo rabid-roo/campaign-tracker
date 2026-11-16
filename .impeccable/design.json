@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-16T23:15:41+00:00",
+  "generatedAt": "2026-11-16T23:48:16+00:00",
   "title": "Design System: Campaign Promise Tracker",
   "extensions": {
     "colorMeta": {
@@ -82,16 +82,16 @@
       "rule-strong": {
         "role": "neutral",
         "displayName": "Strong Rule",
-        "canonical": "oklch(66.7% 0.0172 139.4)",
+        "canonical": "oklch(61.2% 0.0201 142.8)",
         "tonalRamp": [
-          "oklch(15.0% 0.0102 139.4)",
-          "oklch(27.0% 0.0124 139.4)",
-          "oklch(40.0% 0.0138 139.4)",
-          "oklch(53.0% 0.0141 139.4)",
-          "oklch(66.0% 0.0133 139.4)",
-          "oklch(78.0% 0.0116 139.4)",
-          "oklch(89.0% 0.0092 139.4)",
-          "oklch(95.0% 0.0076 139.4)"
+          "oklch(15.0% 0.0119 142.8)",
+          "oklch(27.0% 0.0146 142.8)",
+          "oklch(40.0% 0.0162 142.8)",
+          "oklch(53.0% 0.0165 142.8)",
+          "oklch(66.0% 0.0156 142.8)",
+          "oklch(78.0% 0.0136 142.8)",
+          "oklch(89.0% 0.0108 142.8)",
+          "oklch(95.0% 0.0088 142.8)"
         ]
       },
       "accent": {
@@ -217,6 +217,14 @@
       "stamp-lead": {
         "displayName": "Lead Stamp",
         "purpose": "The finding's verdict at reading scale."
+      },
+      "reference-small": {
+        "displayName": "Small Reference",
+        "purpose": "In-sentence links and timeline dates."
+      },
+      "meta-small": {
+        "displayName": "Meta Small",
+        "purpose": "Evidence metadata and the vote question."
       }
     },
     "shadows": [],
@@ -244,7 +252,7 @@
         "ink": "#e9ece6",
         "muted": "#9aa49a",
         "rule": "#2b322b",
-        "rule-strong": "#4c554c",
+        "rule-strong": "#616b60",
         "accent": "#93c8a8",
         "accent-soft": "#1b2a20",
         "alert": "#d5a05c",
@@ -377,6 +385,11 @@
         "name": "The No-Card Rule",
         "body": "A boundary is a rule or space, never a rounded box with a shadow. If a group needs separation, draw its top rule and leave the sheet visible between groups.",
         "section": "layout"
+      },
+      {
+        "name": "The Earned Verdict Rule",
+        "body": "No status stamp without a recorded examination. A promise with no reviewed_on prints \"Not examined yet\" as the verdict, its empty record says no check was recorded, and its update rows carry \"No source recorded\" when neither an evidence URL nor a source is stored.",
+        "section": "components"
       }
     ],
     "dos": [
@@ -386,7 +399,9 @@
       "**Do** keep Courier Prime for references, dates and counts only.",
       "**Do** keep touch targets at 44px minimum (nav links, source links, vote buttons, disclosure summary).",
       "**Do** route every citation through `SourceLink` so the outbound mark and truncation behave the same everywhere.",
-      "**Do** style selection, caret and scrollbar from the palette; they are part of the sheet."
+      "**Do** style selection, caret and scrollbar from the palette; they are part of the sheet.",
+      "Do print \"Not examined yet\" rather than a status when no examination is on file, and label an unsourced update.",
+      "Do name the tracker's own archive \"Archived copy\"; a citation must say where it lives."
     ],
     "donts": [
       "**Don't** reintroduce pills, chips or rounded badges.",

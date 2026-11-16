@@ -124,9 +124,9 @@ export default async function PromisePage({
       <article>
         {/* Finding head */}
         <header className="grid gap-x-8 gap-y-5 py-8 md:grid-cols-[7rem_minmax(0,1fr)_minmax(11rem,max-content)] md:py-10">
-          <aside className="flex flex-wrap items-baseline gap-x-4 gap-y-2 md:block">
-            <p className="label hidden md:block">Finding</p>
-            <p className="refnum mt-1 hidden text-[1.05rem] text-ink md:block">
+          <aside className="hidden md:block">
+            <p className="label">Finding</p>
+            <p className="refnum mt-1 text-[1.05rem] text-ink">
               {finding}
             </p>
             {promise.tag && (
@@ -137,7 +137,7 @@ export default async function PromisePage({
           </aside>
 
           <div className="min-w-0">
-            <h1 className="max-w-[24ch] text-balance break-words font-sans text-[clamp(1.75rem,3.2vw,2.35rem)] leading-[1.1] font-bold tracking-[-0.015em]">
+            <h1 className="max-w-[var(--measure)] text-balance break-words font-sans text-[clamp(1.75rem,3.2vw,2.35rem)] leading-[1.1] font-bold tracking-[-0.015em]">
               {promise.title}
             </h1>
             {promise.description && (
@@ -167,38 +167,41 @@ export default async function PromisePage({
 
         {/* Ruled strip: sector, last examination, tally, and what the stamp claims */}
         <section className="bleed pt-4">
-          <div className="grid grid-cols-1 sm:grid-cols-4 sm:gap-y-4">
-            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="text-[0.95rem]">{category?.name ?? "Not categorized"}</p>
-              <p className="label sm:mt-1">Area</p>
+          <dl className="grid grid-cols-1 sm:grid-cols-4 sm:gap-y-4">
+            <div className="flex min-w-0 flex-row items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:flex-col sm:items-start sm:gap-1 sm:border-0 sm:py-0 sm:px-1">
+              <dt className="label order-2 sm:mt-1">Area</dt>
+              <dd className="order-1 text-[0.95rem]">
+                {category?.name ?? "Not categorized"}
+              </dd>
             </div>
-            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="text-[0.95rem]">
+            <div className="flex min-w-0 flex-row items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:flex-col sm:items-start sm:gap-1 sm:border-0 sm:py-0 sm:px-1">
+              <dt className="label order-2 sm:mt-1">Last examined</dt>
+              <dd className="order-1 text-[0.95rem]">
                 {reviewedOn ? (
                   <span className="refnum">{formatDate(reviewedOn)}</span>
                 ) : (
                   "Not yet examined"
                 )}
-              </p>
-              <p className="label sm:mt-1">Last examined</p>
+              </dd>
             </div>
-            <div className="flex min-w-0 items-center justify-between gap-3 border-b border-rule/50 py-0 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <div className="min-w-0">
+            <div className="flex min-w-0 flex-row items-center justify-between gap-3 border-b border-rule/50 py-0 sm:flex-col sm:items-start sm:gap-1 sm:border-0 sm:py-0 sm:px-1">
+              <dt className="label order-2 sm:mt-1">Source</dt>
+              <dd className="order-1 min-w-0">
                 {promise.source_url ? (
                   <SourceLink
                     href={promise.source_url}
-                    className="sm:min-h-0"
+                    className="sm:min-h-6"
                   >
                     {sourceLabel(promise.source_url)}
                   </SourceLink>
                 ) : (
                   <p className="text-[0.95rem]">None recorded</p>
                 )}
-              </div>
-              <p className="label sm:mt-1">Source</p>
+              </dd>
             </div>
-            <div className="flex min-w-0 items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:block sm:border-0 sm:py-0 sm:px-1">
-              <p className="text-[0.95rem]">
+            <div className="flex min-w-0 flex-row items-baseline justify-between gap-3 border-b border-rule/50 py-2 sm:flex-col sm:items-start sm:gap-1 sm:border-0 sm:py-0 sm:px-1">
+              <dt className="label order-2 sm:mt-1">Targets met</dt>
+              <dd className="order-1 text-[0.95rem]">
                 {goals.length > 0 ? (
                   <span className="refnum">
                     {goalsMet} of {goals.length}
@@ -206,15 +209,21 @@ export default async function PromisePage({
                 ) : (
                   "None recorded"
                 )}
-              </p>
-              <p className="label sm:mt-1">Targets met</p>
+              </dd>
             </div>
-          </div>
+          </dl>
           <details className="mt-4 border-t border-rule pb-3">
-            <summary className="flex min-h-11 cursor-pointer items-center py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase">
+            <summary
+              aria-label={
+                reviewedOn
+                  ? `What “${statusLabel(promise.current_status)}” means`
+                  : "How states are recorded"
+              }
+              className="flex min-h-11 cursor-pointer items-center py-2 font-sans text-[0.8rem] font-semibold tracking-[0.1em] uppercase"
+            >
               {reviewedOn
                 ? `What “${statusLabel(promise.current_status)}” means`
-                : "How delivery states are recorded"}
+                : "How states are recorded"}
             </summary>
             <p className="border-b border-rule/50 pb-3 font-sans text-[0.8rem] text-muted">
               Each promise is one numbered finding in this register; the stamp
@@ -225,6 +234,9 @@ export default async function PromisePage({
                 <div key={s} className="grid gap-1 sm:grid-cols-[9.5rem_1fr]">
                   <dt className="font-sans text-[0.8rem] font-semibold text-muted">
                     {STATUS_LABELS[s]}
+                    {reviewedOn && s === promise.current_status && (
+                      <span className="label ml-2 text-ink">Current</span>
+                    )}
                   </dt>
                   <dd
                     className={
@@ -299,7 +311,7 @@ export default async function PromisePage({
                             {u.evidence_url && (
                               <SourceLink
                                 href={u.evidence_url}
-                                className="ml-2"
+                                className="ml-2 sm:min-h-6"
                               >
                                 Open source
                               </SourceLink>
@@ -399,9 +411,9 @@ export default async function PromisePage({
         <section className="bleed mt-14">
           <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
+              <h2 className="font-sans text-[0.9rem] font-semibold tracking-[0.02em]">
                 Is this record accurate?
-              </p>
+              </h2>
               <p className="label mt-1">
                 Anonymous · one mark per visitor · tap it again to withdraw
               </p>
