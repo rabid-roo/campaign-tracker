@@ -88,7 +88,7 @@ Key for the mapping below:
 - Shovel-ready new Downtown public library → `(partial) "Make our cultural facilities more accessible"` (sub-item "Explore a new downtown library presence")
 
 **Mayor's priority project**
-- Advance supportive housing / reduce homelessness → `(partial) "Support housing with compassion and common sense"`
+- Advance supportive housing / reduce homelessness → `"Support housing with compassion and common sense"` (champion; the specific shovel-ready target is still a candidate for a goal/metric)
 
 ---
 
