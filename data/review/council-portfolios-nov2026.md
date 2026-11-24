@@ -18,9 +18,9 @@ Key for the mapping below:
 
 ## Summary
 
-- **Clear matches:** 12 portfolio items map directly to existing promises.
-- **Partial matches (narrower/newer than the promise):** 6 items.
-- **New items (no matching promise):** 2 (Folka's community hub; Budhwani's Uptown/Belmont Square).
+- **Championed:** 16 promises now carry a `champion` (councillor lead).
+- **Remaining fuzzy/partial (not championed):** 2 — Armstrong's Queensborough EV charging ("Lead by example" is broad); Minhas's Massey Theatre working-group role.
+- **New items (no matching promise):** 2 — Folka's community hub; Budhwani's Uptown/Belmont Square.
 - **Committee/board appointments (not promises):** ~15 (Transportation, Parks, Planning/Housing, Arts/Culture committees; Community Heritage Commission; Electrical Utility Commission; Metro Vancouver; TransLink Mayors' Council; E-Comm; Public Library Board; Massey Theatre Working Group; Fraser River Discovery Centre; City–School District Working Group).
 
 ---
@@ -33,7 +33,7 @@ Key for the mapping below:
 - TransLink Mayors' Council — Alternate → `[structure]`
 
 **Signature projects**
-1. Deliver an additional artificial turf field (beyond Ryall Park) → `(partial) "Ensure existing sports fields can be used year-round, while pursuing new fields"`
+1. Deliver an additional artificial turf field (beyond Ryall Park) → `"Ensure existing sports fields can be used year-round, while pursuing new fields"` (champion)
 2. Expand EV charging infrastructure in Queensborough → `(partial) "Lead by example"` (sub-item "Expand public EV charging infrastructure")
 
 **Mayor's priority project**
@@ -52,7 +52,7 @@ Key for the mapping below:
 
 **Signature projects**
 1. Transform public engagement / rebuild trust (Be Heard overhaul) → `"Review the Be Heard engagement system within 100 days"`
-2. Expand sidewalk coverage in Queensborough (+10%) → `(partial) "Make Walking Safer and More Accessible"` + `(partial) "Street infrastructure: drainage, lighting, crossings and road maintenance"`
+2. Expand sidewalk coverage in Queensborough (+10%) → `"Street infrastructure: drainage, lighting, crossings and road maintenance"` (champion) + `"Make Walking Safer and More Accessible"` (shared)
 
 **Mayor's priority project**
 - Belmont Square and Uptown (Sixth Street) revitalization → `[NEW]` — Uptown corridor is not covered by the Downtown-focused promises
@@ -85,7 +85,7 @@ Key for the mapping below:
 - Fraser River Discovery Centre Board Lease Advisory Committee — Member → `[structure]`
 
 **Signature project**
-- Shovel-ready new Downtown public library → `(partial) "Make our cultural facilities more accessible"` (sub-item "Explore a new downtown library presence")
+- Shovel-ready new Downtown public library → `"Make our cultural facilities more accessible"` (champion, shared with Morrison)
 
 **Mayor's priority project**
 - Advance supportive housing / reduce homelessness → `"Support housing with compassion and common sense"` (champion; the specific shovel-ready target is still a candidate for a goal/metric)
@@ -120,7 +120,7 @@ Key for the mapping below:
 - City–School District No. 40 Working Group — Alternate Member → `"Strengthen City–School District Collaboration"`
 
 **Signature project**
-- Reimagine the Anvil Centre as a performing-arts & community hub → `(partial) "Make our cultural facilities more accessible"`
+- Reimagine the Anvil Centre as a performing-arts & community hub → `"Make our cultural facilities more accessible"` (champion, shared with Henderson)
 
 **Mayor's priority project**
 - Columbia Street micro-retail (fully implemented by 2028) → `"Create the Columbia District"`
