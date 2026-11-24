@@ -10,6 +10,7 @@ import {
 } from "@/lib/supabase/data";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
 import { TAGS } from "@/lib/tags";
+import { COUNCILLORS } from "@/lib/councillors";
 
 export const revalidate = 300;
 
@@ -28,10 +29,10 @@ export default async function PartyPage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ status?: string; tag?: string }>;
+  searchParams: Promise<{ status?: string; tag?: string; champion?: string }>;
 }) {
   const { slug } = await params;
-  const { status, tag } = await searchParams;
+  const { status, tag, champion } = await searchParams;
 
   const party = await getPartyBySlug(slug);
   if (!party) notFound();
@@ -43,8 +44,11 @@ export default async function PartyPage({
   ]);
 
   const activeTag = TAGS.find((t) => t.slug === tag);
+  const activeChampion = COUNCILLORS.find((c) => c === champion);
   const filtered = (() => {
     if (activeTag) return promises.filter((p) => p.tag === activeTag.label);
+    if (activeChampion)
+      return promises.filter((p) => p.champion?.includes(activeChampion));
     if (status && (STATUSES as readonly string[]).includes(status))
       return promises.filter((p) => p.current_status === status);
     return promises;
@@ -89,7 +93,7 @@ export default async function PartyPage({
         <Link
           href={`/party/${party.slug}`}
           className={`rounded-full px-3 py-1 text-sm font-medium ${
-            !status && !activeTag
+            !status && !activeTag && !activeChampion
               ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
               : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
           }`}
@@ -110,6 +114,23 @@ export default async function PartyPage({
               }`}
             >
               {t.label} ({n})
+            </Link>
+          );
+        })}
+        {COUNCILLORS.map((c) => {
+          const n = promises.filter((p) => p.champion?.includes(c)).length;
+          if (n === 0) return null;
+          return (
+            <Link
+              key={c}
+              href={`/party/${party.slug}?champion=${encodeURIComponent(c)}`}
+              className={`rounded-full px-3 py-1 text-sm font-medium ${
+                champion === c
+                  ? "bg-teal-600 text-white dark:bg-teal-500"
+                  : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700"
+              }`}
+            >
+              {c} ({n})
             </Link>
           );
         })}
