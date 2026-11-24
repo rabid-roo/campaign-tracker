@@ -108,6 +108,15 @@ export default async function PromisePage({
           </p>
         )}
 
+        {promise.champion && (
+          <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+            Champion:{" "}
+            <span className="font-medium text-zinc-700 dark:text-zinc-300">
+              {promise.champion}
+            </span>
+          </p>
+        )}
+
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
           {reviewedOn ? (
             <>
