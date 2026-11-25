@@ -256,7 +256,9 @@ async function PartyRegister({
                         {p.reviewed_on ? (
                           <StatusBadge status={p.current_status} size="small" />
                         ) : (
-                          <span className="label">Not examined yet</span>
+                          <span className="stamp stamp-unexamined px-1.5 py-1">
+                            Not examined yet
+                          </span>
                         )}
                       </span>
                     </Link>
