@@ -137,10 +137,12 @@ export const getTrackerSummaries = cache(
         latestReviewedOn: null,
       });
       summary.total += 1;
-      summary.counts[row.current_status] =
-        (summary.counts[row.current_status] ?? 0) + 1;
+      // Only examined promises earn a status stamp; unexamined records must
+      // never read as "not started" in the totals (see the Earned Verdict Rule).
       if (row.reviewed_on) {
         summary.examined += 1;
+        summary.counts[row.current_status] =
+          (summary.counts[row.current_status] ?? 0) + 1;
         if (
           !summary.latestReviewedOn ||
           row.reviewed_on > summary.latestReviewedOn

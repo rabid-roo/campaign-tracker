@@ -119,7 +119,7 @@ export default function VoteButtons({
           type="button"
           onClick={() => cast(1)}
           aria-disabled={pending}
-          aria-label="Mark this record accurate"
+          aria-label="Yes — mark this record accurate"
           aria-pressed={myVote === 1}
           title="Accurate"
           className={`${buttonClass(myVote === 1)} border-r border-ink`}
@@ -129,26 +129,20 @@ export default function VoteButtons({
         </button>
         <span
           aria-live="polite"
-          className="refnum flex min-w-12 items-center justify-center px-3 text-[0.85rem] tabular-nums"
+          className={`refnum flex min-w-12 items-center justify-center px-3 text-[0.85rem] tabular-nums ${
+            score === 0 ? "text-muted" : ""
+          }`}
         >
-          {score === 0 ? (
-            <span className="font-sans text-[0.75rem] font-normal text-muted">
-              No marks yet
-            </span>
-          ) : (
-            <>
-              {score}
-              <span className="sr-only">
-                {Math.abs(score) === 1 ? " net mark" : " net marks"}
-              </span>
-            </>
-          )}
+          {score}
+          <span className="sr-only">
+            {Math.abs(score) === 1 ? " net mark" : " net marks"}
+          </span>
         </span>
         <button
           type="button"
           onClick={() => cast(-1)}
           aria-disabled={pending}
-          aria-label="Mark this record inaccurate"
+          aria-label="No — mark this record inaccurate"
           aria-pressed={myVote === -1}
           title="Inaccurate"
           className={`${buttonClass(myVote === -1)} border-l border-ink`}

@@ -54,9 +54,11 @@ function Count({ value, label }: { value: number | string; label: string }) {
 function Distribution({
   counts,
   total,
+  unexamined,
 }: {
   counts: Record<string, number>;
   total: number;
+  unexamined: number;
 }) {
   if (total === 0) return null;
   return (
@@ -64,6 +66,13 @@ function Distribution({
       aria-hidden="true"
       className="mt-4 flex h-1.5 w-full overflow-hidden border-y border-rule-strong/40"
     >
+      {unexamined > 0 && (
+        <span
+          title={`Not examined: ${unexamined}`}
+          className="bg-rule/50 border-r border-paper last:border-r-0"
+          style={{ width: `${(unexamined / total) * 100}%` }}
+        />
+      )}
       {STATUSES.map((status) => {
         const count = counts[status] ?? 0;
         if (count === 0) return null;
@@ -147,15 +156,17 @@ export default async function Home() {
         <ul aria-label="Trackers in the record">
           {rows.map(({ party, summary }) => {
             const total = summary.total;
+            const examined = summary.examined;
+            const unexaminedCount = total - examined;
             const delivered = summary.counts.completed ?? 0;
             const inProgress = summary.counts.in_progress ?? 0;
             const notStarted = summary.counts.not_started ?? 0;
             const partial = summary.counts.partially_complete ?? 0;
             const cancelled = summary.counts.cancelled ?? 0;
-            const unexamined = summary.examined === 0;
-            const label = unexamined
+            const allUnexamined = examined === 0;
+            const label = allUnexamined
               ? `${party.name}, ${party.election}: ${total} findings, not examined yet.`
-              : `${party.name}, ${party.election}: ${total} findings, ${summary.examined} examined; ${delivered} delivered, ${partial} partially delivered, ${inProgress} in progress, ${notStarted} not started, ${cancelled} cancelled.`;
+              : `${party.name}, ${party.election}: ${total} findings, ${examined} examined, ${unexaminedCount} not examined; ${delivered} delivered, ${partial} partially delivered, ${inProgress} in progress, ${notStarted} not started, ${cancelled} cancelled.`;
 
             return (
               <li key={party.id}>
@@ -172,17 +183,17 @@ export default async function Home() {
                       <p className="mt-1 text-[0.9rem] text-muted">
                         {party.election}
                       </p>
-                      {unexamined && (
+                      {allUnexamined && (
                         <p className="mt-2 font-sans text-[0.8rem] font-semibold tracking-[0.12em] text-muted uppercase">
                           Not examined yet
                         </p>
                       )}
                     </div>
                     <Count value={total} label="Findings" />
-                    <Count value={unexamined ? "—" : summary.examined} label="Examined" />
-                    <Count value={unexamined ? "—" : delivered} label="Delivered" />
-                    <Count value={unexamined ? "—" : inProgress} label="In progress" />
-                    <Count value={unexamined ? "—" : notStarted} label="Not started" />
+                    <Count value={allUnexamined ? "—" : examined} label="Examined" />
+                    <Count value={allUnexamined ? "—" : delivered} label="Delivered" />
+                    <Count value={allUnexamined ? "—" : inProgress} label="In progress" />
+                    <Count value={allUnexamined ? "—" : notStarted} label="Not started" />
                     <span
                       aria-hidden="true"
                       className="justify-self-end self-center"
@@ -190,8 +201,12 @@ export default async function Home() {
                       <ArrowRight />
                     </span>
                   </div>
-                  {!unexamined && (
-                    <Distribution counts={summary.counts} total={total} />
+                  {!allUnexamined && (
+                    <Distribution
+                      counts={summary.counts}
+                      total={total}
+                      unexamined={unexaminedCount}
+                    />
                   )}
                 </Link>
               </li>

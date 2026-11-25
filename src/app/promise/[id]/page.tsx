@@ -335,10 +335,25 @@ export default async function PromisePage({
           </section>
 
           {/* Measures */}
-          {goals.length > 0 && (
+          {(goals.length > 0 || promise.metric) && (
             <section className="mt-12">
               <SectionLabel>Targets</SectionLabel>
               <ul className="reading mt-2">
+                {promise.metric && (
+                  <li className="border-t border-rule py-4">
+                    <div className="min-w-0">
+                      <p className="font-sans text-[1.05rem] font-medium">
+                        Target
+                      </p>
+                      <p className="reading mt-1 text-[0.95rem] text-muted">
+                        {promise.metric}
+                        {promise.metric_source && (
+                          <span> · {promise.metric_source}</span>
+                        )}
+                      </p>
+                    </div>
+                  </li>
+                )}
                 {goals.map((g) => (
                   <li
                     key={g.id}
@@ -353,13 +368,27 @@ export default async function PromisePage({
                           {g.target}
                         </p>
                       )}
-                      {g.target_value != null && (
+                      {(g.target_value != null || g.current_value != null) && (
                         <p className="refnum mt-2 text-[0.8rem] text-muted">
-                          target {g.target_value}
-                          {g.current_value != null
-                            ? ` · recorded ${g.current_value}`
-                            : " · nothing recorded"}
+                          {g.target_value != null && (
+                            <>
+                              target {g.target_value}
+                              {g.unit ? ` ${g.unit}` : ""}
+                              {g.current_value != null ? " · " : ""}
+                            </>
+                          )}
+                          {g.current_value != null && (
+                            <>
+                              recorded {g.current_value}
+                              {g.unit ? ` ${g.unit}` : ""}
+                            </>
+                          )}
                         </p>
+                      )}
+                      {g.source_url && (
+                        <div className="mt-2">
+                          <SourceLink href={g.source_url}>Open source</SourceLink>
+                        </div>
                       )}
                     </div>
                     <div className="md:justify-self-end">

@@ -253,7 +253,11 @@ async function PartyRegister({
                         )}
                       </span>
                       <span className="col-start-2 md:col-start-auto md:justify-self-end">
-                        <StatusBadge status={p.current_status} size="small" />
+                        {p.reviewed_on ? (
+                          <StatusBadge status={p.current_status} size="small" />
+                        ) : (
+                          <span className="label">Not examined yet</span>
+                        )}
                       </span>
                     </Link>
                   </li>
