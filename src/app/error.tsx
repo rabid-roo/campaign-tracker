@@ -8,25 +8,37 @@ export default function Error({
   retry: () => void;
 }) {
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-16">
-      <h1 className="text-2xl font-semibold tracking-tight">
-        This page could not load
-      </h1>
-      <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-        The tracker data did not come back. Try again in a moment.
-      </p>
-      <button
-        type="button"
-        onClick={() => retry()}
-        className="mt-6 rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-      >
-        Try again
-      </button>
-      {error.digest && (
-        <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
-          Reference: {error.digest}
-        </p>
-      )}
+    <main
+      id="main"
+      className="mx-auto w-full max-w-6xl px-6 md:px-8"
+    >
+      <div className="border-b border-rule py-3">
+        <p className="label">The record could not be read</p>
+      </div>
+      <section className="grid gap-6 py-16 md:grid-cols-[7rem_minmax(0,1fr)]">
+        <p className="label">Error</p>
+        <div className="reading">
+          <h1 className="font-sans text-[clamp(1.75rem,3.2vw,2.35rem)] leading-[1.1] font-bold tracking-[-0.015em]">
+            The tracker data did not come back
+          </h1>
+          <p className="mt-4 text-[1.0625rem] text-muted">
+            The record is served from the live database, and this page could not
+            read it. Try again in a moment.
+          </p>
+          <button
+            type="button"
+            onClick={() => retry()}
+            className="mt-8 inline-block border border-ink px-4 py-3 font-sans text-[0.8rem] font-semibold tracking-[0.12em] uppercase hover:bg-[var(--hover)]"
+          >
+            Try again
+          </button>
+          {error.digest && (
+            <p className="refnum mt-6 text-[0.75rem] text-muted">
+              Reference: {error.digest}
+            </p>
+          )}
+        </div>
+      </section>
     </main>
   );
 }

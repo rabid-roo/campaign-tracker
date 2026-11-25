@@ -35,6 +35,7 @@ async function main() {
         election: p.election,
         year: p.year,
         description: p.description,
+        hidden: p.hidden,
       },
       { onConflict: "slug" },
     );

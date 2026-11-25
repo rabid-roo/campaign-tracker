@@ -27,6 +27,7 @@ export type Party = {
   out: string;
   sourceUrl?: string;
   sourceType: "pdf" | "web";
+  hidden: boolean;
 };
 
 export const PARTIES: Party[] = [
@@ -42,6 +43,7 @@ export const PARTIES: Party[] = [
     sourceUrl:
       "https://campaign-tracker-jet-zeta.vercel.app/bcndp-2024-platform.pdf",
     sourceType: "pdf",
+    hidden: false,
   },
   {
     key: "newwest-2026",
@@ -54,6 +56,7 @@ export const PARTIES: Party[] = [
     raw: "data/raw/newwest-2026.txt",
     out: "data/items/newwest-2026.promises.json",
     sourceType: "web",
+    hidden: false,
   },
   {
     key: "bc-conservatives-2026",
@@ -67,5 +70,6 @@ export const PARTIES: Party[] = [
     sourceUrl:
       "https://conservativebc.ca/wp-content/uploads/2026/10/20261016_BCC_Platform2026_8-5x11-Draft-18_compressed.pdf",
     sourceType: "pdf",
+    hidden: true,
   },
 ];

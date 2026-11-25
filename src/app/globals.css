@@ -1,25 +1,230 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Audit-report world: paper, ink, one auditing green, one amber. No radius anywhere. */
+:root {
+  --paper: #f4f4ef;
+  --paper-raised: #fbfbf8;
+  --ink: #12161a;
+  --muted: #59615a;
+  --rule: #c9ccc4;
+  --rule-strong: #7d877c;
+  --accent: #2b5f45;
+  --accent-soft: #e2ece4;
+  --alert: #7c4a12;
+  --alert-soft: #f2e6d2;
+  --slate: #2f3a44;
+  --hover: #ecede7;
+  --measure: 33rem;
 }
 
-/* One focus ring for the whole site: the UA default is a hairline on dark. */
-@layer base {
-  /* Prose measure: ~65 characters at 16px in Geist, whose "0" is far wider than its average glyph. */
+@media (prefers-color-scheme: dark) {
   :root {
-    --measure: 30rem;
+    --paper: #0f1210;
+    --paper-raised: #141814;
+    --ink: #e9ece6;
+    --muted: #9aa49a;
+    --rule: #2b322b;
+    --rule-strong: #616b60;
+    --accent: #93c8a8;
+    --accent-soft: #1b2a20;
+    --alert: #d5a05c;
+    --alert-soft: #2a2216;
+    --slate: #b8c3cb;
+    --hover: #171c17;
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-archivo);
+  --font-serif: var(--font-spectral);
+  --font-mono: var(--font-courier);
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-alert: var(--alert);
+  --color-alert-soft: var(--alert-soft);
+  --color-slate: var(--slate);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    /* the bleed rules run past the column; clip them at the viewport instead of scrolling */
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-spectral), Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  th,
+  label {
+    font-family: var(--font-archivo), system-ui, sans-serif;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-zinc-900);
+    outline: 2px solid var(--ink);
     outline-offset: 2px;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :focus-visible {
-      outline-color: var(--color-zinc-100);
-    }
+  ::selection {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  html {
+    caret-color: var(--ink);
+    scrollbar-color: var(--rule-strong) transparent;
+  }
+}
+
+@layer components {
+  /* A hairline that runs past the content column to the viewport edge: the
+     sheet's rules hold the page instead of cards. */
+  .bleed {
+    position: relative;
+  }
+  .bleed::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50vw);
+    right: calc(50% - 50vw);
+    border-top: 1px solid var(--rule);
+  }
+  .bleed-strong::before {
+    border-top: 2px solid var(--ink);
+  }
+
+  .label {
+    font-family: var(--font-archivo), system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .refnum {
+    font-family: var(--font-courier), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Status is printed apparatus, never a coloured pill. */
+  .stamp {
+    display: inline-block;
+    border: 1.5px solid currentColor;
+    padding: 0.3rem 0.5rem 0.26rem;
+    font-family: var(--font-archivo), system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .stamp-none {
+    color: var(--muted);
+    /* The outline is the only shape cue for this state, so it clears 3:1. */
+    border-color: var(--muted);
+  }
+  .stamp-progress {
+    color: var(--alert);
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent 0 3px,
+      color-mix(in srgb, var(--alert) 12%, transparent) 3px 6px
+    );
+  }
+  .stamp-partial {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .stamp-complete {
+    color: var(--paper);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .stamp-cancelled {
+    color: var(--muted);
+    border-color: var(--muted);
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+  }
+
+  /* Un-examined: a dashed, muted stamp — blank, not yet a finding. */
+  .stamp-unexamined {
+    color: var(--muted);
+    border-color: var(--muted);
+    border-style: dashed;
+  }
+
+  /* The finding's own verdict: the stamp at reading scale, never a badge. */
+  .stamp-lead {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem 0.45rem;
+    border-width: 2px;
+  }
+
+  /* Plan tag as a printed mark, not a pill. */
+  .planmark {
+    font-family: var(--font-courier), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 1px;
+    white-space: nowrap;
+  }
+
+  .reading {
+    max-width: var(--measure);
+    /* Kills the one-word last line without hand-breaking sentences. */
+    text-wrap: pretty;
+  }
+
+  .ledger-row {
+    transition: background-color 120ms linear;
+  }
+  .ledger-row:hover,
+  .ledger-row:focus-within {
+    background: var(--hover);
+  }
+
+  .field {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.5rem;
+  }
+
+  /* The browser's own triangle is the one piece of chrome the sheet does not print. */
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary::before {
+    content: "+";
+    display: inline-block;
+    width: 1.25rem;
+    font-family: var(--font-courier), ui-monospace, monospace;
+    font-weight: 400;
+  }
+  details[open] > summary::before {
+    content: "−";
   }
 }

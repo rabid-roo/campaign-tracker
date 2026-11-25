@@ -113,18 +113,43 @@ export const getStatusCountsByParty = cache(
   },
 );
 
-export const getAllStatusCounts = cache(
-  async (): Promise<Record<string, Record<string, number>>> => {
+export type TrackerSummary = {
+  total: number;
+  counts: Record<string, number>;
+  examined: number;
+  latestReviewedOn: string | null;
+};
+
+/** One pass over promises: status totals, examined count, latest review date. */
+export const getTrackerSummaries = cache(
+  async (): Promise<Record<string, TrackerSummary>> => {
     const supabase = createClient();
     const { data, error } = await supabase
       .from("promises")
-      .select("party_id, current_status");
+      .select("party_id, current_status, reviewed_on");
     if (error) throw error;
-    const map: Record<string, Record<string, number>> = {};
+    const map: Record<string, TrackerSummary> = {};
     for (const row of data) {
-      map[row.party_id] ??= {};
-      map[row.party_id][row.current_status] =
-        (map[row.party_id][row.current_status] ?? 0) + 1;
+      const summary = (map[row.party_id] ??= {
+        total: 0,
+        counts: {},
+        examined: 0,
+        latestReviewedOn: null,
+      });
+      summary.total += 1;
+      // Only examined promises earn a status stamp; unexamined records must
+      // never read as "not started" in the totals (see the Earned Verdict Rule).
+      if (row.reviewed_on) {
+        summary.examined += 1;
+        summary.counts[row.current_status] =
+          (summary.counts[row.current_status] ?? 0) + 1;
+        if (
+          !summary.latestReviewedOn ||
+          row.reviewed_on > summary.latestReviewedOn
+        ) {
+          summary.latestReviewedOn = row.reviewed_on;
+        }
+      }
     }
     return map;
   },
@@ -191,16 +216,6 @@ export const getVoteScore = cache(
     return typeof data === "number" ? data : 0;
   },
 );
-
-export const getLatestActivityDate = cache(async (): Promise<string | null> => {
-  const supabase = createClient();
-  const { data } = await supabase
-    .from("status_updates")
-    .select("created_at")
-    .order("created_at", { ascending: false })
-    .limit(1);
-  return data?.[0]?.created_at ?? null;
-});
 
 export type Reference = {
   id: string;
