@@ -60,5 +60,29 @@
     "url": "https://dailyhive.com/vancouver/new-westminster-mayor-daniel-fontaine-inaugural-speech",
     "source_type": "news",
     "note": "Said he will chair the inaugural New West Caucus early next year."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Give residents their voice back",
+    "label": "Freshet News — community advisory assembly to be dissolved",
+    "url": "https://www.freshetnews.ca/new-westminster-community-advisory-assembly-to-be-dissolved/",
+    "source_type": "news",
+    "note": "Henderson opposed, calling the assembly a 'best practice' and flagging diversity/inclusion gaps in the replacement committees; Fontaine asked staff to report the assembly's cost."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Publish Council agendas at least 7 calendar days before meetings",
+    "label": "Freshet News — first meeting 'fire hose'",
+    "url": "https://www.freshetnews.ca/a-fire-hose-of-reports-considered-at-new-westminster-councils-first-official-meeting/",
+    "source_type": "news",
+    "note": "Agenda released ~24 hours before the Nov 6 meeting; Henderson cited the NWP 7-day-agenda guarantee; Fontaine defended 24 hours' notice as within the Community Charter."
+  },
+  {
+    "party": "new-west-progressives",
+    "promise": "Get the waterfront pier rebuild moving",
+    "label": "Freshet News — 100-day action plan (pier)",
+    "url": "https://www.freshetnews.ca/traffic-and-neighbourhood-cleanliness-among-new-westminster-councils-100-day-action-plan/",
+    "source_type": "news",
+    "note": "Pier restoration approved 7-0 as amended, adding a requirement to report previous Host Nations work on the park."
   }
 ]

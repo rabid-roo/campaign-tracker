@@ -15,6 +15,7 @@ import type { Party } from "@/lib/supabase/data";
 import { RegisterRows } from "@/components/register-skeleton";
 import { STATUSES, STATUS_LABELS } from "@/lib/status";
 import { TAGS } from "@/lib/tags";
+import { COUNCILLORS } from "@/lib/councillors";
 
 export const revalidate = 300;
 
@@ -33,10 +34,10 @@ export default async function PartyPage({
   searchParams,
 }: {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ status?: string; tag?: string }>;
+  searchParams: Promise<{ status?: string; tag?: string; champion?: string }>;
 }) {
   const { slug } = await params;
-  const { status, tag } = await searchParams;
+  const { status, tag, champion } = await searchParams;
 
   // Resolve the tracker before any streamed boundary so a hidden or missing one
   // answers with a real 404 instead of a 200 carrying a not-found body.
@@ -79,7 +80,12 @@ export default async function PartyPage({
           </div>
         }
       >
-        <PartyRegister party={party} status={status} tag={tag} />
+        <PartyRegister
+          party={party}
+          status={status}
+          tag={tag}
+          champion={champion}
+        />
       </Suspense>
     </main>
   );
@@ -89,10 +95,12 @@ async function PartyRegister({
   party,
   status,
   tag,
+  champion,
 }: {
   party: Party;
   status?: string;
   tag?: string;
+  champion?: string;
 }) {
   const [categories, promises, counts] = await Promise.all([
     getCategories(),
@@ -101,8 +109,11 @@ async function PartyRegister({
   ]);
 
   const activeTag = TAGS.find((t) => t.slug === tag);
+  const activeChampion = COUNCILLORS.find((c) => c === champion);
   const filtered = (() => {
     if (activeTag) return promises.filter((p) => p.tag === activeTag.label);
+    if (activeChampion)
+      return promises.filter((p) => p.champion?.includes(activeChampion));
     if (status && (STATUSES as readonly string[]).includes(status))
       return promises.filter((p) => p.current_status === status);
     return promises;
@@ -124,7 +135,7 @@ async function PartyRegister({
   });
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
-  const active = Boolean(status || activeTag);
+  const active = Boolean(status || activeTag || activeChampion);
 
   return (
     <>
@@ -164,6 +175,7 @@ async function PartyRegister({
           Showing {filtered.length}{" "}
           {filtered.length === 1 ? "finding" : "findings"}
           {activeTag ? ` · ${activeTag.label}` : ""}
+          {activeChampion ? ` · ${activeChampion}` : ""}
         </p>
         <div className="flex flex-wrap gap-4">
           {TAGS.map((t) => {
@@ -178,6 +190,21 @@ async function PartyRegister({
                 className={`planmark ${isActive ? "border-ink text-ink" : ""}`}
               >
                 {t.label} ({n})
+              </Link>
+            );
+          })}
+          {COUNCILLORS.map((c) => {
+            const n = promises.filter((p) => p.champion?.includes(c)).length;
+            if (n === 0) return null;
+            const isActive = champion === c;
+            return (
+              <Link
+                key={c}
+                href={`/party/${party.slug}?champion=${encodeURIComponent(c)}`}
+                aria-current={isActive ? "page" : undefined}
+                className={`planmark ${isActive ? "border-ink text-ink" : ""}`}
+              >
+                {c} ({n})
               </Link>
             );
           })}

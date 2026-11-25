@@ -134,6 +134,14 @@ export default async function PromisePage({
                 <TagBadge tag={promise.tag} />
               </p>
             )}
+            {promise.champion && (
+              <p className="mt-3 md:mt-4">
+                <span className="label block">Champion</span>
+                <span className="mt-1 block text-[0.85rem]">
+                  {promise.champion}
+                </span>
+              </p>
+            )}
           </aside>
 
           <div className="min-w-0">
